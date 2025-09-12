@@ -462,7 +462,6 @@ const NewsSection = () => {
             </div>
           </section>
         )}
-      </div>
 
       {/* News Sources Attribution - Full Width Bottom Section */}
       <section className="mt-20 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 shadow-2xl border border-blue-200/50 backdrop-blur-md relative overflow-hidden">
