@@ -222,7 +222,7 @@ const NewsSection = () => {
               <div className="relative z-10">
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg">⚖️</div>
-                <h3 className="text-2xl font-bold text-gray-900 ml-3">Regulatory Updates</h3>
+                <h3 className="text-2xl font-bold text-gray-900 ml-3">Market Analyses</h3>
               </div>
               
               <div className="space-y-5">
