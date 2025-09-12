@@ -1,90 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, TrendingUp, ExternalLink } from 'lucide-react';
-
-interface NewsItem {
-  id: string;
-  title: string;
-  excerpt: string;
-  url: string;
-  publishedAt: string;
-  source: string;
-  category: 'market' | 'regulation' | 'technology' | 'defi';
-}
+import { newsService, NewsItem } from '../services/newsService';
 
 const LiveNewsWidget = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Mock news data - replace with real API later
-  const mockNews: NewsItem[] = [
-    {
-      id: '1',
-      title: 'Bitcoin Reaches New Monthly High Amid ETF Optimism',
-      excerpt: 'Bitcoin surged past $45,000 as institutional investors show renewed interest following ETF approval rumors.',
-      url: '#',
-      publishedAt: '2 hours ago',
-      source: 'CryptoNews',
-      category: 'market'
-    },
-    {
-      id: '2', 
-      title: 'EU Finalizes Comprehensive Crypto Regulation Framework',
-      excerpt: 'The Markets in Crypto-Assets (MiCA) regulation brings clarity to European cryptocurrency operations.',
-      url: '#',
-      publishedAt: '4 hours ago',
-      source: 'Regulatory Times',
-      category: 'regulation'
-    },
-    {
-      id: '3',
-      title: 'Ethereum Layer 2 Solutions See Record Transaction Volume',
-      excerpt: 'Arbitrum and Optimism process over 2 million transactions daily as users seek lower fees.',
-      url: '#',
-      publishedAt: '6 hours ago',
-      source: 'DeFi Pulse',
-      category: 'technology'
-    },
-    {
-      id: '4',
-      title: 'Major DeFi Protocol Launches New Yield Farming Program',
-      excerpt: 'Uniswap announces enhanced liquidity mining rewards for select trading pairs.',
-      url: '#',
-      publishedAt: '8 hours ago',
-      source: 'DeFi Weekly',
-      category: 'defi'
-    },
-    {
-      id: '5',
-      title: 'Crypto Market Cap Surpasses $1.8 Trillion',
-      excerpt: 'Total cryptocurrency market capitalization reaches new yearly high driven by institutional adoption.',
-      url: '#',
-      publishedAt: '12 hours ago',
-      source: 'Market Watch',
-      category: 'market'
-    }
-  ];
-
   const fetchNews = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Fetch real RSS news from legitimate crypto sources
+      const latestNews = await newsService.fetchAllNews(5);
+      setNews(latestNews);
       
-      // For now, use mock data
-      // TODO: Replace with real API call
-      // const response = await fetch('/api/news?limit=5');
-      // if (!response.ok) throw new Error(`HTTP error ${response.status}`);
-      // const data = await response.json();
-      
-      setNews(mockNews);
     } catch (err) {
       console.error('Error fetching news:', err);
       setError('Failed to load news');
-      // Fallback to mock data even on error
-      setNews(mockNews);
+      // Fallback will be handled by newsService
+      const fallbackNews = await newsService.fetchAllNews(5);
+      setNews(fallbackNews);
     } finally {
       setLoading(false);
     }
@@ -93,37 +30,44 @@ const LiveNewsWidget = () => {
   useEffect(() => {
     fetchNews();
     
-    // Refresh news every 5 minutes
-    const interval = setInterval(fetchNews, 5 * 60 * 1000);
+    // Refresh news every 15 minutes (respectful to RSS sources)
+    const interval = setInterval(fetchNews, 15 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      bitcoin: 'bg-orange-100 text-orange-800',
+      ethereum: 'bg-blue-100 text-blue-800',
       market: 'bg-green-100 text-green-800',
       regulation: 'bg-yellow-100 text-yellow-800', 
-      technology: 'bg-blue-100 text-blue-800',
-      defi: 'bg-purple-100 text-purple-800'
+      defi: 'bg-purple-100 text-purple-800',
+      general: 'bg-gray-100 text-gray-800'
     };
     return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
 
   const getCategoryLabel = (category: string) => {
     const labels = {
+      bitcoin: 'Bitcoin',
+      ethereum: 'Ethereum',
       market: 'Market',
       regulation: 'Regulation',
-      technology: 'Technology', 
-      defi: 'DeFi'
+      defi: 'DeFi',
+      general: 'News'
     };
-    return labels[category as keyof typeof labels] || category;
+    return labels[category as keyof typeof labels] || 'News';
   };
 
   if (loading) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-xl font-bold text-gray-900">📰 Latest Crypto News</h3>
-          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-bold text-gray-900">📰 Live Crypto News</h3>
+          <div className="flex items-center text-sm text-green-600">
+            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+            Live RSS Feeds
+          </div>
         </div>
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
@@ -140,13 +84,21 @@ const LiveNewsWidget = () => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold text-gray-900">📰 Latest Crypto News</h3>
+        <div>
+          <h3 className="text-xl font-bold text-gray-900">📰 Live Crypto News</h3>
+          <p className="text-sm text-gray-600">From CoinDesk, Cointelegraph, Decrypt & more</p>
+        </div>
         <button 
           onClick={fetchNews}
-          className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+          className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center"
           disabled={loading}
         >
-          Refresh
+          {loading ? (
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
+          ) : (
+            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+          )}
+          {loading ? 'Loading...' : 'Refresh'}
         </button>
       </div>
 
