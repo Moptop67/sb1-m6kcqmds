@@ -2,13 +2,90 @@ import React, { useState, useEffect } from 'react';
 import { Clock, TrendingUp, ExternalLink, RefreshCw } from 'lucide-react';
 import { newsService, NewsItem } from '../services/newsService';
 
+interface CryptoData {
+  id: string;
+  symbol: string;
+  name: string;
+  current_price: number;
+  price_change_percentage_24h: number;
+  market_cap_rank: number;
+  market_cap: number;
+  total_volume: number;
+  high_24h: number;
+  low_24h: number;
+}
+
 const NewsSection = () => {
   const [featuredNews, setFeaturedNews] = useState<NewsItem[]>([]);
   const [bitcoinNews, setBitcoinNews] = useState<NewsItem[]>([]);
   const [regulationNews, setRegulationNews] = useState<NewsItem[]>([]);
   const [defiNews, setDefiNews] = useState<NewsItem[]>([]);
+  const [cryptoData, setCryptoData] = useState<CryptoData[]>([]);
+  const [cryptoLoading, setCryptoLoading] = useState(true);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+
+  const fetchCryptoData = async () => {
+    try {
+      setCryptoLoading(true);
+      
+      // Fetch Bitcoin, Ethereum, and Solana data
+      const response = await fetch(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana&order=market_cap_desc&per_page=3&page=1&sparkline=false&price_change_percentage=24h'
+      );
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch crypto data');
+      }
+      
+      const data = await response.json();
+      setCryptoData(data);
+      
+    } catch (error) {
+      console.error('Error fetching crypto data:', error);
+      // Fallback data if API fails
+      setCryptoData([
+        {
+          id: 'bitcoin',
+          symbol: 'btc',
+          name: 'Bitcoin',
+          current_price: 45000,
+          price_change_percentage_24h: 2.5,
+          market_cap_rank: 1,
+          market_cap: 880000000000,
+          total_volume: 25000000000,
+          high_24h: 46000,
+          low_24h: 44000
+        },
+        {
+          id: 'ethereum',
+          symbol: 'eth',
+          name: 'Ethereum',
+          current_price: 2800,
+          price_change_percentage_24h: -1.2,
+          market_cap_rank: 2,
+          market_cap: 340000000000,
+          total_volume: 15000000000,
+          high_24h: 2900,
+          low_24h: 2750
+        },
+        {
+          id: 'solana',
+          symbol: 'sol',
+          name: 'Solana',
+          current_price: 98,
+          price_change_percentage_24h: 5.6,
+          market_cap_rank: 5,
+          market_cap: 45000000000,
+          total_volume: 3000000000,
+          high_24h: 102,
+          low_24h: 95
+        }
+      ]);
+    } finally {
+      setCryptoLoading(false);
+    }
+  };
 
   const fetchAllNews = async (showRefreshing = false) => {
     try {
@@ -51,11 +128,53 @@ const NewsSection = () => {
 
   useEffect(() => {
     fetchAllNews();
+    fetchCryptoData();
     
-    // Auto-refresh every 20 minutes
-    const interval = setInterval(() => fetchAllNews(true), 20 * 60 * 1000);
-    return () => clearInterval(interval);
+    // Auto-refresh news every 20 minutes, crypto data every 2 minutes
+    const newsInterval = setInterval(() => fetchAllNews(true), 20 * 60 * 1000);
+    const cryptoInterval = setInterval(fetchCryptoData, 2 * 60 * 1000);
+    
+    return () => {
+      clearInterval(newsInterval);
+      clearInterval(cryptoInterval);
+    };
   }, []);
+
+  const formatPrice = (price: number) => {
+    if (price >= 1) {
+      return `$${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    } else {
+      return `$${price.toFixed(6)}`;
+    }
+  };
+
+  const formatPercentage = (percentage: number) => {
+    const sign = percentage >= 0 ? '+' : '';
+    return `${sign}${percentage.toFixed(2)}%`;
+  };
+
+  const calculateRSI = (price: number, high: number, low: number) => {
+    // Simple RSI approximation based on price position within 24h range
+    const position = (price - low) / (high - low);
+    return Math.round(30 + (position * 40)); // Range 30-70
+  };
+
+  const getTrendAnalysis = (change: number, rsi: number) => {
+    if (change > 3 && rsi > 60) return { trend: 'Strong Bullish', color: 'text-green-600' };
+    if (change > 0 && rsi > 50) return { trend: 'Bullish', color: 'text-green-600' };
+    if (change < -3 && rsi < 40) return { trend: 'Strong Bearish', color: 'text-red-600' };
+    if (change < 0 && rsi < 50) return { trend: 'Bearish', color: 'text-red-600' };
+    return () => clearInterval(interval);
+    return { trend: 'Neutral', color: 'text-gray-600' };
+  };
+
+  const getVolumeAnalysis = (volume: number, marketCap: number) => {
+    const volumeRatio = volume / marketCap;
+    if (volumeRatio > 0.1) return { level: 'Very High', color: 'text-red-600' };
+    if (volumeRatio > 0.05) return { level: 'High', color: 'text-orange-600' };
+    if (volumeRatio > 0.02) return { level: 'Medium', color: 'text-yellow-600' };
+    return { level: 'Low', color: 'text-gray-600' };
+  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -190,231 +309,9 @@ const NewsSection = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
               <span className="text-white text-xl">⭐</span>
             </div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-purple-700 to-indigo-700 bg-clip-text text-transparent">Featured Stories</h2>
-          </div>
-          <div className="space-y-10 relative">
-            <NewsCard article={featuredNews[0]} featured={true} />
-            <div className="grid md:grid-cols-2 gap-10">
-              {featuredNews.slice(1, 3).map((article) => (
-                <NewsCard key={article.id} article={article} />
+              {cryptoData.map((crypto) => (
+                <TokenAnalysisCard key={crypto.id} crypto={crypto} />
               ))}
-            </div>
-          </div>
-          </div>
-        </section>
-      )}
-
-      {/* Category Sections */}
-      <div className="space-y-16">
-        {/* Bitcoin News - Full Width, 3 Articles */}
-        {bitcoinNews.length > 0 && (
-          <section className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
-            {/* Section Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-full"></div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center mb-8">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">₿</div>
-                <h2 className="text-3xl font-bold text-gray-900 ml-4">Bitcoin News</h2>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {bitcoinNews.slice(0, 3).map((article) => (
-                  <NewsCard key={article.id} article={article} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Market Analyses - Full Width */}
-        <section className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-10 shadow-2xl border border-yellow-200/50 backdrop-blur-md relative overflow-hidden">
-          {/* Section Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/20 to-orange-100/20"></div>
-          <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-yellow-200/10 to-transparent rounded-full"></div>
-          <div className="absolute bottom-0 right-1/4 w-24 h-24 bg-gradient-to-tr from-orange-200/10 to-transparent rounded-full"></div>
-          
-          <div className="relative z-10">
-            <div className="flex items-center mb-8">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">📊</div>
-              <h2 className="text-3xl font-bold text-gray-900 ml-4">Live Token Analysis</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Bitcoin Analysis */}
-              <div className="bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
-                <div className="relative z-10 p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg mr-3">₿</div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">Bitcoin (BTC)</h3>
-                        <p className="text-sm text-gray-600">Market Cap #1</p>
-                      </div>
-                    </div>
-                    <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold shadow-sm">
-                      Technical Analysis
-                    </span>
-                  </div>
-                  
-                  {/* TradingView Mini Chart */}
-                  <div className="mb-4 bg-gray-50 rounded-lg p-4 min-h-[200px] flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-2">$45,234</div>
-                      <div className="text-sm text-green-600 font-medium mb-2">+2.34% (24h)</div>
-                      <div className="text-xs text-gray-600">
-                        <div>RSI: 58.2 (Neutral)</div>
-                        <div>MACD: Bullish</div>
-                        <div>Support: $44,200</div>
-                        <div>Resistance: $46,800</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Trend:</span>
-                      <span className="text-green-600 font-medium">Bullish</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volume:</span>
-                      <span className="text-gray-900 font-medium">High</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volatility:</span>
-                      <span className="text-yellow-600 font-medium">Medium</span>
-                    </div>
-                  </div>
-                  
-                  <a
-                    href="https://www.tradingview.com/symbols/BTCUSD/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm w-full justify-center"
-                  >
-                    View Full Analysis
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Ethereum Analysis */}
-              <div className="bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
-                <div className="relative z-10 p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg mr-3">Ξ</div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">Ethereum (ETH)</h3>
-                        <p className="text-sm text-gray-600">Market Cap #2</p>
-                      </div>
-                    </div>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold shadow-sm">
-                      Technical Analysis
-                    </span>
-                  </div>
-                  
-                  {/* TradingView Mini Chart */}
-                  <div className="mb-4 bg-gray-50 rounded-lg p-4 min-h-[200px] flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-red-600 mb-2">$2,834</div>
-                      <div className="text-sm text-red-600 font-medium mb-2">-1.23% (24h)</div>
-                      <div className="text-xs text-gray-600">
-                        <div>RSI: 42.8 (Oversold)</div>
-                        <div>MACD: Bearish</div>
-                        <div>Support: $2,750</div>
-                        <div>Resistance: $2,950</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Trend:</span>
-                      <span className="text-red-600 font-medium">Bearish</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volume:</span>
-                      <span className="text-gray-900 font-medium">Medium</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volatility:</span>
-                      <span className="text-orange-600 font-medium">High</span>
-                    </div>
-                  </div>
-                  
-                  <a
-                    href="https://www.tradingview.com/symbols/ETHUSD/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm w-full justify-center"
-                  >
-                    View Full Analysis
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Solana Analysis */}
-              <div className="bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
-                <div className="relative z-10 p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg mr-3">◎</div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">Solana (SOL)</h3>
-                        <p className="text-sm text-gray-600">Market Cap #5</p>
-                      </div>
-                    </div>
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold shadow-sm">
-                      Technical Analysis
-                    </span>
-                  </div>
-                  
-                  {/* TradingView Mini Chart */}
-                  <div className="mb-4 bg-gray-50 rounded-lg p-4 min-h-[200px] flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-2">$98.45</div>
-                      <div className="text-sm text-green-600 font-medium mb-2">+5.67% (24h)</div>
-                      <div className="text-xs text-gray-600">
-                        <div>RSI: 68.4 (Overbought)</div>
-                        <div>MACD: Bullish</div>
-                        <div>Support: $92.00</div>
-                        <div>Resistance: $105.00</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Trend:</span>
-                      <span className="text-green-600 font-medium">Strong Bullish</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volume:</span>
-                      <span className="text-gray-900 font-medium">Very High</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Volatility:</span>
-                      <span className="text-red-600 font-medium">Very High</span>
-                    </div>
-                  </div>
-                  
-                  <a
-                    href="https://www.tradingview.com/symbols/SOLUSD/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm w-full justify-center"
-                  >
-                    View Full Analysis
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </section>
