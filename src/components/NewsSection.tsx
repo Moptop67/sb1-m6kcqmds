@@ -165,35 +165,6 @@ const NewsSection = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
-      {/* Header */}
-      <div className="text-center mb-16 bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
-        {/* Header Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/20 to-transparent rounded-full"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-200/20 to-transparent rounded-full"></div>
-        
-        <div className="relative z-10">
-        <div className="flex items-center justify-center mb-4">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-700 bg-clip-text text-transparent">Latest Crypto News</h1>
-          <button
-            onClick={() => fetchAllNews(true)}
-            disabled={refreshing}
-            className="ml-6 p-3 text-blue-600 hover:text-blue-700 disabled:opacity-50 bg-blue-50 rounded-full hover:bg-blue-100 transition-all shadow-lg"
-            title="Refresh all news"
-          >
-            <RefreshCw className={`h-5 w-5 ${refreshing ? 'animate-spin' : ''}`} />
-          </button>
-        </div>
-        <p className="text-2xl text-gray-700 max-w-4xl mx-auto font-medium leading-relaxed">
-          Real-time crypto news from trusted sources including CoinDesk, Cointelegraph, Decrypt, and more.
-        </p>
-        <div className="mt-6 flex items-center justify-center text-base text-gray-600 bg-green-50 rounded-full px-6 py-3 inline-flex shadow-md">
-          <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-          <span className="font-semibold">Live RSS feeds • Updates every 15 minutes</span>
-        </div>
-        </div>
-      </div>
-
       {/* Featured News */}
       {featuredNews.length > 0 && (
         <section className="mb-20 bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
