@@ -229,7 +229,6 @@ const NewsSection = () => {
                 <h2 className="text-3xl font-bold text-gray-900 ml-4">Market Analyses</h2>
               </div>
               
-              <div className="grid md:grid-cols-4 gap-8">
               <div className="grid md:grid-cols-3 gap-8">
                 {regulationNews.slice(0, 3).map((article) => (
                   <NewsCard key={article.id} article={article} />
