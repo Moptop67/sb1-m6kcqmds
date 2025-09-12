@@ -230,7 +230,8 @@ const NewsSection = () => {
               </div>
               
               <div className="grid md:grid-cols-4 gap-8">
-                {regulationNews.slice(0, 4).map((article) => (
+              <div className="grid md:grid-cols-3 gap-8">
+                {regulationNews.slice(0, 3).map((article) => (
                   <NewsCard key={article.id} article={article} />
                 ))}
               </div>
