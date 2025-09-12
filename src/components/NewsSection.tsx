@@ -214,34 +214,54 @@ const NewsSection = () => {
         {/* Enhanced Sidebar */}
         <div className="space-y-10">
           {regulationNews.length > 0 && (
-            <section className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-8 shadow-2xl border border-yellow-200/50 backdrop-blur-md relative overflow-hidden">
+            <section className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
               {/* Sidebar Section Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/20 to-orange-100/20"></div>
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-yellow-200/20 to-transparent rounded-full"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-full"></div>
               
               <div className="relative z-10">
-              <div className="flex items-center mb-6">
-                <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg">⚖️</div>
-                <h3 className="text-2xl font-bold text-gray-900 ml-3">Market Analyses</h3>
+              <div className="flex items-center mb-8">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg">⚖️</div>
+                <h2 className="text-3xl font-bold text-gray-900 ml-4">Market Analyses</h2>
               </div>
               
-              <div className="space-y-5">
+              <div className="grid md:grid-cols-1 gap-8">
                 {regulationNews.slice(0, 3).map((article) => (
-                  <div key={article.id} className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-yellow-200/30 hover:shadow-lg transition-all">
-                    <h4 className="font-semibold text-gray-900 text-base mb-3">{article.title}</h4>
-                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">{article.excerpt}</p>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-500">{article.source}</span>
+                  <article key={article.id} className="bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold shadow-sm ${getCategoryColor(article.category)}`}>
+                          {getCategoryLabel(article.category)}
+                        </span>
+                        <div className="flex items-center text-sm text-gray-600 bg-gray-100 rounded-full px-3 py-1">
+                          <Clock className="h-4 w-4 mr-2" />
+                          {article.publishedAt}
+                        </div>
+                      </div>
+                      
+                      <h3 className="font-bold text-gray-900 mb-4 leading-tight text-lg">
+                        {article.title}
+                      </h3>
+                      
+                      <p className="text-gray-700 mb-5 line-clamp-3 leading-relaxed">
+                        {article.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-600 font-semibold bg-gray-100 px-3 py-1 rounded-full">{article.source}</span>
                       <a
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 font-semibold hover:underline"
+                        className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm"
                       >
-                        Read More →
+                        Read Full Article
+                        <ExternalLink className="h-4 w-4 ml-2" />
                       </a>
                     </div>
-                  </div>
+                    </div>
+                  </article>
                 ))}
               </div>
               </div>
