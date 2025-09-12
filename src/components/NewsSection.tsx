@@ -164,7 +164,6 @@ const NewsSection = () => {
     if (change > 0 && rsi > 50) return { trend: 'Bullish', color: 'text-green-600' };
     if (change < -3 && rsi < 40) return { trend: 'Strong Bearish', color: 'text-red-600' };
     if (change < 0 && rsi < 50) return { trend: 'Bearish', color: 'text-red-600' };
-    return () => clearInterval(interval);
     return { trend: 'Neutral', color: 'text-gray-600' };
   };
 
@@ -274,6 +273,67 @@ const NewsSection = () => {
     </section>
   );
 
+  const TokenAnalysisCard = ({ crypto }: { crypto: CryptoData }) => {
+    const rsi = calculateRSI(crypto.current_price, crypto.high_24h, crypto.low_24h);
+    const trendAnalysis = getTrendAnalysis(crypto.price_change_percentage_24h, rsi);
+    const volumeAnalysis = getVolumeAnalysis(crypto.total_volume, crypto.market_cap);
+
+    return (
+      <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                {crypto.symbol.toUpperCase().charAt(0)}
+              </div>
+              <div className="ml-3">
+                <h3 className="font-bold text-gray-900">{crypto.name}</h3>
+                <p className="text-sm text-gray-600">{crypto.symbol.toUpperCase()}</p>
+              </div>
+            </div>
+            <div className="text-right">
+              <p className="text-2xl font-bold text-gray-900">{formatPrice(crypto.current_price)}</p>
+              <p className={`text-sm font-semibold ${crypto.price_change_percentage_24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {formatPercentage(crypto.price_change_percentage_24h)}
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <p className="text-xs text-gray-600 mb-1">24h High</p>
+              <p className="font-semibold text-gray-900">{formatPrice(crypto.high_24h)}</p>
+            </div>
+            <div>
+              <p className="text-xs text-gray-600 mb-1">24h Low</p>
+              <p className="font-semibold text-gray-900">{formatPrice(crypto.low_24h)}</p>
+            </div>
+            <div>
+              <p className="text-xs text-gray-600 mb-1">RSI (24h)</p>
+              <p className="font-semibold text-gray-900">{rsi}</p>
+            </div>
+            <div>
+              <p className="text-xs text-gray-600 mb-1">Volume</p>
+              <p className={`font-semibold ${volumeAnalysis.color}`}>{volumeAnalysis.level}</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs text-gray-600 mb-1">Trend Analysis</p>
+              <p className={`font-semibold ${trendAnalysis.color}`}>{trendAnalysis.trend}</p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-600 mb-1">Market Cap Rank</p>
+              <p className="font-semibold text-gray-900">#{crypto.market_cap_rank}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   if (loading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -309,12 +369,77 @@ const NewsSection = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
               <span className="text-white text-xl">⭐</span>
             </div>
+            <h2 className="text-3xl font-bold text-gray-900">Featured News</h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {featuredNews.slice(0, 2).map((article) => (
+              <NewsCard key={article.id} article={article} featured />
+            ))}
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredNews.slice(2, 6).map((article) => (
+              <NewsCard key={article.id} article={article} />
+            ))}
+          </div>
+          </div>
+        </section>
+      )}
+
+      {/* Crypto Market Analysis */}
+      {!cryptoLoading && cryptoData.length > 0 && (
+        <section className="mb-20 bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+          {/* Section Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30"></div>
+          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-green-200/10 to-transparent rounded-full"></div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-10">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <TrendingUp className="h-6 w-6 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">Market Analysis</h2>
+              </div>
+              {refreshing && (
+                <div className="flex items-center text-blue-600">
+                  <RefreshCw className="h-5 w-5 animate-spin mr-2" />
+                  <span className="text-sm font-medium">Updating...</span>
+                </div>
+              )}
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
               {cryptoData.map((crypto) => (
                 <TokenAnalysisCard key={crypto.id} crypto={crypto} />
               ))}
             </div>
           </div>
         </section>
+      )}
+
+      {/* Bitcoin News */}
+      {bitcoinNews.length > 0 && (
+        <div className="mb-20">
+          <NewsGrid 
+            title="Bitcoin News" 
+            news={bitcoinNews} 
+            icon={<div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">₿</div>}
+          />
+        </div>
+      )}
+
+      {/* Market & Regulation News */}
+      {regulationNews.length > 0 && (
+        <div className="mb-20">
+          <NewsGrid 
+            title="Market & Regulation" 
+            news={regulationNews} 
+            icon={<div className="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">📊</div>}
+          />
+        </div>
+      )}
 
         {/* DeFi Updates - Full Width */}
         {defiNews.length > 0 && (
