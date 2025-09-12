@@ -16,16 +16,29 @@ const NewsSection = () => {
       else setLoading(true);
 
       // Fetch news from different categories
-      const [featured, bitcoin, regulation, defi] = await Promise.all([
+      const [featured, bitcoin, allNews, defi] = await Promise.all([
         newsService.fetchAllNews(6), // Featured news
         newsService.fetchNewsByCategory('bitcoin', 4),
-        newsService.fetchNewsByCategory('regulation', 4),
+        newsService.fetchAllNews(20), // Get more general news for market analyses
         newsService.fetchNewsByCategory('defi', 4)
       ]);
 
+      // Filter for market/regulation news, fallback to general news to ensure we have 3 items
+      const marketNews = allNews.filter(item => 
+        item.category === 'regulation' || 
+        item.category === 'market' || 
+        item.title.toLowerCase().includes('market') ||
+        item.title.toLowerCase().includes('price') ||
+        item.title.toLowerCase().includes('trading')
+      ).slice(0, 3);
+      
+      // If we don't have 3 market-related articles, fill with general news
+      const finalMarketNews = marketNews.length >= 3 
+        ? marketNews 
+        : [...marketNews, ...allNews.filter(item => !marketNews.includes(item)).slice(0, 3 - marketNews.length)];
       setFeaturedNews(featured);
       setBitcoinNews(bitcoin);
-      setRegulationNews(regulation);
+      setRegulationNews(finalMarketNews);
       setDefiNews(defi);
 
     } catch (error) {
