@@ -280,48 +280,48 @@ const NewsSection = () => {
       </div>
 
       {/* News Sources Attribution - Full Width Bottom Section */}
-      <section className="mt-20 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12 shadow-2xl border border-blue-200/50 backdrop-blur-md relative overflow-hidden">
+      <section className="mt-20 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 shadow-2xl border border-blue-200/50 backdrop-blur-md relative overflow-hidden">
         {/* Attribution Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-indigo-100/20"></div>
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-blue-200/10 to-transparent rounded-full"></div>
         <div className="absolute bottom-0 right-1/4 w-24 h-24 bg-gradient-to-tr from-indigo-200/10 to-transparent rounded-full"></div>
         
         <div className="relative z-10 text-center">
-          <div className="flex items-center justify-center mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg mr-4">📡</div>
-            <h3 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">News Sources</h3>
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-xl shadow-lg mr-3">📡</div>
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">News Sources</h3>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8 mb-10 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-4 mb-6 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto mb-3">CD</div>
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg mx-auto mb-2">CD</div>
               <p className="font-semibold text-gray-900">CoinDesk</p>
               <p className="text-sm text-gray-600">Leading crypto news</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto mb-3">CT</div>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg mx-auto mb-2">CT</div>
               <p className="font-semibold text-gray-900">Cointelegraph</p>
               <p className="text-sm text-gray-600">Blockchain insights</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto mb-3">D</div>
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg mx-auto mb-2">D</div>
               <p className="font-semibold text-gray-900">Decrypt</p>
               <p className="text-sm text-gray-600">Web3 & crypto culture</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto mb-3">₿</div>
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg mx-auto mb-2">₿</div>
               <p className="font-semibold text-gray-900">Bitcoin Magazine</p>
               <p className="text-sm text-gray-600">Bitcoin focus</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto mb-3">TB</div>
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg mx-auto mb-2">TB</div>
               <p className="font-semibold text-gray-900">The Block</p>
               <p className="text-sm text-gray-600">Industry analysis</p>
             </div>
           </div>
           
-          <div className="max-w-4xl mx-auto p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-blue-200/30 shadow-inner">
-            <p className="text-lg text-gray-700 leading-relaxed">
+          <div className="max-w-4xl mx-auto p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-blue-200/30 shadow-inner">
+            <p className="text-base text-gray-700 leading-relaxed">
               <strong>Attribution:</strong> All news content is sourced from legitimate RSS feeds. 
               Headlines and excerpts are displayed with proper attribution and link back to original articles.
             </p>
