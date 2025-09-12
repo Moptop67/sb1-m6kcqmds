@@ -69,47 +69,52 @@ const NewsSection = () => {
   };
 
   const NewsCard = ({ article, featured = false }: { article: NewsItem, featured?: boolean }) => (
-    <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${featured ? 'md:flex' : ''}`}>
+    <article className={`bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative ${featured ? 'md:flex' : ''}`}>
+      {/* Card Background Enhancement */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
+      
       {featured && (
         <div className="md:w-1/3">
-          <div className="h-48 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <div className="text-white text-center p-4">
-              <TrendingUp className="h-12 w-12 mx-auto mb-2" />
-              <p className="text-sm font-medium">Featured News</p>
+          <div className="h-48 md:h-full bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"></div>
+            <div className="text-white text-center p-6 relative z-10">
+              <TrendingUp className="h-16 w-16 mx-auto mb-3 animate-pulse drop-shadow-lg" />
+              <p className="text-base font-bold tracking-wide drop-shadow-md">Featured News</p>
             </div>
           </div>
         </div>
       )}
       
-      <div className={featured ? 'md:w-2/3 p-6' : 'p-6'}>
-        <div className="flex items-center justify-between mb-3">
-          <span className={`px-2 py-1 rounded text-xs font-medium ${getCategoryColor(article.category)}`}>
+      <div className={`relative z-10 ${featured ? 'md:w-2/3 p-8' : 'p-6'}`}>
+        <div className="flex items-center justify-between mb-4">
+          <span className={`px-3 py-1 rounded-full text-sm font-semibold shadow-sm ${getCategoryColor(article.category)}`}>
             {getCategoryLabel(article.category)}
           </span>
-          <div className="flex items-center text-sm text-gray-500">
-            <Clock className="h-3 w-3 mr-1" />
+          <div className="flex items-center text-sm text-gray-600 bg-gray-100 rounded-full px-3 py-1">
+            <Clock className="h-4 w-4 mr-2" />
             {article.publishedAt}
           </div>
         </div>
         
-        <h3 className={`font-bold text-gray-900 mb-3 ${featured ? 'text-xl' : 'text-lg'}`}>
+        <h3 className={`font-bold text-gray-900 mb-4 leading-tight ${featured ? 'text-2xl' : 'text-lg'}`}>
           {article.title}
         </h3>
         
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-gray-700 mb-5 line-clamp-3 leading-relaxed">
           {article.excerpt}
         </p>
         
         <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-500 font-medium">{article.source}</span>
+          <span className="text-sm text-gray-600 font-semibold bg-gray-100 px-3 py-1 rounded-full">{article.source}</span>
           <a
             href={article.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center"
+            className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm"
           >
             Read Full Article
-            <ExternalLink className="h-3 w-3 ml-1" />
+            <ExternalLink className="h-4 w-4 ml-2" />
           </a>
         </div>
       </div>
@@ -117,16 +122,22 @@ const NewsSection = () => {
   );
 
   const NewsGrid = ({ title, news, icon }: { title: string, news: NewsItem[], icon: React.ReactNode }) => (
-    <section className="mb-12">
-      <div className="flex items-center mb-6">
+    <section className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+      {/* Grid Section Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-full"></div>
+      
+      <div className="relative z-10">
+      <div className="flex items-center mb-8">
         {icon}
-        <h2 className="text-2xl font-bold text-gray-900 ml-3">{title}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 ml-4">{title}</h2>
       </div>
       
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-8">
         {news.slice(0, 4).map((article) => (
           <NewsCard key={article.id} article={article} />
         ))}
+      </div>
       </div>
     </section>
   );
@@ -153,52 +164,70 @@ const NewsSection = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-16 bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+        {/* Header Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/20 to-transparent rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-200/20 to-transparent rounded-full"></div>
+        
+        <div className="relative z-10">
         <div className="flex items-center justify-center mb-4">
-          <h1 className="text-4xl font-bold text-gray-900">Latest Crypto News</h1>
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-700 bg-clip-text text-transparent">Latest Crypto News</h1>
           <button
             onClick={() => fetchAllNews(true)}
             disabled={refreshing}
-            className="ml-4 p-2 text-blue-600 hover:text-blue-700 disabled:opacity-50"
+            className="ml-6 p-3 text-blue-600 hover:text-blue-700 disabled:opacity-50 bg-blue-50 rounded-full hover:bg-blue-100 transition-all shadow-lg"
             title="Refresh all news"
           >
             <RefreshCw className={`h-5 w-5 ${refreshing ? 'animate-spin' : ''}`} />
           </button>
         </div>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-2xl text-gray-700 max-w-4xl mx-auto font-medium leading-relaxed">
           Real-time crypto news from trusted sources including CoinDesk, Cointelegraph, Decrypt, and more.
         </p>
-        <div className="mt-4 flex items-center justify-center text-sm text-gray-500">
-          <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-          Live RSS feeds • Updates every 15 minutes
+        <div className="mt-6 flex items-center justify-center text-base text-gray-600 bg-green-50 rounded-full px-6 py-3 inline-flex shadow-md">
+          <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+          <span className="font-semibold">Live RSS feeds • Updates every 15 minutes</span>
+        </div>
         </div>
       </div>
 
       {/* Featured News */}
       {featuredNews.length > 0 && (
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Stories</h2>
-          <div className="space-y-8">
+        <section className="mb-20 bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+          {/* Section Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/30 to-purple-50/30"></div>
+          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-purple-200/10 to-transparent rounded-full"></div>
+          
+          <div className="relative z-10">
+          <div className="flex items-center mb-10">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
+              <span className="text-white text-xl">⭐</span>
+            </div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-purple-700 to-indigo-700 bg-clip-text text-transparent">Featured Stories</h2>
+          </div>
+          <div className="space-y-10 relative">
             <NewsCard article={featuredNews[0]} featured={true} />
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-10">
               {featuredNews.slice(1, 3).map((article) => (
                 <NewsCard key={article.id} article={article} />
               ))}
             </div>
           </div>
+          </div>
         </section>
       )}
 
       {/* Category Sections */}
-      <div className="grid lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2">
+      <div className="grid lg:grid-cols-3 gap-16">
+        <div className="lg:col-span-2 space-y-16">
           {bitcoinNews.length > 0 && (
             <NewsGrid 
               title="Bitcoin News" 
               news={bitcoinNews}
-              icon={<div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">₿</div>}
+              icon={<div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">₿</div>}
             />
           )}
           
@@ -206,32 +235,37 @@ const NewsSection = () => {
             <NewsGrid 
               title="DeFi Updates" 
               news={defiNews}
-              icon={<div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">🏦</div>}
+              icon={<div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">🏦</div>}
             />
           )}
         </div>
 
-        {/* Sidebar */}
-        <div>
+        {/* Enhanced Sidebar */}
+        <div className="space-y-10">
           {regulationNews.length > 0 && (
-            <section className="bg-yellow-50 rounded-xl p-6 mb-8">
-              <div className="flex items-center mb-4">
-                <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-white text-sm font-bold">⚖️</div>
-                <h3 className="text-xl font-bold text-gray-900 ml-2">Regulatory Updates</h3>
+            <section className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-8 shadow-2xl border border-yellow-200/50 backdrop-blur-md relative overflow-hidden">
+              {/* Sidebar Section Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/20 to-orange-100/20"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-yellow-200/20 to-transparent rounded-full"></div>
+              
+              <div className="relative z-10">
+              <div className="flex items-center mb-6">
+                <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg">⚖️</div>
+                <h3 className="text-2xl font-bold text-gray-900 ml-3">Regulatory Updates</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {regulationNews.slice(0, 3).map((article) => (
-                  <div key={article.id} className="border-b border-yellow-200 pb-4 last:border-b-0 last:pb-0">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-2">{article.title}</h4>
-                    <p className="text-gray-600 text-sm mb-2 line-clamp-2">{article.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs">
+                  <div key={article.id} className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-yellow-200/30 hover:shadow-lg transition-all">
+                    <h4 className="font-semibold text-gray-900 text-base mb-3">{article.title}</h4>
+                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">{article.excerpt}</p>
+                    <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">{article.source}</span>
                       <a
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 font-medium"
+                        className="text-blue-600 hover:text-blue-700 font-semibold hover:underline"
                       >
                         Read More →
                       </a>
@@ -239,24 +273,34 @@ const NewsSection = () => {
                   </div>
                 ))}
               </div>
+              </div>
             </section>
           )}
 
           {/* News Sources Attribution */}
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">News Sources</h3>
-            <div className="space-y-2 text-sm text-gray-600">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 shadow-2xl border border-blue-200/50 backdrop-blur-md relative overflow-hidden">
+            {/* Attribution Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-indigo-100/20"></div>
+            <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-blue-200/20 to-transparent rounded-full"></div>
+            
+            <div className="relative z-10">
+            <div className="flex items-center mb-6">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-lg shadow-lg">📡</div>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent ml-3">News Sources</h3>
+            </div>
+            <div className="space-y-3 text-base text-gray-700">
               <p>• CoinDesk - Leading crypto news</p>
               <p>• Cointelegraph - Blockchain insights</p>
               <p>• Decrypt - Web3 & crypto culture</p>
               <p>• Bitcoin Magazine - Bitcoin focus</p>
               <p>• The Block - Industry analysis</p>
             </div>
-            <div className="mt-4 p-3 bg-white rounded-lg border">
-              <p className="text-xs text-gray-500">
+            <div className="mt-6 p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-blue-200/30 shadow-inner">
+              <p className="text-sm text-gray-600 leading-relaxed">
                 <strong>Attribution:</strong> All news content is sourced from legitimate RSS feeds. 
                 Headlines and excerpts are displayed with proper attribution and link back to original articles.
               </p>
+            </div>
             </div>
           </div>
         </div>
