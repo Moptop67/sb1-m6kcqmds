@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Globe, Shield, CheckCircle, AlertTriangle, FileText, Users, TrendingUp, ArrowLeft, XCircle } from 'lucide-react';
+import { Globe, Shield, CheckCircle, AlertTriangle, FileText, Users } from 'lucide-react';
 
 const RegulatoryCompliance = () => {
   const [selectedCountry, setSelectedCountry] = useState('australia');
