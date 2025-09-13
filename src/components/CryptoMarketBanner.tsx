@@ -26,7 +26,7 @@ const CryptoMarketBanner = () => {
       );
       
       if (!response.ok) {
-        throw new Error('Failed to fetch crypto data');
+        throw new Error(`Failed to fetch crypto data: ${response.status} ${response.statusText}`);
       }
       
       const data = await response.json();
@@ -64,8 +64,8 @@ const CryptoMarketBanner = () => {
   useEffect(() => {
     fetchCryptoData();
     
-    // Update every 2 minutes (respecting API rate limits)
-    const interval = setInterval(fetchCryptoData, 2 * 60 * 1000);
+    // Update every 5 minutes (respecting API rate limits)
+    const interval = setInterval(fetchCryptoData, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
