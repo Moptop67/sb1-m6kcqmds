@@ -564,283 +564,297 @@ const RegulatoryCompliance = () => {
           </div>
         )}
 
-        {/* Nigeria Guide */}
-        {selectedCountry === 'nigeria' && (
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="flex items-center mb-6">
-              <span className="text-4xl mr-4">🇳🇬</span>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900">Nigeria Crypto Guide 2025</h2>
-                <p className="text-gray-600">Complete guide to cryptocurrency in Nigeria</p>
-              </div>
+        {/* Vietnam Guide */}
+        {selectedCountry === 'vietnam' && (
+          <div className="space-y-12">
+            {/* Header */}
+            <div className="text-center">
+              <div className="text-6xl mb-4">🇻🇳</div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                CryptoStarted Guide: How to Begin With Crypto in Vietnam (2025)
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Planning to start with crypto in Vietnam? CryptoStarted Guide helps by covering the latest laws, 
+                best local/global exchanges, and practical instructions for converting Vietnamese dong (VND) and digital assets.
+              </p>
             </div>
 
             {/* Legal Status */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in Nigeria?</h3>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-green-800 font-semibold mb-2">Yes - Legal and Regulated</p>
-                    <p className="text-green-700">
-                      Crypto is legal and strictly regulated in Nigeria. The Investments and Securities Act (ISA 2025) 
-                      recognizes digital assets as financial securities and commodities under SEC oversight. All exchanges 
-                      must be registered/licensed with the Nigerian Securities and Exchange Commission (SEC).
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Is Crypto Legal in Vietnam?</h3>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-600 mb-4">
+                  Vietnam's stance on crypto has shifted substantially. As of June 2025, the Law on Digital Technology Industry 
+                  establishes a framework, recognizes crypto assets, and mandates registration, strict KYC/AML, and cybersecurity. 
+                  However, crypto cannot be used for payments, and only licensed Vietnamese exchanges can offer trading.
+                </p>
+                <p className="text-gray-600">
+                  A five-year government-led pilot (2025–2029) now regulates domestic exchanges with robust compliance and controls. 
+                  Foreign platforms must be locally licensed, meet capital minimums, and limit foreign ownership to 49%.
+                </p>
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-900 mb-2">Regulatory Framework</h4>
-                  <ul className="text-blue-800 text-sm space-y-1">
-                    <li>• Investments and Securities Act (ISA 2025)</li>
-                    <li>• SEC licensing required for all exchanges</li>
-                    <li>• Banks can serve crypto companies</li>
-                    <li>• Strict AML/KYC enforcement</li>
-                  </ul>
-                </div>
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-yellow-900 mb-2">Key Requirements</h4>
-                  <ul className="text-yellow-800 text-sm space-y-1">
-                    <li>• Only licensed exchanges for fiat-crypto</li>
-                    <li>• Full KYC verification required</li>
-                    <li>• Crypto taxed as securities/commodities</li>
-                    <li>• Corporate usage under scrutiny</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+            </div>
 
             {/* Getting Started */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Getting Started: Steps for Beginners</h3>
+            <div className="bg-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Getting Started: Steps for Beginners</h3>
               <div className="space-y-4">
-                {[
-                  'Select a SEC-licensed exchange from the options below',
-                  'Complete KYC: Submit government ID, selfie, and proof of address',
-                  'Deposit Naira (NGN): Use bank transfer, debit card, Paystack, Flutterwave, or P2P',
-                  'Buy crypto: Start with Bitcoin, Ethereum, USDT, or other supported coins',
-                  'Protect your funds: Enable 2FA, strong passwords, and move large holdings to personal wallet'
-                ].map((step, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <p className="text-gray-700">{step}</p>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Register with a licensed Vietnamese exchange</h4>
+                    <p className="text-gray-600 text-sm">See list below for approved platforms</p>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Complete KYC</h4>
+                    <p className="text-gray-600 text-sm">Submit ID, proof of address, and biometric (selfie) verification</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Deposit VND</h4>
+                    <p className="text-gray-600 text-sm">Use bank transfer, MoMo, Vietcombank, Unlimit, or other approved onramps</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Buy crypto</h4>
+                    <p className="text-gray-600 text-sm">Trade Bitcoin, Ethereum, and other assets—no stablecoin or cash payments</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Secure your funds</h4>
+                    <p className="text-gray-600 text-sm">Enable two-factor authentication, strong passwords, and use personal wallets for larger balances</p>
+                  </div>
+                </div>
               </div>
-            </section>
+            </div>
 
-            {/* Best Exchanges */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Best Crypto Exchanges for Nigeria (2025)</h3>
+            {/* Exchanges */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Best Crypto Exchanges for Vietnam (2025)</h3>
               
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">Top Centralized Exchanges</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full bg-white border border-gray-200 rounded-lg">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">NGN Deposit</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      {[
-                        { name: 'Binance', deposit: 'P2P', features: 'Largest, NGN support, high liquidity', kyc: 'Yes' },
-                        { name: 'Bybit', deposit: 'P2P', features: 'Strong for derivatives/spot, NGN P2P', kyc: 'Yes' },
-                        { name: 'Bitget', deposit: 'Crypto/P2P', features: 'Copy trading leader, P2P, spot & futures', kyc: 'Yes' },
-                        { name: 'Luno', deposit: 'Direct', features: 'Fully regulated NGN deposits, easy interface', kyc: 'Yes' },
-                        { name: 'Quidax', deposit: 'Direct', features: 'Africa-focused, supports many coins', kyc: 'Yes' },
-                        { name: 'NairaEx', deposit: 'Direct', features: 'Longstanding reputation, instant trades', kyc: 'Yes' },
-                        { name: 'Busha', deposit: 'Direct', features: 'Local exchange, great for beginners', kyc: 'Yes' }
-                      ].map((exchange, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
-                          <td className="px-4 py-3 font-medium text-gray-900">{exchange.name}</td>
-                          <td className="px-4 py-3 text-gray-700">{exchange.deposit}</td>
-                          <td className="px-4 py-3 text-gray-700">{exchange.features}</td>
-                          <td className="px-4 py-3">
-                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
-                              {exchange.kyc}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Top Centralized Exchanges</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Exchange</th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Features</th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">VND Deposit/Withdrawal</th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">KYC</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="py-3 px-4 font-medium">Binance Vietnam</td>
+                      <td className="py-3 px-4 text-sm">Most trusted, MoMo/Vietcombank bank/Unlimit support, lowest fees, multi-lingual</td>
+                      <td className="py-3 px-4 text-center text-green-600">Yes (MoMo, VCB, Unlimit, bank)</td>
+                      <td className="py-3 px-4 text-center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4 font-medium">OKX</td>
+                      <td className="py-3 px-4 text-sm">DeFi integration, Web3, global liquidity, beginner-friendly</td>
+                      <td className="py-3 px-4 text-center text-green-600">Yes (bank, Unlimit)</td>
+                      <td className="py-3 px-4 text-center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4 font-medium">Bitget</td>
+                      <td className="py-3 px-4 text-sm">P2P leader, low fees, expanded VND support</td>
+                      <td className="py-3 px-4 text-center text-green-600">Yes (bank/P2P)</td>
+                      <td className="py-3 px-4 text-center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4 font-medium">Bybit</td>
+                      <td className="py-3 px-4 text-sm">Pilot program partner, offers compliance support and VND ramps</td>
+                      <td className="py-3 px-4 text-center text-green-600">Yes (bank transfer, Unlimit, P2P)</td>
+                      <td className="py-3 px-4 text-center">Yes</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">Leading Global & Africa-Based Platforms</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full bg-white border border-gray-200 rounded-lg">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">NGN Support</th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      {[
-                        { name: 'KuCoin', features: 'Best for altcoins, advanced P2P', support: 'Yes (P2P)', kyc: 'Yes' },
-                        { name: 'OKX', features: 'Top multi-asset security', support: 'Yes (P2P)', kyc: 'Yes' },
-                        { name: 'Yellow Card', features: 'Nigeria-based, direct NGN deposits', support: 'Yes', kyc: 'Yes' },
-                        { name: 'Prestmit/Breet', features: 'NGN off-ramp, USDT/USDC liquidity', support: 'Yes', kyc: 'Yes' }
-                      ].map((exchange, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
-                          <td className="px-4 py-3 font-medium text-gray-900">{exchange.name}</td>
-                          <td className="px-4 py-3 text-gray-700">{exchange.features}</td>
-                          <td className="px-4 py-3 text-gray-700">{exchange.support}</td>
-                          <td className="px-4 py-3">
-                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
-                              {exchange.kyc}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
+              <p className="text-sm text-gray-600 mt-4">
+                All above platforms conform with government pilot program and VND-only rules for offering crypto trading in Vietnam.
+              </p>
+            </div>
 
             {/* On/Off Ramps */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: NGN and Crypto</h3>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: Move Between VND and Crypto</h3>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-6">
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-900 mb-4">Best On-Ramp Methods</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-green-800">Local exchanges:</span>
-                        <p className="text-green-700 text-sm">Luno, Quidax, NairaEx, Busha, Yellow Card - secure direct NGN deposits</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-green-800">P2P on global exchanges:</span>
-                        <p className="text-green-700 text-sm">Binance, Bybit, KuCoin, OKX - verified sellers with escrow</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-green-800">Fintech/payments:</span>
-                        <p className="text-green-700 text-sm">Flutterwave, Paystack support at compliant exchanges</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-900 mb-4">Best Off-Ramp Methods</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-blue-800">Local exchanges:</span>
-                        <p className="text-blue-700 text-sm">Instant NGN withdrawal after crypto sale</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-blue-800">Instant off-ramp apps:</span>
-                        <p className="text-blue-700 text-sm">Breet, Prestmit - convert USDT/USDC to NGN fast</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                      <div>
-                        <span className="font-medium text-blue-800">P2P platforms:</span>
-                        <p className="text-blue-700 text-sm">Sell crypto using escrow protection</p>
-                      </div>
-                    </li>
-                  </ul>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">What Are On/Off Ramps?</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <strong className="text-gray-900">On-ramp:</strong>
+                      <span className="text-gray-600"> Deposit Vietnamese dong to buy crypto through approved channels.</span>
+                    </div>
+                    <div>
+                      <strong className="text-gray-900">Off-ramp:</strong>
+                      <span className="text-gray-600"> Sell crypto and withdraw VND directly to your bank or e-wallet.</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* FAQ */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">On/Off Ramp FAQs</h4>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h5 className="font-medium text-gray-900 mb-2">Is KYC required?</h5>
-                    <p className="text-gray-700 text-sm mb-4">Yes - full ID, selfie, and address required at all licensed exchanges.</p>
-                    
-                    <h5 className="font-medium text-gray-900 mb-2">Are there limits?</h5>
-                    <p className="text-gray-700 text-sm">Yes - deposits/withdrawals capped based on user tier and bank limits.</p>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-gray-900 mb-2">Are transactions taxable?</h5>
-                    <p className="text-gray-700 text-sm mb-4">Yes - traders must report crypto earnings for taxation.</p>
-                    
-                    <h5 className="font-medium text-gray-900 mb-2">How fast are NGN ramps?</h5>
-                    <p className="text-gray-700 text-sm">Bank/wallet withdrawals are instant or within 1 business day.</p>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Best On-Ramp Methods</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">Local exchanges:</strong>
+                        <span className="text-gray-600"> Binance Vietnam, OKX, Bitget, Bybit enable fast VND deposit by bank transfer, MoMo, Unlimit, or P2P</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">Onramp platforms:</strong>
+                        <span className="text-gray-600"> Banxa, Alchemy Pay, Unlimit, and Onramper support VND deposits and direct crypto purchases</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">Approved P2P:</strong>
+                        <span className="text-gray-600"> Peer-to-peer purchases on Bitget or Bybit, using locally licensed verified accounts</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Best Off-Ramp Methods</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">Sell on local exchange:</strong>
+                        <span className="text-gray-600"> Binance, OKX, Bybit, Bitget allow selling crypto for VND, withdrawn instantly to bank, MoMo, or Unlimit</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">Off-ramp platforms:</strong>
+                        <span className="text-gray-600"> Onramper and Banxa streamline crypto-to-VND conversion for quick bank/e-wallet settlement</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-gray-900">P2P:</strong>
+                        <span className="text-gray-600"> Approved sellers offer direct VND payouts. Always check for government or exchange verification</span>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </section>
+            </div>
+
+            {/* FAQ */}
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">On/Off Ramp FAQs</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Is KYC required?</h4>
+                  <p className="text-gray-600 text-sm">Yes—all legal platforms require full identity and address verification.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Are there limits?</h4>
+                  <p className="text-gray-600 text-sm">Yes—platforms set deposit, trade, and withdrawal limits per user, based on KYC and capital rules.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Are transactions taxable?</h4>
+                  <p className="text-gray-600 text-sm">Yes—crypto is taxed under Vietnam's new law, with draft implementation for capital gains and income taxes.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">How fast are transfers?</h4>
+                  <p className="text-gray-600 text-sm">VND ramps (MoMo, bank) settle near-instantly; withdrawals usually finish the same day or within 24 hours.</p>
+                </div>
+              </div>
+            </div>
 
             {/* Tax & Compliance */}
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tax & Compliance Essentials</h3>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-yellow-800">All crypto exchanges and VASPs must hold a SEC license - penalties for illegal activity are severe.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-yellow-800">Crypto is taxed as a security/commodity - keep detailed records for annual filings.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-yellow-800">Always use verified, licensed exchanges - avoid Telegram/WhatsApp OTC trading.</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Tax & Compliance Essentials</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Crypto is recognized as an asset and taxed under the new digital law; draft rules suggest declaration of gains/losses</span>
+                </li>
+                <li className="flex items-start">
+                  <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">All trading and conversions must occur in VND via locally licensed exchanges—no stablecoins, cash, or foreign currency payments allowed</span>
+                </li>
+                <li className="flex items-start">
+                  <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Only use authorized, compliant platforms and report holdings and trades when filing income tax; keep up-to-date as rules develop into 2026</span>
+                </li>
+              </ul>
+            </div>
 
             {/* Quick Checklist */}
-            <section>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Beginner Checklist</h3>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <ul className="space-y-3">
-                  {[
-                    'Register with a SEC-licensed exchange (Luno, Quidax, Binance P2P, etc.)',
-                    'Complete KYC with valid government ID and proof of address',
-                    'Use only regulated NGN onramp/offramp methods',
-                    'Enable 2FA, secure passwords, and transfer large volumes to hardware wallet',
-                    'Follow CryptoStarted Guide for up-to-date regulations and scam alerts'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
-                      <span className="text-green-800">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="bg-green-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Beginner Checklist</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Register with a licensed, compliant Vietnamese exchange</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Prepare ID, address, and payment methods for KYC onboarding</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Compare fees, VND ramps, coin offerings, and platform security</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Protect funds with two-factor authentication</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Use personal wallets for larger amounts</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                    <span className="text-gray-700">Bookmark CryptoStarted Guide for live regulation news</span>
+                  </div>
+                </div>
               </div>
-            </section>
+            </div>
+
+            {/* Summary */}
+            <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-8 text-white text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Start with Crypto in Vietnam?</h3>
+              <p className="text-green-100 mb-6 max-w-3xl mx-auto">
+                CryptoStarted Guide ensures a safe, legal, and practical crypto journey in Vietnam—combining top exchanges, 
+                strict compliance, and instant VND on/off ramps for 2025.
+              </p>
+              <button className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started with Vietnamese Exchanges
+              </button>
+            </div>
           </div>
         )}
 
         {/* Coming Soon Countries */}
-        {selectedCountry && !['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(selectedCountry) && (
+        {selectedCountry && !['australia', 'usa', 'india', 'brazil', 'ukraine', 'vietnam'].includes(selectedCountry) && (
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <FileText className="h-10 w-10 text-gray-400" />
@@ -865,7 +879,7 @@ const RegulatoryCompliance = () => {
                     key={country.id}
                     onClick={() => setSelectedCountry(country.id)}
                     className={`p-6 rounded-xl border-2 transition-all hover:shadow-lg ${
-                      ['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(country.id)
+                      ['australia', 'usa', 'india', 'brazil', 'ukraine', 'vietnam'].includes(country.id)
                         ? 'border-green-200 bg-green-50 hover:border-green-300'
                         : 'border-gray-200 bg-gray-50 hover:border-gray-300'
                     }`}
@@ -873,7 +887,7 @@ const RegulatoryCompliance = () => {
                     <div className="text-4xl mb-3">{country.flag}</div>
                     <h3 className="font-semibold text-gray-900 mb-2">{country.name}</h3>
                     <div className="flex items-center justify-center">
-                      {['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(country.id) ? (
+                      {['australia', 'usa', 'india', 'brazil', 'ukraine', 'vietnam'].includes(country.id) ? (
                         <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                           Complete Guide
                         </span>
