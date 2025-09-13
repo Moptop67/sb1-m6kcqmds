@@ -422,11 +422,141 @@ const NewsSection = () => {
       {/* Bitcoin News */}
       {bitcoinNews.length > 0 && (
         <div className="mb-20">
-          <NewsGrid 
-            title="Bitcoin News" 
-            news={bitcoinNews} 
-            icon={<div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">₿</div>}
-          />
+          <section className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+            {/* Section Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-full"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center mb-8">
+                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">📊</div>
+                <h2 className="text-3xl font-bold text-gray-900 ml-4">Weekly Crypto Market Update</h2>
+              </div>
+              
+              {/* Weekly Market Update Article */}
+              <article className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <header className="mb-6">
+                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                    Weekly Crypto Market Update & On-Chain Insights – September 13, 2025
+                  </h1>
+                  <p className="text-gray-600 text-sm">
+                    Stay ahead of the markets with the latest cryptocurrency news, price trends, and on-chain data. 
+                    In this week's report: Bitcoin's push higher, key macro drivers, the latest regulatory news, 
+                    and detailed blockchain activity metrics shaping crypto investment decisions.
+                  </p>
+                </header>
+                
+                <div className="prose prose-lg max-w-none">
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Crypto Market Performance Overview</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      The global crypto market cap surged 1.5% this week to reach $4.12 trillion, powered by renewed risk appetite 
+                      and macroeconomic drivers. Bitcoin (BTC) broke above $114,000, with technical analysis pointing to possible 
+                      targets above $126,000 for September based on robust spot flows and ETF inflows. Ethereum (ETH) and Solana (SOL) 
+                      took different paths—ETH dipped slightly, while SOL rallied sharply, though network activity and participation 
+                      data suggest caution for its upward momentum.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mt-3">
+                      Altcoins experienced mixed fortunes. While majors like XRP and Cardano corrected, high-performing tokens such 
+                      as Polygon and Loopring posted double-digit weekly gains, highlighting sector rotation opportunities among 
+                      trending cryptocurrencies.
+                    </p>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Top Crypto News & Macro Drivers</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>Federal Reserve Policy:</strong> The crypto community is speculating on a September US Fed rate cut, 
+                          which is supporting bullish price action and influencing institutional inflows.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>Regulation & Exchange News:</strong> Progress between US regulatory agencies and the fast-approaching 
+                          European MiCA framework have prompted repositioning, while news around FTX creditor repayments continues to 
+                          impact sector sentiment.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>Token Unlocks & Volatility:</strong> Over $4.5 billion in token unlocks are scheduled for September, 
+                          setting the stage for increased volatility and major protocol price swings around key dates.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>On-Chain Adoption:</strong> Ripple's record $6 billion in network settlements and chatter around new 
+                          crypto ETFs are boosting positive sentiment among blockchain investors.
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">On-Chain Data: Key Metrics & Interpretations</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      This week's on-chain data across major blockchains reveals several notable trends:
+                    </p>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>Bitcoin Metrics:</strong> Nearly 936,000 active BTC addresses and falling exchange balances show 
+                          investor confidence and reduced short-term selling pressure. Large "whale" holders and positive ETF inflows 
+                          point to continued accumulation, supporting potential for a fresh rally if macro conditions allow. Watch for 
+                          price reactions around the $110,000 level—a technical and on-chain support zone.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>Ethereum Network:</strong> Daily transaction fees hit $1.4 million, reflecting surging DeFi and NFT 
+                          activity. High Layer-2 transaction volumes on networks like Arbitrum and Optimism indicate healthy migration 
+                          without hurting overall Ethereum network engagement.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-gray-700 leading-relaxed">
+                          <strong>XRP Ledger Growth:</strong> XRP saw a 13% jump in wallets since February, primarily driven by smaller 
+                          new entrants (1 XRP wallets up 45%). However, only a portion of these wallets are actively transacting, so 
+                          interpret headline growth numbers with nuance—real network utility follows behind raw signup metrics.
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Market Outlook & Action Points</h3>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2">
+                      <li>
+                        <strong>Liquidity & Supply:</strong> Lower BTC and ETH exchange reserves, supported by continued corporate 
+                        and ETF accumulation, indicate tightening liquidity and a bullish structural backdrop barring external shocks.
+                      </li>
+                      <li>
+                        <strong>Community Adoption:</strong> Rising wallet numbers (especially in XRP) and strong blockchain fee 
+                        metrics show the user base is evolving rapidly. This supports the case for continued capital inflows during 
+                        favorable market cycles.
+                      </li>
+                      <li>
+                        <strong>Volatility Caution:</strong> Prepare for volatility linked to scheduled token unlocks, macro events 
+                        like the Fed meeting, and regulatory updates, all of which can drive rapid price moves.
+                      </li>
+                    </ul>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Conclusion</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      The overall trend for the crypto market in September remains positive, underpinned by constructive regulatory 
+                      developments, bullish on-chain metrics, and ongoing institutional adoption. Stay tuned for more weekly updates 
+                      tracking the latest crypto prices, blockchain analytics, and market forecasts to inform smarter trading and 
+                      investment decisions.
+                    </p>
+                  </section>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       )}
 
