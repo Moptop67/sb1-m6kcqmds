@@ -313,6 +313,12 @@ const RegulatoryCompliance = () => {
                   <a
                     href="/learn"
                     className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+                  >
+                    Learn Crypto Basics
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                    Learn More
+                    <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
                 </div>
               </div>
