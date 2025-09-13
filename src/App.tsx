@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
 import LearnCrypto from './pages/LearnCrypto';
 import ToolsReviews from './pages/ToolsReviews';
-import NewsAnalysis from './pages/NewsAnalysis';
 import RegulatoryCompliance from './pages/RegulatoryCompliance';
 import StartHere from './pages/StartHere';
 import BeginnerGuide from './pages/BeginnerGuide';
@@ -27,7 +26,6 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/learn" element={<LearnCrypto />} />
           <Route path="/tools" element={<ToolsReviews />} />
-          <Route path="/news" element={<NewsAnalysis />} />
           <Route path="/regulatory-compliance" element={<RegulatoryCompliance />} />
           <Route path="/start-here" element={<StartHere />} />
           <Route path="/guide/beginner-bitcoin" element={<BeginnerGuide />} />

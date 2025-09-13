@@ -62,6 +62,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onMouseEnter={() => setIsToolsDropdownOpen(true)}
+                onMouseLeave={() => setIsToolsDropdownOpen(false)}
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-900 font-medium"
               >
                 <span>Tools & Reviews</span>
@@ -92,7 +93,7 @@ const Header = () => {
               )}
             </div>
             
-            <Link to="/news" className="text-gray-700 hover:text-blue-900 font-medium">
+            <Link to="/regulatory-compliance" className="text-gray-700 hover:text-blue-900 font-medium">
               Regulatory Compliance
             </Link>
             <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
@@ -122,7 +123,7 @@ const Header = () => {
               <Link to="/tools" className="text-gray-700 hover:text-blue-900">
                 Tools & Reviews
               </Link>
-              <Link to="/news" className="text-gray-700 hover:text-blue-900">
+              <Link to="/regulatory-compliance" className="text-gray-700 hover:text-blue-900">
                 Regulatory Compliance
               </Link>
               <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors w-full">
