@@ -33,6 +33,8 @@ function App() {
           <Route path="/review/binance" element={<BinanceReview />} />
           <Route path="/review/coinbase" element={<CoinbaseReview />} />
           <Route path="/review/kucoin" element={<KuCoinReview />} />
+          {/* Debug route */}
+          <Route path="/debug" element={<div className="p-8"><h1>Debug Page</h1><p>Routing is working!</p></div>} />
         </Routes>
         <Footer />
       </div>

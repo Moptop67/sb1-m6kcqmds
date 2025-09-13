@@ -109,6 +109,11 @@ const Header = () => {
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
+        
+        {/* Debug: Check current route */}
+        <div className="text-center mt-4 text-gray-500 text-xs">
+          Current URL: {window.location.pathname}
+        </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
