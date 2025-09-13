@@ -45,6 +45,262 @@ const RegulatoryCompliance = () => {
           <CheckCircle className="h-5 w-5 text-blue-600" />
         )}
       </div>
+        {/* Brazil Guide */}
+        {selectedCountry === 'brazil' && (
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-center mb-6">
+              <span className="text-4xl mr-4">🇧🇷</span>
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">CryptoStarted Guide: How to Begin With Crypto in Brazil (2025)</h1>
+                <p className="text-gray-600 mt-2">Ready to buy your first cryptocurrency in Brazil? CryptoStarted Guide keeps it simple—covering local laws, top exchanges, essential buying/selling steps, and reliable ways to convert between BRL and crypto.</p>
+              </div>
+            </div>
+
+            {/* Legal Status */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in Brazil?</h2>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-green-800 font-semibold mb-2">Cryptocurrency is fully legal in Brazil</p>
+                    <p className="text-green-700">
+                      Regulated framework under Federal Law No. 14.478/2022. Key agencies—Banco Central do Brasil (BCB) and CVM (Securities Commission)—require exchanges to be registered, follow strict AML/KYC compliance, and maintain transparent transaction reporting. New comprehensive rules covering licensing and asset tokenization are set to roll out through 2025–2026.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Getting Started */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Getting Started: Simple Steps for Beginners</h2>
+              <div className="space-y-4">
+                {[
+                  'Pick a trusted Brazilian exchange: See the list below for the best options.',
+                  'Verify your account (KYC): Upload CPF (tax ID), photo ID, proof of address.',
+                  'Deposit BRL: Use Pix (instant payment system), bank transfer, boleto, debit/credit card.',
+                  'Buy crypto: Instantly purchase Bitcoin, Ethereum, stablecoins, or other tokens.',
+                  'Secure your funds: Use strong passwords, activate two-factor authentication, and transfer large holdings to personal wallets for added safety.'
+                ].map((step, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <p className="text-gray-700">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Local Exchanges */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Best Crypto Exchanges for Brazil (2025)</h2>
+              
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Top Local Centralized Exchanges</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full bg-white border border-gray-200 rounded-lg">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Features</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">BRL Deposit</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {[
+                        { name: 'Mercado Bitcoin', features: '300+ coins, asset tokenization, trusted & regulated', brl: 'Yes', kyc: 'CPF' },
+                        { name: 'Foxbit', features: '100+ coins, low fees, Pix, simple app', brl: 'Yes', kyc: 'CPF' },
+                        { name: 'NovaDAX', features: '500+ coins, competitive fees, Pix & bank transfer', brl: 'Yes', kyc: 'CPF' },
+                        { name: 'Bitso', features: 'Pan-Latin platform, low fees, deep liquidity', brl: 'Yes', kyc: 'CPF' },
+                        { name: 'Binance Brazil', features: '400+ coins, lowest spot fees, global liquidity', brl: 'Yes', kyc: 'Photo ID' }
+                      ].map((exchange, index) => (
+                        <tr key={index}>
+                          <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                          <td className="px-6 py-4 text-gray-600">{exchange.features}</td>
+                          <td className="px-6 py-4 text-green-600 font-medium">{exchange.brl}</td>
+                          <td className="px-6 py-4 text-gray-600">{exchange.kyc}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">
+                  <strong>Note:</strong> Pix, Brazil's instant payment system, is supported at all exchanges for fast deposits and withdrawals.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Leading Global Exchanges for Brazilians</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full bg-white border border-gray-200 rounded-lg">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Market Reach</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">BRL On/Off Ramp</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {[
+                        { name: 'Binance', reach: 'Largest global exchange', ramp: 'Yes (Pix, bank, P2P)', kyc: 'Photo ID' },
+                        { name: 'Bitso', reach: 'Latin America-wide, deep liquidity', ramp: 'Yes (Pix, bank)', kyc: 'CPF' },
+                        { name: 'Bybit', reach: 'Global, powerful tools', ramp: 'Yes (P2P, stablecoins)', kyc: 'Photo ID' }
+                      ].map((exchange, index) => (
+                        <tr key={index}>
+                          <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                          <td className="px-6 py-4 text-gray-600">{exchange.reach}</td>
+                          <td className="px-6 py-4 text-green-600 font-medium">{exchange.ramp}</td>
+                          <td className="px-6 py-4 text-gray-600">{exchange.kyc}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+            {/* On/Off Ramps */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: Move Between BRL and Crypto</h2>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-bold text-blue-900 mb-3">What Are On/Off Ramps?</h3>
+                <ul className="text-blue-800 space-y-2">
+                  <li><strong>On-ramp:</strong> Deposit BRL to buy crypto—using Pix, bank, or third-party methods.</li>
+                  <li><strong>Off-ramp:</strong> Sell crypto for BRL and withdraw instantly to your bank or through Pix.</li>
+                </ul>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Best On-Ramp Options</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Local exchanges:</strong> Mercado Bitcoin, Foxbit, NovaDAX, Bitso, and Binance Brazil all offer Pix, bank transfer, and boleto for BRL deposits.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Global access:</strong> Binance and Bitso allow BRL on-ramps through their Brazilian platforms, supporting Pix and P2P options.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Fiat-to-crypto platforms:</strong> OneSafe and Onramper streamline BRL-to-crypto onboarding.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Best Off-Ramp Methods</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Local exchanges:</strong> Sell crypto for BRL and withdraw to bank or Pix—usually near-instant, with low fees.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Global exchanges:</strong> Binance Brazil and Bitso offer P2P and Pix off-ramps for crypto sales.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong>Dedicated off-ramp services:</strong> OneSafe accelerates crypto-to-BRL payout, reducing fees and delays.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">On/Off Ramp FAQs</h2>
+              <div className="space-y-6">
+                {[
+                  { q: 'KYC required?', a: 'Yes—every reputable ramp asks for CPF (Brazilian tax ID), photo ID, and proof of address.' },
+                  { q: 'Limits?', a: 'Deposit/withdrawal limits vary by platform, but Pix often allows very high caps for verified users.' },
+                  { q: 'Tax obligations?', a: 'Brazilians must report all crypto profits; currently, capital gains and regular income apply, plus annual declarations for transactions exceeding R$35,000.' },
+                  { q: 'Transfer speed?', a: 'Pix enables almost instant deposits/withdrawals, and most exchanges process on/off ramps within 1–2 business days.' }
+                ].map((faq, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-6">
+                    <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
+                    <p className="text-gray-700">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Tax & Compliance */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Tax & Compliance Essentials</h2>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span>Crypto profits are subject to progressive tax rates in Brazil; consult a registered tax advisor for current details.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span>All transactions above R$35,000/year must be declared using Receita Federal forms.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span>Only use registered, CVM/BCB-compliant exchanges and never share personal keys or credentials.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span>Regulation is rapidly evolving; bookmark CryptoStarted Guide for news and the latest regulatory updates.</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Checklist */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Beginner Checklist</h2>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  {[
+                    'Register with a leading, KYC-compliant exchange (Mercado Bitcoin, Foxbit, etc.)',
+                    'Prepare your CPF, photo ID, and proof of address',
+                    'Compare fees, coins, on/off ramp methods, and security features',
+                    'Activate 2FA, use strong passwords, and move larger holdings to personal wallets',
+                    'Stay updated at CryptoStarted Guide for fresh regulatory news, scams, and best exchange reviews'
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                      <span className="text-green-800">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+            {/* Back Button */}
+            <button
+              onClick={() => setSelectedCountry(null)}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Country Selection
+            </button>
+          </div>
+        )}
+
       <div className="flex items-center justify-between text-sm">
         <span className="text-gray-600">{country.users} crypto users</span>
         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(country.status)}`}>
