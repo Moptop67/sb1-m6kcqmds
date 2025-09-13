@@ -158,6 +158,12 @@ const ToolsReviews = () => {
                     Sign Up
                     <ExternalLink className="h-3 w-3 ml-1" />
                   </a>
+                  <Link
+                    to={`/review/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center transition-colors block text-center"
+                  >
+                    Read Full Review
+                  </Link>
                   {item.bonus && (
                     <div className="text-xs text-green-600 font-medium">
                       🎁 {item.bonus}
