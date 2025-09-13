@@ -577,9 +577,9 @@ const NewsSection = () => {
               {/* Weekly Update Article */}
               <article className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <header className="mb-6">
-                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Global Regulatory Challenges Roil Crypto Markets This Week
-                  </h1>
+                  </h2>
                   <p className="text-gray-600 text-sm">Published September 13, 2025</p>
                 </header>
                 
