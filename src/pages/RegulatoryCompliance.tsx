@@ -324,6 +324,23 @@ const RegulatoryCompliance = () => {
                       <p className="text-gray-700">{selectedCountryData.details.restrictions}</p>
                     </div>
 
+                    {selectedCountryData.details.penalties && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                        <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
+                          <AlertTriangle className="h-5 w-5 mr-2" />
+                          Penalties & Enforcement
+                        </h3>
+                        <p className="text-red-700">{selectedCountryData.details.penalties}</p>
+                      </div>
+                    )}
+
+                    {selectedCountryData.details.updates && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h3 className="text-lg font-bold text-blue-800 mb-3">📅 Recent Updates</h3>
+                        <p className="text-blue-700">{selectedCountryData.details.updates}</p>
+                      </div>
+                    )}
+
                     {selectedCountryData.status === 'regulated' && (
                       <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                         <h3 className="text-lg font-bold text-green-800 mb-2">✅ Compliance Tips</h3>
@@ -332,6 +349,8 @@ const RegulatoryCompliance = () => {
                           <li>• Use regulated exchanges with proper licensing</li>
                           <li>• Report crypto gains according to local tax laws</li>
                           <li>• Complete KYC verification on all platforms</li>
+                          <li>• Stay updated on regulatory changes</li>
+                          <li>• Consider professional tax advice for large holdings</li>
                         </ul>
                       </div>
                     )}
@@ -342,23 +361,6 @@ const RegulatoryCompliance = () => {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="/tools"
-                  {selectedCountryData.details.penalties && (
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
-                        <AlertTriangle className="h-5 w-5 mr-2" />
-                        Penalties & Enforcement
-                      </h3>
-                      <p className="text-red-700">{selectedCountryData.details.penalties}</p>
-                    </div>
-                  )}
-
-                  {selectedCountryData.details.updates && (
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-blue-800 mb-3">📅 Recent Updates</h3>
-                      <p className="text-blue-700">{selectedCountryData.details.updates}</p>
-                    </div>
-                  )}
-
                     className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
                     View Recommended Exchanges
@@ -375,8 +377,6 @@ const RegulatoryCompliance = () => {
                     href="/regulatory-compliance"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
-                        <li>• Stay updated on regulatory changes</li>
-                        <li>• Consider professional tax advice for large holdings</li>
                     Learn More
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
