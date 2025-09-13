@@ -200,9 +200,9 @@ const NewsSection = () => {
   };
 
   const NewsCard = ({ article, featured = false }: { article: NewsItem, featured?: boolean }) => (
-    <article className={`bg-white/98 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-white/40 relative ${featured ? 'md:flex' : ''}`}>
+    <article className={`bg-green-50/95 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-green-200/50 relative ${featured ? 'md:flex' : ''}`}>
       {/* Card Background Enhancement */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-gray-50/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50/60 to-green-100/40 pointer-events-none"></div>
       
       {featured && (
         <div className="md:w-1/3">
