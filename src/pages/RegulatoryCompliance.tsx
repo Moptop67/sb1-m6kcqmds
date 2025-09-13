@@ -11,13 +11,16 @@ const RegulatoryCompliance = () => {
       code: 'US',
       flag: '🇺🇸',
       status: 'regulated',
-      summary: 'Complex regulatory framework with state-by-state variations',
+      summary: 'Complex federal and state regulatory framework with comprehensive oversight',
       details: {
-        legal: 'Legal with extensive regulations',
-        exchanges: ['Coinbase', 'Kraken', 'Gemini'],
-        restrictions: 'Some states have additional requirements',
-        taxes: 'Capital gains tax applies',
-        kyc: 'Strict KYC/AML requirements'
+        legal: 'Legal and regulated by multiple agencies including SEC, CFTC, FinCEN, and state regulators. Bitcoin classified as commodity, most altcoins as securities.',
+        exchanges: ['Coinbase', 'Kraken', 'Gemini', 'Binance.US'],
+        restrictions: 'Some states like New York require BitLicense. Certain DeFi protocols restricted. No access to international Binance.',
+        taxes: 'Capital gains tax: 0-20% long-term, up to 37% short-term. Must report all transactions over $10,000. Form 8949 required.',
+        kyc: 'Strict KYC/AML under Bank Secrecy Act. Enhanced due diligence for high-value transactions. FATCA reporting requirements.',
+        licenses: 'Money Service Business (MSB) registration required. State-by-state licensing varies.',
+        penalties: 'Severe penalties for non-compliance: up to $250,000 fines and 5 years imprisonment for willful violations.',
+        updates: 'Recent: Spot Bitcoin ETFs approved. Proposed stablecoin regulations pending. Enhanced crypto tax reporting rules.'
       }
     },
     {
@@ -25,13 +28,16 @@ const RegulatoryCompliance = () => {
       code: 'UK',
       flag: '🇬🇧',
       status: 'regulated',
-      summary: 'Well-regulated market with FCA oversight',
+      summary: 'Comprehensive FCA regulation with clear guidelines for crypto businesses',
       details: {
-        legal: 'Legal and regulated by FCA',
-        exchanges: ['Coinbase', 'Binance UK', 'Kraken'],
-        restrictions: 'Advertising restrictions in place',
-        taxes: 'Capital gains tax applies',
-        kyc: 'FCA-compliant KYC required'
+        legal: 'Legal under FCA regulation. Crypto assets classified as property. Clear distinction between utility tokens, security tokens, and e-money tokens.',
+        exchanges: ['Coinbase', 'Binance UK', 'Kraken', 'Bitstamp', 'eToro'],
+        restrictions: 'Advertising restrictions for high-risk investments. Derivatives banned for retail investors. Cold calling prohibited.',
+        taxes: 'Capital gains tax: 10-20% depending on income. Annual exemption £6,000. Income tax on mining/staking. Corporation tax for businesses.',
+        kyc: 'FCA-compliant KYC under MLR 2017. Enhanced due diligence for PEPs. Travel rule compliance required.',
+        licenses: 'Cryptoasset firms must register with FCA. Temporary registration regime ended. Full authorization required.',
+        penalties: 'Unlimited fines and up to 2 years imprisonment for operating without registration. Consumer redress available.',
+        updates: 'Recent: Stablecoin regulation framework. Proposed crypto promotion rules. Enhanced consumer protections.'
       }
     },
     {
@@ -39,13 +45,16 @@ const RegulatoryCompliance = () => {
       code: 'EU',
       flag: '🇪🇺',
       status: 'regulated',
-      summary: 'MiCA regulation provides unified framework',
+      summary: 'Markets in Crypto-Assets (MiCA) regulation creates harmonized EU-wide framework',
       details: {
-        legal: 'Legal under MiCA regulation',
-        exchanges: ['Coinbase', 'Binance', 'Kraken'],
-        restrictions: 'Varies by member state',
-        taxes: 'Varies by member state',
-        kyc: 'EU-wide KYC standards'
+        legal: 'Legal under MiCA regulation (effective 2024). Harmonized rules across 27 member states. Clear categorization of crypto assets.',
+        exchanges: ['Coinbase', 'Binance', 'Kraken', 'Bitstamp', 'Bitpanda'],
+        restrictions: 'Energy disclosure requirements for proof-of-work. Marketing restrictions. Consumer protection measures.',
+        taxes: 'Varies by member state: Germany (0% after 1 year hold), France (30% flat tax), Netherlands (25-49% income tax).',
+        kyc: 'EU-wide AML6 directive. Travel rule for transactions >€1,000. Enhanced due diligence requirements.',
+        licenses: 'MiCA licenses valid across EU. Grandfathering provisions for existing operators. Passport rights available.',
+        penalties: 'Up to 10% of annual turnover or €5 million. Criminal sanctions vary by member state.',
+        updates: 'Recent: MiCA fully implemented. DeFi regulation under consideration. Stablecoin reserve requirements active.'
       }
     },
     {
@@ -53,13 +62,16 @@ const RegulatoryCompliance = () => {
       code: 'CA',
       flag: '🇨🇦',
       status: 'regulated',
-      summary: 'Provincial regulation with federal oversight',
+      summary: 'Federal securities regulation with provincial implementation and oversight',
       details: {
-        legal: 'Legal with provincial licensing',
-        exchanges: ['Coinbase', 'Kraken', 'Bitbuy'],
-        restrictions: 'Provincial variations apply',
-        taxes: 'Capital gains tax applies',
-        kyc: 'FINTRAC compliance required'
+        legal: 'Legal under securities law. CSA guidance treats most crypto as securities. Clear regulatory framework for exchanges.',
+        exchanges: ['Coinbase', 'Kraken', 'Bitbuy', 'Coinsquare', 'Newton'],
+        restrictions: 'Leverage limits for retail investors. Stablecoin restrictions. Some DeFi protocols limited.',
+        taxes: 'Capital gains: 50% taxable at marginal rate. Business income fully taxable. GST/HST may apply to mining.',
+        kyc: 'FINTRAC compliance under PCMLTFA. Large cash transaction reports. Suspicious transaction reports required.',
+        licenses: 'Provincial securities registration required. Investment dealer or marketplace dealer categories.',
+        penalties: 'Up to CAD $5 million fines and 5 years imprisonment. Administrative penalties available.',
+        updates: 'Recent: Crypto trading platform guidance updated. Stablecoin consultation ongoing. Enhanced retail protections.'
       }
     },
     {
@@ -67,13 +79,16 @@ const RegulatoryCompliance = () => {
       code: 'AU',
       flag: '🇦🇺',
       status: 'regulated',
-      summary: 'AUSTRAC regulated with clear guidelines',
+      summary: 'Comprehensive AUSTRAC regulation with ASIC oversight for financial services',
       details: {
-        legal: 'Legal and regulated by AUSTRAC',
-        exchanges: ['Coinbase', 'Binance', 'Swyftx'],
-        restrictions: 'Consumer protection measures',
-        taxes: 'Capital gains tax applies',
-        kyc: 'AML/CTF Act compliance'
+        legal: 'Legal with dual regulation: AUSTRAC for AML/CTF, ASIC for financial services. Clear guidance on crypto classification.',
+        exchanges: ['Coinbase', 'Binance', 'Swyftx', 'CoinSpot', 'Independent Reserve'],
+        restrictions: 'Margin lending restrictions. Enhanced consumer protections. Advertising standards apply.',
+        taxes: 'CGT: 50% discount after 12 months for individuals. Companies pay full rate. GST exempt for personal use.',
+        kyc: 'AML/CTF Act compliance. Customer identification and verification. Ongoing monitoring required.',
+        licenses: 'AUSTRAC registration mandatory. ASIC licensing for derivatives. Consumer credit licenses may apply.',
+        penalties: 'Up to AUD $22.2 million or 10% of turnover. Criminal penalties up to 10 years imprisonment.',
+        updates: 'Recent: Token mapping consultation. Custody and settlement facility licensing. Enhanced scam protections.'
       }
     },
     {
@@ -81,13 +96,16 @@ const RegulatoryCompliance = () => {
       code: 'JP',
       flag: '🇯🇵',
       status: 'regulated',
-      summary: 'Comprehensive regulatory framework',
+      summary: 'World-leading comprehensive regulatory framework with FSA oversight',
       details: {
-        legal: 'Legal with FSA licensing',
-        exchanges: ['Coincheck', 'bitFlyer', 'Liquid'],
-        restrictions: 'Strict exchange licensing',
-        taxes: 'Income tax on crypto gains',
-        kyc: 'FSA-mandated KYC'
+        legal: 'Legal under Payment Services Act and Financial Instruments and Exchange Act. Crypto assets legally defined.',
+        exchanges: ['Coincheck', 'bitFlyer', 'Liquid', 'GMO Coin', 'Rakuten Wallet'],
+        restrictions: 'Strict segregation requirements. Leverage limits (2x max). Cold storage mandates. Insurance requirements.',
+        taxes: 'Income tax up to 55% on crypto gains. Separate taxation for business use. Consumption tax exempt.',
+        kyc: 'FSA-mandated KYC under JAFIC guidelines. Enhanced verification for large transactions. Ongoing monitoring.',
+        licenses: 'Crypto Asset Exchange Service Provider license required. Strict capital and operational requirements.',
+        penalties: 'Business improvement orders. License revocation. Criminal penalties up to 10 years imprisonment.',
+        updates: 'Recent: Stablecoin regulations implemented. DAO legal framework under development. NFT guidance issued.'
       }
     },
     {
@@ -95,13 +113,16 @@ const RegulatoryCompliance = () => {
       code: 'SG',
       flag: '🇸🇬',
       status: 'regulated',
-      summary: 'Progressive regulatory approach',
+      summary: 'Progressive fintech-friendly regulation with comprehensive MAS oversight',
       details: {
-        legal: 'Legal with MAS oversight',
-        exchanges: ['Coinbase', 'Binance', 'Gemini'],
-        restrictions: 'Retail investor protections',
-        taxes: 'No capital gains tax',
-        kyc: 'MAS compliance required'
+        legal: 'Legal under Payment Services Act. Clear distinction between payment tokens, utility tokens, and security tokens.',
+        exchanges: ['Coinbase', 'Binance', 'Gemini', 'Crypto.com', 'Coinhako'],
+        restrictions: 'Retail investor protections. Advertising restrictions. Leverage limits. Cold storage requirements.',
+        taxes: 'No capital gains tax for individuals. Income tax for businesses. GST exempt for crypto transactions.',
+        kyc: 'MAS AML/CFT requirements. Customer due diligence. Enhanced measures for high-risk customers.',
+        licenses: 'Major Payment Institution license for large operators. Standard Payment Institution for smaller ones.',
+        penalties: 'Up to SGD $1 million fines and 10 years imprisonment. Civil penalties and license revocation.',
+        updates: 'Recent: Stablecoin framework consultation. Project Guardian DeFi pilots. Enhanced retail protections.'
       }
     },
     {
@@ -109,13 +130,16 @@ const RegulatoryCompliance = () => {
       code: 'IN',
       flag: '🇮🇳',
       status: 'restricted',
-      summary: 'Legal but heavily taxed and regulated',
+      summary: 'Legal but with significant restrictions, high taxation, and regulatory uncertainty',
       details: {
-        legal: 'Legal but with restrictions',
-        exchanges: ['WazirX', 'CoinDCX', 'ZebPay'],
-        restrictions: 'Banking restrictions, high taxes',
-        taxes: '30% tax on crypto gains',
-        kyc: 'RBI guidelines apply'
+        legal: 'Legal but not recognized as legal tender. No specific crypto law. RBI restrictions on banking services.',
+        exchanges: ['WazirX', 'CoinDCX', 'ZebPay', 'CoinSwitch', 'Unocoin'],
+        restrictions: 'Banking restrictions lifted by Supreme Court. High TDS requirements. Advertising restrictions proposed.',
+        taxes: '30% flat tax on crypto gains. 1% TDS on transactions. No set-off of losses. Gifts taxable.',
+        kyc: 'RBI KYC guidelines. PAN card mandatory. Enhanced due diligence for large transactions.',
+        licenses: 'No specific licensing regime. Exchanges operate under existing laws. Regulatory clarity pending.',
+        penalties: 'Tax evasion penalties apply. Potential money laundering charges. No specific crypto penalties.',
+        updates: 'Recent: 30% crypto tax implemented. TDS rules active. Central Bank Digital Currency (CBDC) pilot launched.'
       }
     },
     {
@@ -123,13 +147,16 @@ const RegulatoryCompliance = () => {
       code: 'CN',
       flag: '🇨🇳',
       status: 'banned',
-      summary: 'Cryptocurrency trading and mining banned',
+      summary: 'Complete ban on cryptocurrency trading, mining, and related services',
       details: {
-        legal: 'Banned for individuals',
-        exchanges: 'All exchanges banned',
-        restrictions: 'Complete ban on crypto activities',
-        taxes: 'N/A - banned',
-        kyc: 'N/A - banned'
+        legal: 'Completely banned. All crypto transactions illegal. Criminal penalties for violations.',
+        exchanges: 'All exchanges banned and blocked. VPN use for crypto trading illegal.',
+        restrictions: 'Mining banned. Payment services prohibited. Financial institutions cannot provide crypto services.',
+        taxes: 'N/A - all crypto activities illegal',
+        kyc: 'N/A - all crypto activities illegal',
+        licenses: 'No licenses available. All crypto business activities prohibited.',
+        penalties: 'Criminal charges for crypto activities. Asset forfeiture. Up to 10 years imprisonment.',
+        updates: 'Recent: Digital Yuan (CBDC) expansion. Continued crackdown on crypto activities. Cross-border enforcement.'
       }
     }
   ];
@@ -269,6 +296,16 @@ const RegulatoryCompliance = () => {
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h3 className="text-lg font-bold text-gray-900 mb-3">Recommended Exchanges</h3>
                       <div className="space-y-2">
+
+                  {selectedCountryData.details.licenses && (
+                    <div className="bg-gray-50 rounded-lg p-6">
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                        <Scale className="h-5 w-5 mr-2 text-purple-600" />
+                        Licensing Requirements
+                      </h3>
+                      <p className="text-gray-700">{selectedCountryData.details.licenses}</p>
+                    </div>
+                  )}
                         {Array.isArray(selectedCountryData.details.exchanges) ? 
                           selectedCountryData.details.exchanges.map((exchange, index) => (
                             <div key={index} className="flex items-center">
@@ -305,6 +342,23 @@ const RegulatoryCompliance = () => {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="/tools"
+                  {selectedCountryData.details.penalties && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                      <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
+                        <AlertTriangle className="h-5 w-5 mr-2" />
+                        Penalties & Enforcement
+                      </h3>
+                      <p className="text-red-700">{selectedCountryData.details.penalties}</p>
+                    </div>
+                  )}
+
+                  {selectedCountryData.details.updates && (
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                      <h3 className="text-lg font-bold text-blue-800 mb-3">📅 Recent Updates</h3>
+                      <p className="text-blue-700">{selectedCountryData.details.updates}</p>
+                    </div>
+                  )}
+
                     className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
                     View Recommended Exchanges
@@ -321,6 +375,8 @@ const RegulatoryCompliance = () => {
                     href="/regulatory-compliance"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
+                        <li>• Stay updated on regulatory changes</li>
+                        <li>• Consider professional tax advice for large holdings</li>
                     Learn More
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
