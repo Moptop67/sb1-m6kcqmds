@@ -314,6 +314,90 @@ const RegulatoryCompliance = () => {
 
             {/* Legal Status */}
             <section className="mb-12">
+          {selectedCountry === 'usa' && (
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="flex items-center mb-6">
+                <span className="text-4xl mr-4">🇺🇸</span>
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900">USA Crypto Guide</h2>
+                  <p className="text-gray-600">Navigate US cryptocurrency regulations and compliance</p>
+                </div>
+              </div>
+              
+              <div className="space-y-8">
+                <section>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in the USA?</h3>
+                  <p className="text-gray-600 mb-4">
+                    Yes—cryptocurrency is legal in the United States, regulated by multiple agencies including the SEC, CFTC, FinCEN, and state regulators. 
+                    The regulatory landscape varies by state, with some like New York requiring special BitLicenses for crypto businesses.
+                  </p>
+                </section>
+                
+                <section>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Getting Started: Steps for Beginners</h3>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-600">
+                    <li><strong>Choose a regulated exchange:</strong> Select from our recommended US-compliant platforms</li>
+                    <li><strong>Complete KYC verification:</strong> Provide SSN, driver's license, and proof of address</li>
+                    <li><strong>Deposit USD:</strong> Use bank transfer (ACH), wire transfer, or debit card</li>
+                    <li><strong>Buy cryptocurrency:</strong> Start with major coins like Bitcoin and Ethereum</li>
+                    <li><strong>Understand tax implications:</strong> Crypto is taxed as property by the IRS</li>
+                  </ol>
+                </section>
+                
+                <section>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Best Crypto Exchanges for USA</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-gray-300">
+                      <thead>
+                        <tr className="bg-gray-50">
+                          <th className="border border-gray-300 px-4 py-2 text-left">Exchange</th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">USD Deposit</th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">KYC</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-2">Coinbase</td>
+                          <td className="border border-gray-300 px-4 py-2">Yes</td>
+                          <td className="border border-gray-300 px-4 py-2">Most trusted, beginner-friendly, publicly traded</td>
+                          <td className="border border-gray-300 px-4 py-2">SSN, ID required</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-2">Kraken</td>
+                          <td className="border border-gray-300 px-4 py-2">Yes</td>
+                          <td className="border border-gray-300 px-4 py-2">Advanced trading, low fees, high security</td>
+                          <td className="border border-gray-300 px-4 py-2">SSN, ID required</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-2">Gemini</td>
+                          <td className="border border-gray-300 px-4 py-2">Yes</td>
+                          <td className="border border-gray-300 px-4 py-2">Regulated, institutional grade, FDIC insured USD</td>
+                          <td className="border border-gray-300 px-4 py-2">SSN, ID required</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-2">Binance.US</td>
+                          <td className="border border-gray-300 px-4 py-2">Yes</td>
+                          <td className="border border-gray-300 px-4 py-2">Low fees, wide selection, advanced features</td>
+                          <td className="border border-gray-300 px-4 py-2">SSN, ID required</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+                
+                <section>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Tax & Compliance</h3>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p className="text-red-800">
+                      <strong>Critical:</strong> The IRS treats cryptocurrency as property. Every crypto transaction is a taxable event. 
+                      Keep detailed records and consider using crypto tax software like CoinLedger for compliance.
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </div>
+          )}
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in Ukraine?</h3>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
                 <div className="flex items-start">
