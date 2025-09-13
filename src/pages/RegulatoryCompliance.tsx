@@ -1,163 +1,224 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink, Globe, Shield, Scale, FileText } from 'lucide-react';
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink, Globe, Shield, Scale, FileText, Users, Star } from 'lucide-react';
 
 const RegulatoryCompliance = () => {
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const countries = [
     {
+      name: 'Australia',
+      code: 'AU',
+      flag: '🇦🇺',
+      status: 'regulated',
+      title: 'How to Begin With Crypto in Australia (2025)',
+      subtitle: 'Thinking about buying your first cryptocurrency in Australia? This guide makes starting simple—with local rules, compliance essentials, and the trusted exchanges that beginners use most.',
+      legalStatus: {
+        title: 'Is Crypto Legal in Australia?',
+        content: 'Cryptocurrency is legal in Australia, regulated as a digital asset by the Australian Securities and Investments Commission (ASIC) and AUSTRAC. All exchanges operating in Australia must follow anti-money laundering (AML) and counter-terrorism financing (CTF) rules—including mandatory identity checks for new users.'
+      },
+      steps: [
+        'Choose an exchange registered with AUSTRAC',
+        'Complete Know-Your-Customer (KYC) checks (ID, proof of address)',
+        'Deposit AUD using trusted payment methods',
+        'Buy crypto (Bitcoin, Ethereum, or others) directly, with clear fee display',
+        'Secure your funds with strong passwords and two-factor authentication',
+        'Move larger balances to a personal wallet for extra safety'
+      ],
+      taxes: {
+        title: 'Basic Tax and Record-Keeping',
+        content: 'Australia treats crypto as a taxable asset—any profit is subject to capital gains tax. Users must:',
+        requirements: [
+          'Keep all trading records (dates, AUD values, asset details)',
+          'Report crypto gains/losses in annual tax returns',
+          'Use ATO guides or consult a registered accountant for the latest rules'
+        ]
+      },
+      compliance: {
+        title: 'Stay Compliant—Avoid Scams!',
+        tips: [
+          'Only use exchanges with AUSTRAC registration (look for regulatory logos)',
+          'Never share private keys or wallet seed phrases',
+          'Check ASIC and AUSTRAC sites for scam warnings and consumer alerts'
+        ]
+      },
+      localExchanges: [
+        { name: 'CoinSpot', registration: 'Yes', features: 'Most trusted, high security, user-friendly', audSupport: 'Yes', rating: 4.8 },
+        { name: 'Swyftx', registration: 'Yes', features: 'Competitive fees, great mobile app', audSupport: 'Yes', rating: 4.7 },
+        { name: 'CoinJar', registration: 'Yes', features: 'Long history, crypto debit card', audSupport: 'Yes', rating: 4.5 },
+        { name: 'Independent Reserve', registration: 'Yes', features: 'High security, business accounts', audSupport: 'Yes', rating: 4.6 },
+        { name: 'Digital Surge', registration: 'Yes', features: 'Low fees, transparent', audSupport: 'Yes', rating: 4.4 }
+      ],
+      globalExchanges: [
+        { name: 'Binance', regulation: 'Registered in multiple countries', features: 'Largest marketplace, huge asset selection', audSupport: 'Yes', rating: 4.8 },
+        { name: 'Bybit', regulation: 'Regulated (overseas)', features: 'Trading, copy trading, derivatives', audSupport: 'Limited', rating: 4.3 },
+        { name: 'Kraken', regulation: 'US/Global registration', features: 'Top security, broad coin range', audSupport: 'Yes', rating: 4.7 },
+        { name: 'Coinbase', regulation: 'US/Global registration', features: 'Ease of use, high trust', audSupport: 'Yes', rating: 4.6 },
+        { name: 'OKX', regulation: 'Global registration', features: 'Wide selection, advanced tools', audSupport: 'Limited', rating: 4.2 }
+      ],
+      checklist: [
+        'Verify your chosen exchange on the AUSTRAC registry',
+        'Prepare a government ID and proof of address',
+        'Read the platform\'s security and privacy guides',
+        'Start small, keep records, never invest more than you can afford to lose'
+      ]
+    },
+    {
       name: 'United States',
       code: 'US',
       flag: '🇺🇸',
       status: 'regulated',
-      summary: 'Complex federal and state regulatory framework with comprehensive oversight',
-      details: {
-        legal: 'Legal and regulated by multiple agencies including SEC, CFTC, FinCEN, and state regulators. Bitcoin classified as commodity, most altcoins as securities.',
-        exchanges: ['Coinbase', 'Kraken', 'Gemini', 'Binance.US'],
-        restrictions: 'Some states like New York require BitLicense. Certain DeFi protocols restricted. No access to international Binance.',
-        taxes: 'Capital gains tax: 0-20% long-term, up to 37% short-term. Must report all transactions over $10,000. Form 8949 required.',
-        kyc: 'Strict KYC/AML under Bank Secrecy Act. Enhanced due diligence for high-value transactions. FATCA reporting requirements.',
-        licenses: 'Money Service Business (MSB) registration required. State-by-state licensing varies.',
-        penalties: 'Severe penalties for non-compliance: up to $250,000 fines and 5 years imprisonment for willful violations.',
-        updates: 'Recent: Spot Bitcoin ETFs approved. Proposed stablecoin regulations pending. Enhanced crypto tax reporting rules.'
-      }
+      title: 'How to Begin With Crypto in the United States (2025)',
+      subtitle: 'Ready to start your crypto journey in the US? Navigate federal and state regulations with confidence using our beginner-friendly compliance guide.',
+      legalStatus: {
+        title: 'Is Crypto Legal in the United States?',
+        content: 'Cryptocurrency is legal in the United States, regulated by multiple federal agencies including the SEC, CFTC, and FinCEN. Bitcoin is classified as a commodity, while most altcoins are considered securities. All exchanges must comply with federal AML/KYC requirements and state-specific licensing.'
+      },
+      steps: [
+        'Choose a US-regulated exchange (Coinbase, Kraken, Gemini)',
+        'Complete identity verification with SSN and government ID',
+        'Link your US bank account or debit card',
+        'Start with small purchases to understand the process',
+        'Enable two-factor authentication immediately',
+        'Consider a hardware wallet for long-term storage'
+      ],
+      taxes: {
+        title: 'US Tax Requirements',
+        content: 'The IRS treats crypto as property subject to capital gains tax:',
+        requirements: [
+          'Report all crypto transactions on Form 8949',
+          'Pay 0-20% long-term capital gains (held >1 year)',
+          'Pay up to 37% short-term capital gains (held <1 year)',
+          'Keep detailed records of all purchases, sales, and trades'
+        ]
+      },
+      compliance: {
+        title: 'Stay Compliant in the US',
+        tips: [
+          'Only use exchanges registered as Money Service Businesses (MSB)',
+          'Be aware of state-specific requirements (NY BitLicense)',
+          'Report foreign crypto accounts over $10,000 (FBAR)',
+          'Use crypto tax software like CoinLedger for accurate reporting'
+        ]
+      },
+      localExchanges: [
+        { name: 'Coinbase', registration: 'Yes', features: 'Most beginner-friendly, FDIC insured USD', audSupport: 'Yes', rating: 4.6 },
+        { name: 'Kraken', registration: 'Yes', features: 'Advanced trading, high security', audSupport: 'Yes', rating: 4.7 },
+        { name: 'Gemini', registration: 'Yes', features: 'Regulated, institutional grade', audSupport: 'Yes', rating: 4.5 },
+        { name: 'Binance.US', registration: 'Yes', features: 'Low fees, wide selection', audSupport: 'Yes', rating: 4.3 }
+      ],
+      globalExchanges: [],
+      checklist: [
+        'Verify the exchange is registered with FinCEN as an MSB',
+        'Check if your state has additional licensing requirements',
+        'Prepare SSN, government ID, and proof of address',
+        'Set up crypto tax tracking from your first purchase'
+      ]
     },
     {
       name: 'United Kingdom',
       code: 'UK',
       flag: '🇬🇧',
       status: 'regulated',
-      summary: 'Comprehensive FCA regulation with clear guidelines for crypto businesses',
-      details: {
-        legal: 'Legal under FCA regulation. Crypto assets classified as property. Clear distinction between utility tokens, security tokens, and e-money tokens.',
-        exchanges: ['Coinbase', 'Binance UK', 'Kraken', 'Bitstamp', 'eToro'],
-        restrictions: 'Advertising restrictions for high-risk investments. Derivatives banned for retail investors. Cold calling prohibited.',
-        taxes: 'Capital gains tax: 10-20% depending on income. Annual exemption £6,000. Income tax on mining/staking. Corporation tax for businesses.',
-        kyc: 'FCA-compliant KYC under MLR 2017. Enhanced due diligence for PEPs. Travel rule compliance required.',
-        licenses: 'Cryptoasset firms must register with FCA. Temporary registration regime ended. Full authorization required.',
-        penalties: 'Unlimited fines and up to 2 years imprisonment for operating without registration. Consumer redress available.',
-        updates: 'Recent: Stablecoin regulation framework. Proposed crypto promotion rules. Enhanced consumer protections.'
-      }
-    },
-    {
-      name: 'European Union',
-      code: 'EU',
-      flag: '🇪🇺',
-      status: 'regulated',
-      summary: 'Markets in Crypto-Assets (MiCA) regulation creates harmonized EU-wide framework',
-      details: {
-        legal: 'Legal under MiCA regulation (effective 2024). Harmonized rules across 27 member states. Clear categorization of crypto assets.',
-        exchanges: ['Coinbase', 'Binance', 'Kraken', 'Bitstamp', 'Bitpanda'],
-        restrictions: 'Energy disclosure requirements for proof-of-work. Marketing restrictions. Consumer protection measures.',
-        taxes: 'Varies by member state: Germany (0% after 1 year hold), France (30% flat tax), Netherlands (25-49% income tax).',
-        kyc: 'EU-wide AML6 directive. Travel rule for transactions >€1,000. Enhanced due diligence requirements.',
-        licenses: 'MiCA licenses valid across EU. Grandfathering provisions for existing operators. Passport rights available.',
-        penalties: 'Up to 10% of annual turnover or €5 million. Criminal sanctions vary by member state.',
-        updates: 'Recent: MiCA fully implemented. DeFi regulation under consideration. Stablecoin reserve requirements active.'
-      }
+      title: 'How to Begin With Crypto in the United Kingdom (2025)',
+      subtitle: 'Starting your crypto journey in the UK? Our guide covers FCA regulations, tax implications, and the best exchanges for British beginners.',
+      legalStatus: {
+        title: 'Is Crypto Legal in the UK?',
+        content: 'Cryptocurrency is legal in the UK under Financial Conduct Authority (FCA) regulation. Crypto assets are classified as property, with clear distinctions between utility tokens, security tokens, and e-money tokens. All crypto businesses must register with the FCA.'
+      },
+      steps: [
+        'Choose an FCA-registered exchange',
+        'Complete identity verification with UK documents',
+        'Set up GBP deposits via bank transfer or debit card',
+        'Start with Bitcoin or Ethereum for beginners',
+        'Enable strong security measures (2FA, withdrawal limits)',
+        'Understand the tax implications before trading'
+      ],
+      taxes: {
+        title: 'UK Tax Requirements',
+        content: 'HMRC treats crypto gains as subject to Capital Gains Tax:',
+        requirements: [
+          'Pay 10% or 20% CGT depending on your income bracket',
+          'Annual CGT allowance of £6,000 (2024/25)',
+          'Keep records of all transactions for tax reporting',
+          'Report gains on your Self Assessment if above allowance'
+        ]
+      },
+      compliance: {
+        title: 'UK Compliance Tips',
+        tips: [
+          'Only use FCA-registered crypto exchanges',
+          'Be aware of advertising restrictions on high-risk investments',
+          'Understand that crypto derivatives are banned for retail investors',
+          'Keep detailed records for HMRC reporting'
+        ]
+      },
+      localExchanges: [
+        { name: 'Coinbase', registration: 'Yes', features: 'FCA registered, beginner-friendly', audSupport: 'Yes', rating: 4.6 },
+        { name: 'Binance UK', registration: 'Yes', features: 'Low fees, wide selection', audSupport: 'Yes', rating: 4.4 },
+        { name: 'Kraken', registration: 'Yes', features: 'High security, advanced features', audSupport: 'Yes', rating: 4.7 },
+        { name: 'eToro', registration: 'Yes', features: 'Social trading, copy trading', audSupport: 'Yes', rating: 4.2 }
+      ],
+      globalExchanges: [],
+      checklist: [
+        'Verify FCA registration on the Financial Services Register',
+        'Prepare UK passport/driving license and proof of address',
+        'Understand CGT implications before your first trade',
+        'Set up proper record-keeping for tax purposes'
+      ]
     },
     {
       name: 'Canada',
       code: 'CA',
       flag: '🇨🇦',
       status: 'regulated',
-      summary: 'Federal securities regulation with provincial implementation and oversight',
-      details: {
-        legal: 'Legal under securities law. CSA guidance treats most crypto as securities. Clear regulatory framework for exchanges.',
-        exchanges: ['Coinbase', 'Kraken', 'Bitbuy', 'Coinsquare', 'Newton'],
-        restrictions: 'Leverage limits for retail investors. Stablecoin restrictions. Some DeFi protocols limited.',
-        taxes: 'Capital gains: 50% taxable at marginal rate. Business income fully taxable. GST/HST may apply to mining.',
-        kyc: 'FINTRAC compliance under PCMLTFA. Large cash transaction reports. Suspicious transaction reports required.',
-        licenses: 'Provincial securities registration required. Investment dealer or marketplace dealer categories.',
-        penalties: 'Up to CAD $5 million fines and 5 years imprisonment. Administrative penalties available.',
-        updates: 'Recent: Crypto trading platform guidance updated. Stablecoin consultation ongoing. Enhanced retail protections.'
-      }
-    },
-    {
-      name: 'Australia',
-      code: 'AU',
-      flag: '🇦🇺',
-      status: 'regulated',
-      summary: 'Comprehensive AUSTRAC regulation with ASIC oversight for financial services',
-      details: {
-        legal: 'Legal with dual regulation: AUSTRAC for AML/CTF, ASIC for financial services. Clear guidance on crypto classification.',
-        exchanges: ['Coinbase', 'Binance', 'Swyftx', 'CoinSpot', 'Independent Reserve'],
-        restrictions: 'Margin lending restrictions. Enhanced consumer protections. Advertising standards apply.',
-        taxes: 'CGT: 50% discount after 12 months for individuals. Companies pay full rate. GST exempt for personal use.',
-        kyc: 'AML/CTF Act compliance. Customer identification and verification. Ongoing monitoring required.',
-        licenses: 'AUSTRAC registration mandatory. ASIC licensing for derivatives. Consumer credit licenses may apply.',
-        penalties: 'Up to AUD $22.2 million or 10% of turnover. Criminal penalties up to 10 years imprisonment.',
-        updates: 'Recent: Token mapping consultation. Custody and settlement facility licensing. Enhanced scam protections.'
-      }
-    },
-    {
-      name: 'Japan',
-      code: 'JP',
-      flag: '🇯🇵',
-      status: 'regulated',
-      summary: 'World-leading comprehensive regulatory framework with FSA oversight',
-      details: {
-        legal: 'Legal under Payment Services Act and Financial Instruments and Exchange Act. Crypto assets legally defined.',
-        exchanges: ['Coincheck', 'bitFlyer', 'Liquid', 'GMO Coin', 'Rakuten Wallet'],
-        restrictions: 'Strict segregation requirements. Leverage limits (2x max). Cold storage mandates. Insurance requirements.',
-        taxes: 'Income tax up to 55% on crypto gains. Separate taxation for business use. Consumption tax exempt.',
-        kyc: 'FSA-mandated KYC under JAFIC guidelines. Enhanced verification for large transactions. Ongoing monitoring.',
-        licenses: 'Crypto Asset Exchange Service Provider license required. Strict capital and operational requirements.',
-        penalties: 'Business improvement orders. License revocation. Criminal penalties up to 10 years imprisonment.',
-        updates: 'Recent: Stablecoin regulations implemented. DAO legal framework under development. NFT guidance issued.'
-      }
-    },
-    {
-      name: 'Singapore',
-      code: 'SG',
-      flag: '🇸🇬',
-      status: 'regulated',
-      summary: 'Progressive fintech-friendly regulation with comprehensive MAS oversight',
-      details: {
-        legal: 'Legal under Payment Services Act. Clear distinction between payment tokens, utility tokens, and security tokens.',
-        exchanges: ['Coinbase', 'Binance', 'Gemini', 'Crypto.com', 'Coinhako'],
-        restrictions: 'Retail investor protections. Advertising restrictions. Leverage limits. Cold storage requirements.',
-        taxes: 'No capital gains tax for individuals. Income tax for businesses. GST exempt for crypto transactions.',
-        kyc: 'MAS AML/CFT requirements. Customer due diligence. Enhanced measures for high-risk customers.',
-        licenses: 'Major Payment Institution license for large operators. Standard Payment Institution for smaller ones.',
-        penalties: 'Up to SGD $1 million fines and 10 years imprisonment. Civil penalties and license revocation.',
-        updates: 'Recent: Stablecoin framework consultation. Project Guardian DeFi pilots. Enhanced retail protections.'
-      }
-    },
-    {
-      name: 'India',
-      code: 'IN',
-      flag: '🇮🇳',
-      status: 'restricted',
-      summary: 'Legal but with significant restrictions, high taxation, and regulatory uncertainty',
-      details: {
-        legal: 'Legal but not recognized as legal tender. No specific crypto law. RBI restrictions on banking services.',
-        exchanges: ['WazirX', 'CoinDCX', 'ZebPay', 'CoinSwitch', 'Unocoin'],
-        restrictions: 'Banking restrictions lifted by Supreme Court. High TDS requirements. Advertising restrictions proposed.',
-        taxes: '30% flat tax on crypto gains. 1% TDS on transactions. No set-off of losses. Gifts taxable.',
-        kyc: 'RBI KYC guidelines. PAN card mandatory. Enhanced due diligence for large transactions.',
-        licenses: 'No specific licensing regime. Exchanges operate under existing laws. Regulatory clarity pending.',
-        penalties: 'Tax evasion penalties apply. Potential money laundering charges. No specific crypto penalties.',
-        updates: 'Recent: 30% crypto tax implemented. TDS rules active. Central Bank Digital Currency (CBDC) pilot launched.'
-      }
-    },
-    {
-      name: 'China',
-      code: 'CN',
-      flag: '🇨🇳',
-      status: 'banned',
-      summary: 'Complete ban on cryptocurrency trading, mining, and related services',
-      details: {
-        legal: 'Completely banned. All crypto transactions illegal. Criminal penalties for violations.',
-        exchanges: 'All exchanges banned and blocked. VPN use for crypto trading illegal.',
-        restrictions: 'Mining banned. Payment services prohibited. Financial institutions cannot provide crypto services.',
-        taxes: 'N/A - all crypto activities illegal',
-        kyc: 'N/A - all crypto activities illegal',
-        licenses: 'No licenses available. All crypto business activities prohibited.',
-        penalties: 'Criminal charges for crypto activities. Asset forfeiture. Up to 10 years imprisonment.',
-        updates: 'Recent: Digital Yuan (CBDC) expansion. Continued crackdown on crypto activities. Cross-border enforcement.'
-      }
+      title: 'How to Begin With Crypto in Canada (2025)',
+      subtitle: 'Ready to buy crypto in Canada? Navigate CSA regulations and find the best exchanges with our comprehensive beginner guide.',
+      legalStatus: {
+        title: 'Is Crypto Legal in Canada?',
+        content: 'Cryptocurrency is legal in Canada under Canadian Securities Administrators (CSA) guidance. Most crypto assets are treated as securities, with clear regulatory frameworks for exchanges. All platforms must register with provincial securities regulators.'
+      },
+      steps: [
+        'Choose a CSA-registered exchange',
+        'Complete identity verification with Canadian documents',
+        'Fund your account with CAD via Interac e-Transfer',
+        'Start with major cryptocurrencies (BTC, ETH)',
+        'Set up proper security (2FA, strong passwords)',
+        'Understand tax implications for your province'
+      ],
+      taxes: {
+        title: 'Canadian Tax Requirements',
+        content: 'CRA treats crypto as either capital gains or business income:',
+        requirements: [
+          '50% of capital gains are taxable at your marginal rate',
+          'Business income from trading is fully taxable',
+          'Keep detailed records of all transactions',
+          'Report on your annual tax return'
+        ]
+      },
+      compliance: {
+        title: 'Canadian Compliance',
+        tips: [
+          'Use only provincially registered exchanges',
+          'Comply with FINTRAC reporting requirements',
+          'Understand leverage limits for retail investors',
+          'Keep records for CRA auditing purposes'
+        ]
+      },
+      localExchanges: [
+        { name: 'Coinbase', registration: 'Yes', features: 'Regulated, user-friendly', audSupport: 'Yes', rating: 4.6 },
+        { name: 'Kraken', registration: 'Yes', features: 'Advanced trading, high security', audSupport: 'Yes', rating: 4.7 },
+        { name: 'Bitbuy', registration: 'Yes', features: 'Canadian-focused, easy CAD deposits', audSupport: 'Yes', rating: 4.3 },
+        { name: 'Coinsquare', registration: 'Yes', features: 'Established Canadian exchange', audSupport: 'Yes', rating: 4.1 },
+        { name: 'Newton', registration: 'Yes', features: 'No fees, simple interface', audSupport: 'Yes', rating: 4.4 }
+      ],
+      globalExchanges: [],
+      checklist: [
+        'Verify provincial securities registration',
+        'Prepare Canadian ID and proof of address',
+        'Set up Interac e-Transfer for funding',
+        'Understand your province\'s specific tax rules'
+      ]
     }
   ];
 
@@ -184,27 +245,33 @@ const RegulatoryCompliance = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Cryptocurrency Regulatory Compliance Guide 2025 - Country-Specific Laws</title>
-        <meta name="description" content="Complete guide to cryptocurrency regulations worldwide. Learn the legal status, tax implications, and compliance requirements for crypto in your country." />
-        <meta name="keywords" content="cryptocurrency regulation, crypto laws, bitcoin legal status, crypto taxes, compliance guide" />
-        <meta property="og:title" content="Crypto Regulatory Compliance Guide 2025" />
-        <meta property="og:description" content="Navigate crypto regulations worldwide with our comprehensive compliance guide covering legal status, taxes, and requirements by country." />
+        <title>Cryptocurrency Beginner Guide 2025 - How to Start Crypto in Your Country</title>
+        <meta name="description" content="Complete beginner guide to buying cryptocurrency legally. Step-by-step instructions, recommended exchanges, and compliance tips for your country." />
+        <meta name="keywords" content="how to buy crypto, cryptocurrency beginner guide, best crypto exchanges, crypto compliance, bitcoin for beginners" />
+        <meta property="og:title" content="Crypto Beginner Guide 2025 - Start Safely" />
+        <meta property="og:description" content="Learn how to buy your first cryptocurrency safely and legally with our comprehensive beginner guide." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://cryptostarterguide.com/regulatory-compliance" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-purple-800 text-white py-16">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
-              <Scale className="h-12 w-12 text-purple-400 mr-4" />
-              <h1 className="text-4xl md:text-5xl font-bold">Regulatory Compliance</h1>
+              <Shield className="h-12 w-12 text-blue-400 mr-4" />
+              <h1 className="text-4xl md:text-5xl font-bold">CryptoStarter Guide</h1>
             </div>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
-              Navigate the complex world of cryptocurrency regulations with confidence. 
-              Get country-specific guidance on legal status, tax obligations, and compliance requirements.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              Your complete beginner's guide to buying cryptocurrency safely and legally. 
+              Get step-by-step instructions, recommended exchanges, and compliance tips for your country.
             </p>
+            <div className="bg-blue-800 bg-opacity-50 rounded-lg p-4 inline-block">
+              <p className="text-blue-100">
+                <CheckCircle className="h-5 w-5 inline mr-2" />
+                Beginner-friendly • Compliance-focused • Updated for 2025
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -215,8 +282,8 @@ const RegulatoryCompliance = () => {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-lg p-6 sticky top-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Globe className="h-6 w-6 mr-2 text-purple-600" />
-                Select Your Country
+                <Globe className="h-6 w-6 mr-2 text-blue-600" />
+                Choose Your Country
               </h2>
               
               <div className="space-y-3">
@@ -249,13 +316,13 @@ const RegulatoryCompliance = () => {
           {/* Main Content */}
           <div className="lg:col-span-3">
             {selectedCountryData ? (
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="space-y-8">
                 {/* Country Header */}
-                <div className="mb-8">
-                  <div className="flex items-center mb-4">
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <div className="flex items-center mb-6">
                     <span className="text-4xl mr-4">{selectedCountryData.flag}</span>
                     <div>
-                      <h2 className="text-3xl font-bold text-gray-900">{selectedCountryData.name}</h2>
+                      <h1 className="text-3xl font-bold text-gray-900">{selectedCountryData.title}</h1>
                       <div className="flex items-center mt-2">
                         {getStatusIcon(selectedCountryData.status)}
                         <span className="ml-2 text-lg font-medium capitalize text-gray-700">
@@ -264,169 +331,264 @@ const RegulatoryCompliance = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-lg">{selectedCountryData.summary}</p>
+                  <p className="text-gray-600 text-lg leading-relaxed">{selectedCountryData.subtitle}</p>
                 </div>
 
-                {/* Detailed Information */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-6">
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                        <Shield className="h-5 w-5 mr-2 text-blue-600" />
-                        Legal Status
-                      </h3>
-                      <p className="text-gray-700">{selectedCountryData.details.legal}</p>
-                    </div>
+                {/* Legal Status */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <Scale className="h-6 w-6 mr-3 text-green-600" />
+                    1. {selectedCountryData.legalStatus.title}
+                  </h2>
+                  <p className="text-gray-700 text-lg leading-relaxed">{selectedCountryData.legalStatus.content}</p>
+                </div>
 
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                        <FileText className="h-5 w-5 mr-2 text-green-600" />
-                        Tax Implications
-                      </h3>
-                      <p className="text-gray-700">{selectedCountryData.details.taxes}</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3">KYC Requirements</h3>
-                      <p className="text-gray-700">{selectedCountryData.details.kyc}</p>
-                    </div>
+                {/* Steps for Beginners */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <CheckCircle className="h-6 w-6 mr-3 text-blue-600" />
+                    2. Steps for Beginners: Safe, Simple, and Compliant
+                  </h2>
+                  <div className="space-y-4">
+                    {selectedCountryData.steps.map((step, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0 mt-1">
+                          {index + 1}
+                        </div>
+                        <p className="text-gray-700 text-lg">{step}</p>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="space-y-6">
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3">Recommended Exchanges</h3>
-                      <div className="space-y-2">
+                {/* Tax Requirements */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <FileText className="h-6 w-6 mr-3 text-purple-600" />
+                    3. {selectedCountryData.taxes.title}
+                  </h2>
+                  <p className="text-gray-700 text-lg mb-4">{selectedCountryData.taxes.content}</p>
+                  <ul className="space-y-2">
+                    {selectedCountryData.taxes.requirements.map((req, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                        <span className="text-gray-700">{req}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  {selectedCountryData.details.licenses && (
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                        <Scale className="h-5 w-5 mr-2 text-purple-600" />
-                        Licensing Requirements
+                {/* Compliance Tips */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    <Shield className="h-6 w-6 mr-3 text-red-600" />
+                    4. {selectedCountryData.compliance.title}
+                  </h2>
+                  <ul className="space-y-3">
+                    {selectedCountryData.compliance.tips.map((tip, index) => (
+                      <li key={index} className="flex items-start">
+                        <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                        <span className="text-gray-700 text-lg">{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Recommended Exchanges */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    🏆 Top Crypto Exchanges for {selectedCountryData.name.split(' ')[0]}s (2025)
+                  </h2>
+                  <p className="text-gray-600 mb-8">
+                    To help newcomers, here is a current list of trusted exchanges accessible in {selectedCountryData.name}:
+                  </p>
+
+                  {/* Local Exchanges */}
+                  {selectedCountryData.localExchanges.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        Top Local ({selectedCountryData.name}-Registered) Exchanges
                       </h3>
-                      <p className="text-gray-700">{selectedCountryData.details.licenses}</p>
+                      <div className="overflow-x-auto">
+                        <table className="w-full bg-gray-50 rounded-lg">
+                          <thead className="bg-gray-100">
+                            <tr>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Registration</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features/Highlights</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Local Support</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Rating</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-200">
+                            {selectedCountryData.localExchanges.map((exchange, index) => (
+                              <tr key={index} className="hover:bg-white">
+                                <td className="px-4 py-4 font-medium text-gray-900">{exchange.name}</td>
+                                <td className="px-4 py-4">
+                                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
+                                    {exchange.registration}
+                                  </span>
+                                </td>
+                                <td className="px-4 py-4 text-gray-700">{exchange.features}</td>
+                                <td className="px-4 py-4">
+                                  <span className={`px-2 py-1 rounded text-sm ${
+                                    exchange.audSupport === 'Yes' 
+                                      ? 'bg-green-100 text-green-800' 
+                                      : 'bg-yellow-100 text-yellow-800'
+                                  }`}>
+                                    {exchange.audSupport}
+                                  </span>
+                                </td>
+                                <td className="px-4 py-4">
+                                  <div className="flex items-center">
+                                    <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                                    <span className="font-medium">{exchange.rating}</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      <p className="text-sm text-gray-600 mt-4">
+                        All local exchanges require users to verify identity for compliance, and offer simple local currency deposits.
+                      </p>
                     </div>
                   )}
-                        {Array.isArray(selectedCountryData.details.exchanges) ? 
-                          selectedCountryData.details.exchanges.map((exchange, index) => (
-                            <div key={index} className="flex items-center">
-                              <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                              <span className="text-gray-700">{exchange}</span>
-                            </div>
-                          )) : (
-                            <p className="text-gray-700">{selectedCountryData.details.exchanges}</p>
-                          )
-                        }
+
+                  {/* Global Exchanges */}
+                  {selectedCountryData.globalExchanges.length > 0 && (
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                        Major Overseas (Accessible to {selectedCountryData.name.split(' ')[0]}s)
+                      </h3>
+                      <div className="overflow-x-auto">
+                        <table className="w-full bg-gray-50 rounded-lg">
+                          <thead className="bg-gray-100">
+                            <tr>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Global Regulation</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features/Highlights</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Local Support</th>
+                              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Rating</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-200">
+                            {selectedCountryData.globalExchanges.map((exchange, index) => (
+                              <tr key={index} className="hover:bg-white">
+                                <td className="px-4 py-4 font-medium text-gray-900">{exchange.name}</td>
+                                <td className="px-4 py-4 text-gray-700">{exchange.regulation}</td>
+                                <td className="px-4 py-4 text-gray-700">{exchange.features}</td>
+                                <td className="px-4 py-4">
+                                  <span className={`px-2 py-1 rounded text-sm ${
+                                    exchange.audSupport === 'Yes' 
+                                      ? 'bg-green-100 text-green-800' 
+                                      : 'bg-yellow-100 text-yellow-800'
+                                  }`}>
+                                    {exchange.audSupport}
+                                  </span>
+                                </td>
+                                <td className="px-4 py-4">
+                                  <div className="flex items-center">
+                                    <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                                    <span className="font-medium">{exchange.rating}</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
+                      <p className="text-sm text-gray-600 mt-4">
+                        Before using overseas exchanges, always check local access updates—regulations sometimes change.
+                      </p>
                     </div>
+                  )}
+                </div>
 
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3">Key Restrictions</h3>
-                      <p className="text-gray-700">{selectedCountryData.details.restrictions}</p>
-                    </div>
-
-                    {selectedCountryData.details.penalties && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                        <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
-                          <AlertTriangle className="h-5 w-5 mr-2" />
-                          Penalties & Enforcement
-                        </h3>
-                        <p className="text-red-700">{selectedCountryData.details.penalties}</p>
+                {/* Quick Checklist */}
+                <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-8 text-white">
+                  <h2 className="text-2xl font-bold mb-6 flex items-center">
+                    <CheckCircle className="h-6 w-6 mr-3" />
+                    Quick Checklist for New Users
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {selectedCountryData.checklist.map((item, index) => (
+                      <div key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0 mt-1" />
+                        <span className="text-green-100">{item}</span>
                       </div>
-                    )}
-
-                    {selectedCountryData.details.updates && (
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                        <h3 className="text-lg font-bold text-blue-800 mb-3">📅 Recent Updates</h3>
-                        <p className="text-blue-700">{selectedCountryData.details.updates}</p>
-                      </div>
-                    )}
-
-                    {selectedCountryData.status === 'regulated' && (
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h3 className="text-lg font-bold text-green-800 mb-2">✅ Compliance Tips</h3>
-                        <ul className="text-green-700 space-y-1 text-sm">
-                          <li>• Keep detailed records of all transactions</li>
-                          <li>• Use regulated exchanges with proper licensing</li>
-                          <li>• Report crypto gains according to local tax laws</li>
-                          <li>• Complete KYC verification on all platforms</li>
-                          <li>• Stay updated on regulatory changes</li>
-                          <li>• Consider professional tax advice for large holdings</li>
-                        </ul>
-                      </div>
-                    )}
+                    ))}
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-green-500">
+                    <p className="text-green-100">
+                      <strong>Remember:</strong> Start small, keep records, never invest more than you can afford to lose.
+                    </p>
                   </div>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4">
                   <a
                     href="/tools"
-                    className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
-                    View Recommended Exchanges
+                    View All Exchange Reviews
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
                   <a
-                    href="/learn"
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+                    href="/start-here"
+                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center transition-colors"
                   >
-                    Learn Crypto Basics
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
-                  <a
-                    href="/regulatory-compliance"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
-                  >
-                    Learn More
+                    Complete Beginner Guide
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
                 </div>
               </div>
             ) : (
               <div className="bg-white rounded-xl shadow-lg p-12 text-center">
-                <Globe className="h-16 w-16 text-purple-400 mx-auto mb-6" />
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Select a Country</h2>
+                <Globe className="h-16 w-16 text-blue-400 mx-auto mb-6" />
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Select Your Country</h2>
                 <p className="text-gray-600 text-lg">
-                  Choose your country from the sidebar to view specific cryptocurrency regulations, 
-                  legal status, and compliance requirements.
+                  Choose your country from the sidebar to view a complete beginner's guide 
+                  with step-by-step instructions, recommended exchanges, and compliance tips.
                 </p>
               </div>
             )}
           </div>
         </div>
 
-        {/* Global Overview */}
-        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Global Regulatory Landscape</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+        {/* SEO Tips Section */}
+        <div className="mt-16 bg-blue-50 border border-blue-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose CryptoStarter Guide?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Beginner-Focused</h3>
+              <p className="text-gray-600">
+                Written specifically for newcomers with step-by-step instructions and clear explanations.
+              </p>
+            </div>
+            
             <div className="text-center">
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-green-600" />
+                <Shield className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Regulated Markets</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Compliance-First</h3>
               <p className="text-gray-600">
-                Countries with clear regulatory frameworks providing legal certainty for crypto users and businesses.
+                Stay legal and safe with country-specific regulatory guidance and compliance tips.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="h-8 w-8 text-yellow-600" />
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <FileText className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Restricted Markets</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Always Updated</h3>
               <p className="text-gray-600">
-                Countries with partial restrictions, high taxes, or uncertain regulatory environments.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <XCircle className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Banned Markets</h3>
-              <p className="text-gray-600">
-                Countries where cryptocurrency trading and related activities are prohibited by law.
+                Regular updates with the latest regulations, exchange recommendations, and safety tips.
               </p>
             </div>
           </div>
@@ -438,7 +600,7 @@ const RegulatoryCompliance = () => {
           <p className="text-yellow-700">
             This information is for educational purposes only and should not be considered legal or financial advice. 
             Cryptocurrency regulations are rapidly evolving. Always consult with qualified legal and tax professionals 
-            in your jurisdiction before making any cryptocurrency-related decisions.
+            in your jurisdiction before making any cryptocurrency-related decisions. Never invest more than you can afford to lose.
           </p>
         </div>
       </div>
