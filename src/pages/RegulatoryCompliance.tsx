@@ -317,6 +317,10 @@ const RegulatoryCompliance = () => {
                     Learn Crypto Basics
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
+                  <a
+                    href="/regulatory-compliance"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+                  >
                     Learn More
                     <ExternalLink className="h-4 w-4 ml-2" />
                   </a>
