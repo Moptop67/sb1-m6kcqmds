@@ -741,6 +741,7 @@ const RegulatoryCompliance = () => {
     }
   ];
 
+  const getStatusColor = (status: string) => {
   const getStatusColor = (status: 'regulated' | 'restricted' | 'banned' | string): string => {
     switch (status) {
       case 'regulated': return 'border-green-500 bg-green-50';
@@ -750,6 +751,7 @@ const RegulatoryCompliance = () => {
     }
   };
 
+  const getStatusIcon = (status: string) => {
   const getStatusIcon = (status: 'regulated' | 'restricted' | 'banned' | string): JSX.Element => {
     switch (status) {
       case 'regulated': return <CheckCircle className="h-5 w-5 text-green-600" />;
