@@ -762,7 +762,8 @@ const RegulatoryCompliance = () => {
   const selectedCountryData = countries.find(c => c.code === selectedCountry);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Cryptocurrency Beginner Guide 2025 - How to Start Crypto in Your Country</title>
         <meta name="description" content="Complete beginner guide to buying cryptocurrency legally. Step-by-step instructions, recommended exchanges, and compliance tips for your country." />
@@ -1653,8 +1654,9 @@ const RegulatoryCompliance = () => {
                 </p>
               </div>
             </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
