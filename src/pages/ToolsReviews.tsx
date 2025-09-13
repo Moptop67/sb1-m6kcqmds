@@ -160,7 +160,7 @@ const ToolsReviews = () => {
                     <ExternalLink className="h-3 w-3 ml-1" />
                   </a>
                   <Link
-                    to={`/review/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={item.name === 'Binance' ? '/review/binance' : item.name === 'Coinbase' ? '/review/binance-vs-coinbase' : '/review/binance'}
                     className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center transition-colors block text-center"
                   >
                     Read Full Review

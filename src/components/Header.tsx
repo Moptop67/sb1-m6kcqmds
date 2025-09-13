@@ -131,6 +131,15 @@ const Header = () => {
             </div>
           </div>
         )}
+        
+        {/* Add mouse leave handler to the entire nav area */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          onMouseLeave={() => {
+            setIsLearnDropdownOpen(false);
+            setIsToolsDropdownOpen(false);
+          }}
+        ></div>
       </nav>
     </header>
   );
