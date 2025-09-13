@@ -564,6 +564,281 @@ const RegulatoryCompliance = () => {
           </div>
         )}
 
+        {/* Nigeria Guide */}
+        {selectedCountry === 'nigeria' && (
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-center mb-6">
+              <span className="text-4xl mr-4">🇳🇬</span>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900">Nigeria Crypto Guide 2025</h2>
+                <p className="text-gray-600">Complete guide to cryptocurrency in Nigeria</p>
+              </div>
+            </div>
+
+            {/* Legal Status */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in Nigeria?</h3>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-green-800 font-semibold mb-2">Yes - Legal and Regulated</p>
+                    <p className="text-green-700">
+                      Crypto is legal and strictly regulated in Nigeria. The Investments and Securities Act (ISA 2025) 
+                      recognizes digital assets as financial securities and commodities under SEC oversight. All exchanges 
+                      must be registered/licensed with the Nigerian Securities and Exchange Commission (SEC).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-900 mb-2">Regulatory Framework</h4>
+                  <ul className="text-blue-800 text-sm space-y-1">
+                    <li>• Investments and Securities Act (ISA 2025)</li>
+                    <li>• SEC licensing required for all exchanges</li>
+                    <li>• Banks can serve crypto companies</li>
+                    <li>• Strict AML/KYC enforcement</li>
+                  </ul>
+                </div>
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-yellow-900 mb-2">Key Requirements</h4>
+                  <ul className="text-yellow-800 text-sm space-y-1">
+                    <li>• Only licensed exchanges for fiat-crypto</li>
+                    <li>• Full KYC verification required</li>
+                    <li>• Crypto taxed as securities/commodities</li>
+                    <li>• Corporate usage under scrutiny</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Getting Started */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Getting Started: Steps for Beginners</h3>
+              <div className="space-y-4">
+                {[
+                  'Select a SEC-licensed exchange from the options below',
+                  'Complete KYC: Submit government ID, selfie, and proof of address',
+                  'Deposit Naira (NGN): Use bank transfer, debit card, Paystack, Flutterwave, or P2P',
+                  'Buy crypto: Start with Bitcoin, Ethereum, USDT, or other supported coins',
+                  'Protect your funds: Enable 2FA, strong passwords, and move large holdings to personal wallet'
+                ].map((step, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <p className="text-gray-700">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Best Exchanges */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Best Crypto Exchanges for Nigeria (2025)</h3>
+              
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Top Centralized Exchanges</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full bg-white border border-gray-200 rounded-lg">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">NGN Deposit</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {[
+                        { name: 'Binance', deposit: 'P2P', features: 'Largest, NGN support, high liquidity', kyc: 'Yes' },
+                        { name: 'Bybit', deposit: 'P2P', features: 'Strong for derivatives/spot, NGN P2P', kyc: 'Yes' },
+                        { name: 'Bitget', deposit: 'Crypto/P2P', features: 'Copy trading leader, P2P, spot & futures', kyc: 'Yes' },
+                        { name: 'Luno', deposit: 'Direct', features: 'Fully regulated NGN deposits, easy interface', kyc: 'Yes' },
+                        { name: 'Quidax', deposit: 'Direct', features: 'Africa-focused, supports many coins', kyc: 'Yes' },
+                        { name: 'NairaEx', deposit: 'Direct', features: 'Longstanding reputation, instant trades', kyc: 'Yes' },
+                        { name: 'Busha', deposit: 'Direct', features: 'Local exchange, great for beginners', kyc: 'Yes' }
+                      ].map((exchange, index) => (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className="px-4 py-3 font-medium text-gray-900">{exchange.name}</td>
+                          <td className="px-4 py-3 text-gray-700">{exchange.deposit}</td>
+                          <td className="px-4 py-3 text-gray-700">{exchange.features}</td>
+                          <td className="px-4 py-3">
+                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
+                              {exchange.kyc}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Leading Global & Africa-Based Platforms</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full bg-white border border-gray-200 rounded-lg">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Features</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">NGN Support</th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {[
+                        { name: 'KuCoin', features: 'Best for altcoins, advanced P2P', support: 'Yes (P2P)', kyc: 'Yes' },
+                        { name: 'OKX', features: 'Top multi-asset security', support: 'Yes (P2P)', kyc: 'Yes' },
+                        { name: 'Yellow Card', features: 'Nigeria-based, direct NGN deposits', support: 'Yes', kyc: 'Yes' },
+                        { name: 'Prestmit/Breet', features: 'NGN off-ramp, USDT/USDC liquidity', support: 'Yes', kyc: 'Yes' }
+                      ].map((exchange, index) => (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className="px-4 py-3 font-medium text-gray-900">{exchange.name}</td>
+                          <td className="px-4 py-3 text-gray-700">{exchange.features}</td>
+                          <td className="px-4 py-3 text-gray-700">{exchange.support}</td>
+                          <td className="px-4 py-3">
+                            <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
+                              {exchange.kyc}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+            {/* On/Off Ramps */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: NGN and Crypto</h3>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-6">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-green-900 mb-4">Best On-Ramp Methods</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-green-800">Local exchanges:</span>
+                        <p className="text-green-700 text-sm">Luno, Quidax, NairaEx, Busha, Yellow Card - secure direct NGN deposits</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-green-800">P2P on global exchanges:</span>
+                        <p className="text-green-700 text-sm">Binance, Bybit, KuCoin, OKX - verified sellers with escrow</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-green-800">Fintech/payments:</span>
+                        <p className="text-green-700 text-sm">Flutterwave, Paystack support at compliant exchanges</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-blue-900 mb-4">Best Off-Ramp Methods</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-blue-800">Local exchanges:</span>
+                        <p className="text-blue-700 text-sm">Instant NGN withdrawal after crypto sale</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-blue-800">Instant off-ramp apps:</span>
+                        <p className="text-blue-700 text-sm">Breet, Prestmit - convert USDT/USDC to NGN fast</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <div>
+                        <span className="font-medium text-blue-800">P2P platforms:</span>
+                        <p className="text-blue-700 text-sm">Sell crypto using escrow protection</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">On/Off Ramp FAQs</h4>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h5 className="font-medium text-gray-900 mb-2">Is KYC required?</h5>
+                    <p className="text-gray-700 text-sm mb-4">Yes - full ID, selfie, and address required at all licensed exchanges.</p>
+                    
+                    <h5 className="font-medium text-gray-900 mb-2">Are there limits?</h5>
+                    <p className="text-gray-700 text-sm">Yes - deposits/withdrawals capped based on user tier and bank limits.</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-900 mb-2">Are transactions taxable?</h5>
+                    <p className="text-gray-700 text-sm mb-4">Yes - traders must report crypto earnings for taxation.</p>
+                    
+                    <h5 className="font-medium text-gray-900 mb-2">How fast are NGN ramps?</h5>
+                    <p className="text-gray-700 text-sm">Bank/wallet withdrawals are instant or within 1 business day.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Tax & Compliance */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tax & Compliance Essentials</h3>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-yellow-800">All crypto exchanges and VASPs must hold a SEC license - penalties for illegal activity are severe.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-yellow-800">Crypto is taxed as a security/commodity - keep detailed records for annual filings.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-yellow-800">Always use verified, licensed exchanges - avoid Telegram/WhatsApp OTC trading.</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Quick Checklist */}
+            <section>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Beginner Checklist</h3>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  {[
+                    'Register with a SEC-licensed exchange (Luno, Quidax, Binance P2P, etc.)',
+                    'Complete KYC with valid government ID and proof of address',
+                    'Use only regulated NGN onramp/offramp methods',
+                    'Enable 2FA, secure passwords, and transfer large volumes to hardware wallet',
+                    'Follow CryptoStarted Guide for up-to-date regulations and scam alerts'
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                      <span className="text-green-800">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          </div>
+        )}
+
         {/* Coming Soon Countries */}
         {selectedCountry && !['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(selectedCountry) && (
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
