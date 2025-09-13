@@ -100,7 +100,21 @@ const ToolsReviews = () => {
     }
   ];
 
-  const ComparisonTable = ({ items, type }: { items: any[], type: string }) => (
+  interface ComparisonItem {
+    name: string;
+    rating: number;
+    pros: string[];
+    cons: string[];
+    fees?: string;
+    price?: string;
+    bonus?: string;
+    affiliateLink: string;
+    logo: string;
+    trusted?: boolean;
+    type?: string;
+  }
+
+  const ComparisonTable = ({ items, type }: { items: ComparisonItem[], type: string }) => (
     <div className="overflow-x-auto">
       <table className="w-full bg-white rounded-lg shadow-lg">
         <thead className="bg-gray-50">

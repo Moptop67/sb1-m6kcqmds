@@ -92,7 +92,16 @@ const LearnCrypto = () => {
     }
   ];
 
-  const TopicCard = ({ topic, level }: { topic: any, level: string }) => (
+  type Topic = {
+    title: string;
+    description: string;
+    duration: string;
+    students: string;
+    completed: boolean;
+    link: string;
+  };
+
+  const TopicCard = ({ topic, level }: { topic: Topic, level: 'beginner' | 'intermediate' | 'advanced' }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex justify-between items-start mb-4">
         <div className="flex-1">
