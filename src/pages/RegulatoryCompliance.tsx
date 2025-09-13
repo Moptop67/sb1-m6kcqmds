@@ -17,6 +17,77 @@ const RegulatoryCompliance = () => {
         title: 'Is Crypto Legal in Australia?',
         content: 'Cryptocurrency is legal in Australia, regulated as a digital asset by the Australian Securities and Investments Commission (ASIC) and AUSTRAC. All exchanges operating in Australia must follow anti-money laundering (AML) and counter-terrorism financing (CTF) rules—including mandatory identity checks for new users.'
       },
+      onramp: {
+        description: 'Getting Australian dollars into crypto exchanges is straightforward with multiple fast, secure options:',
+        methods: [
+          {
+            name: 'Bank Transfer (OSKO/PayID)',
+            description: 'Direct bank transfer using PayID or BSB/Account',
+            fee: 'Free - $2',
+            speed: 'Fast',
+            limit: 'Up to $50,000/day'
+          },
+          {
+            name: 'BPAY',
+            description: 'Pay using your bank\'s BPAY system',
+            fee: 'Free',
+            speed: 'Same day',
+            limit: 'Up to $10,000/day'
+          },
+          {
+            name: 'Debit Card',
+            description: 'Instant purchase with Visa/Mastercard',
+            fee: '1-3%',
+            speed: 'Instant',
+            limit: 'Up to $5,000/day'
+          },
+          {
+            name: 'POLi Payments',
+            description: 'Direct online banking payment',
+            fee: '$2-5',
+            speed: 'Fast',
+            limit: 'Up to $20,000/day'
+          }
+        ],
+        tips: [
+          'PayID is the fastest and cheapest method for most exchanges',
+          'Start with small amounts ($50-200) for your first deposit',
+          'Bank transfers are usually free but may take 1-2 hours',
+          'Debit cards are instant but have higher fees - good for urgent purchases'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto back to AUD and withdrawing to your bank account:',
+        methods: [
+          {
+            name: 'Bank Transfer',
+            description: 'Withdraw AUD directly to your bank account',
+            fee: 'Free - $5',
+            speed: '1-2 business days',
+            limit: 'Up to $100,000/day'
+          },
+          {
+            name: 'PayID Withdrawal',
+            description: 'Fast withdrawal using PayID',
+            fee: 'Free - $2',
+            speed: 'Same day',
+            limit: 'Up to $50,000/day'
+          },
+          {
+            name: 'Crypto Debit Card',
+            description: 'Spend crypto directly with CoinJar Card',
+            fee: '0.5-1%',
+            speed: 'Instant',
+            limit: 'Up to $5,000/day'
+          }
+        ],
+        warnings: [
+          'Large withdrawals may trigger additional verification',
+          'Keep records of all withdrawals for tax purposes',
+          'Some banks may question large crypto-related deposits',
+          'Consider spreading large withdrawals over multiple days'
+        ]
+      },
       steps: [
         'Choose an exchange registered with AUSTRAC',
         'Complete Know-Your-Customer (KYC) checks (ID, proof of address)',
@@ -74,6 +145,77 @@ const RegulatoryCompliance = () => {
         title: 'Is Crypto Legal in the United States?',
         content: 'Cryptocurrency is legal in the United States, regulated by multiple federal agencies including the SEC, CFTC, and FinCEN. Bitcoin is classified as a commodity, while most altcoins are considered securities. All exchanges must comply with federal AML/KYC requirements and state-specific licensing.'
       },
+      onramp: {
+        description: 'US residents have several regulated options to fund crypto accounts:',
+        methods: [
+          {
+            name: 'ACH Bank Transfer',
+            description: 'Link your bank account for direct transfers',
+            fee: 'Free',
+            speed: '3-5 business days',
+            limit: 'Up to $25,000/day'
+          },
+          {
+            name: 'Wire Transfer',
+            description: 'Fast bank wire for large amounts',
+            fee: '$10-25',
+            speed: 'Same day',
+            limit: 'Up to $500,000/day'
+          },
+          {
+            name: 'Debit Card',
+            description: 'Instant purchase with Visa/Mastercard',
+            fee: '2-4%',
+            speed: 'Instant',
+            limit: 'Up to $1,000/day'
+          },
+          {
+            name: 'PayPal/Apple Pay',
+            description: 'Digital wallet funding (select exchanges)',
+            fee: '1-2%',
+            speed: 'Instant',
+            limit: 'Up to $2,500/day'
+          }
+        ],
+        tips: [
+          'ACH transfers are free but take 3-5 days to clear',
+          'Start with small debit card purchases for instant access',
+          'Wire transfers are best for large amounts ($10,000+)',
+          'Some banks block crypto purchases - call ahead to notify them'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto to USD and withdrawing to US bank accounts:',
+        methods: [
+          {
+            name: 'ACH Bank Transfer',
+            description: 'Standard withdrawal to linked bank account',
+            fee: 'Free',
+            speed: '1-3 business days',
+            limit: 'Up to $25,000/day'
+          },
+          {
+            name: 'Wire Transfer',
+            description: 'Fast withdrawal for large amounts',
+            fee: '$25',
+            speed: 'Same day',
+            limit: 'Up to $500,000/day'
+          },
+          {
+            name: 'Coinbase Card',
+            description: 'Spend crypto directly with Visa debit card',
+            fee: '2.49%',
+            speed: 'Instant',
+            limit: 'Up to $2,500/day'
+          }
+        ],
+        warnings: [
+          'Large withdrawals may require additional verification',
+          'Report all gains/losses to IRS on Form 8949',
+          'Some banks may hold large crypto-related deposits',
+          'Keep detailed records for tax reporting'
+        ]
+      },
       steps: [
         'Choose a US-regulated exchange (Coinbase, Kraken, Gemini)',
         'Complete identity verification with SSN and government ID',
@@ -126,6 +268,63 @@ const RegulatoryCompliance = () => {
         title: 'Is Crypto Legal in the UK?',
         content: 'Cryptocurrency is legal in the UK under Financial Conduct Authority (FCA) regulation. Crypto assets are classified as property, with clear distinctions between utility tokens, security tokens, and e-money tokens. All crypto businesses must register with the FCA.'
       },
+      onramp: {
+        description: 'UK residents can fund crypto accounts through several FCA-regulated methods:',
+        methods: [
+          {
+            name: 'Bank Transfer (Faster Payments)',
+            description: 'Direct transfer from UK bank account',
+            fee: 'Free',
+            speed: 'Same day',
+            limit: 'Up to £25,000/day'
+          },
+          {
+            name: 'Debit Card',
+            description: 'Instant purchase with UK debit card',
+            fee: '1-3%',
+            speed: 'Instant',
+            limit: 'Up to £2,000/day'
+          },
+          {
+            name: 'Open Banking',
+            description: 'Secure connection to your bank via Open Banking',
+            fee: 'Free',
+            speed: 'Instant',
+            limit: 'Up to £10,000/day'
+          }
+        ],
+        tips: [
+          'Faster Payments are free and usually arrive within hours',
+          'Some banks block crypto purchases - Monzo, Starling are crypto-friendly',
+          'Open Banking is the most secure instant funding method',
+          'Start small (£50-100) for your first purchase'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto to GBP and withdrawing to UK bank accounts:',
+        methods: [
+          {
+            name: 'Bank Transfer',
+            description: 'Withdraw GBP to your UK bank account',
+            fee: 'Free - £1',
+            speed: 'Same day',
+            limit: 'Up to £50,000/day'
+          },
+          {
+            name: 'Crypto Debit Card',
+            description: 'Spend crypto directly with cards like Crypto.com',
+            fee: '0-2%',
+            speed: 'Instant',
+            limit: 'Up to £5,000/day'
+          }
+        ],
+        warnings: [
+          'Keep records for HMRC Capital Gains Tax reporting',
+          'Large withdrawals may trigger bank security checks',
+          'Annual CGT allowance is £6,000 (2024/25)',
+          'Consider timing withdrawals to optimize tax efficiency'
+        ]
+      },
       steps: [
         'Choose an FCA-registered exchange',
         'Complete identity verification with UK documents',
@@ -177,6 +376,63 @@ const RegulatoryCompliance = () => {
       legalStatus: {
         title: 'Is Crypto Legal in Canada?',
         content: 'Cryptocurrency is legal in Canada under Canadian Securities Administrators (CSA) guidance. Most crypto assets are treated as securities, with clear regulatory frameworks for exchanges. All platforms must register with provincial securities regulators.'
+      },
+      onramp: {
+        description: 'Canadian residents can fund crypto accounts through regulated, secure methods:',
+        methods: [
+          {
+            name: 'Interac e-Transfer',
+            description: 'Standard Canadian online banking transfer',
+            fee: 'Free - $1.50',
+            speed: 'Same day',
+            limit: 'Up to $10,000/day'
+          },
+          {
+            name: 'Bank Wire',
+            description: 'Direct wire transfer for large amounts',
+            fee: '$15-30',
+            speed: 'Same day',
+            limit: 'Up to $250,000/day'
+          },
+          {
+            name: 'Debit Card',
+            description: 'Instant purchase with Canadian debit card',
+            fee: '2-4%',
+            speed: 'Instant',
+            limit: 'Up to $2,000/day'
+          }
+        ],
+        tips: [
+          'Interac e-Transfer is the most popular funding method',
+          'Most major Canadian banks support crypto exchanges',
+          'Start with small amounts ($100-500) initially',
+          'Wire transfers are best for amounts over $10,000'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto to CAD and withdrawing to Canadian bank accounts:',
+        methods: [
+          {
+            name: 'Bank Transfer',
+            description: 'Direct withdrawal to Canadian bank account',
+            fee: 'Free - $5',
+            speed: '1-2 business days',
+            limit: 'Up to $50,000/day'
+          },
+          {
+            name: 'Interac e-Transfer',
+            description: 'Receive funds via Interac e-Transfer',
+            fee: '$1-3',
+            speed: 'Same day',
+            limit: 'Up to $3,000/day'
+          }
+        ],
+        warnings: [
+          'Report all crypto gains/losses to CRA',
+          '50% of capital gains are taxable',
+          'Keep detailed transaction records',
+          'Large withdrawals may require additional verification'
+        ]
       },
       steps: [
         'Choose a CSA-registered exchange',
@@ -361,11 +617,114 @@ const RegulatoryCompliance = () => {
                   </div>
                 </div>
 
+                {/* On-ramp and Off-ramp */}
+                <div className="bg-white rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <TrendingUp className="h-6 w-6 mr-3 text-green-600" />
+                    3. Getting Money In & Out (On-ramp/Off-ramp)
+                  </h2>
+                  
+                  {/* On-ramp Section */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 text-green-700">
+                      💰 Getting Money IN (On-ramp) - How to Fund Your Account
+                    </h3>
+                    <p className="text-gray-700 mb-4">{selectedCountryData.onramp.description}</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {selectedCountryData.onramp.methods.map((method, index) => (
+                        <div key={index} className="border border-green-200 rounded-lg p-4 bg-green-50">
+                          <div className="flex items-center justify-between mb-2">
+                            <h4 className="font-bold text-gray-900">{method.name}</h4>
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${
+                              method.speed === 'Instant' ? 'bg-green-100 text-green-800' :
+                              method.speed === 'Fast' ? 'bg-blue-100 text-blue-800' :
+                              'bg-yellow-100 text-yellow-800'
+                            }`}>
+                              {method.speed}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{method.description}</p>
+                          <div className="text-sm">
+                            <div className="flex justify-between">
+                              <span className="text-gray-600">Fee:</span>
+                              <span className="font-medium">{method.fee}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-600">Limit:</span>
+                              <span className="font-medium">{method.limit}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                      <h4 className="font-bold text-blue-800 mb-2">💡 Pro Tips for Funding:</h4>
+                      <ul className="text-blue-700 text-sm space-y-1">
+                        {selectedCountryData.onramp.tips.map((tip, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="h-4 w-4 mr-2 flex-shrink-0 mt-0.5" />
+                            {tip}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Off-ramp Section */}
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 text-red-700">
+                      💸 Getting Money OUT (Off-ramp) - How to Cash Out
+                    </h3>
+                    <p className="text-gray-700 mb-4">{selectedCountryData.offramp.description}</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {selectedCountryData.offramp.methods.map((method, index) => (
+                        <div key={index} className="border border-red-200 rounded-lg p-4 bg-red-50">
+                          <div className="flex items-center justify-between mb-2">
+                            <h4 className="font-bold text-gray-900">{method.name}</h4>
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${
+                              method.speed === 'Instant' ? 'bg-green-100 text-green-800' :
+                              method.speed === 'Fast' ? 'bg-blue-100 text-blue-800' :
+                              'bg-yellow-100 text-yellow-800'
+                            }`}>
+                              {method.speed}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{method.description}</p>
+                          <div className="text-sm">
+                            <div className="flex justify-between">
+                              <span className="text-gray-600">Fee:</span>
+                              <span className="font-medium">{method.fee}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-600">Limit:</span>
+                              <span className="font-medium">{method.limit}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                      <h4 className="font-bold text-yellow-800 mb-2">⚠️ Important Cash-Out Notes:</h4>
+                      <ul className="text-yellow-700 text-sm space-y-1">
+                        {selectedCountryData.offramp.warnings.map((warning, index) => (
+                          <li key={index} className="flex items-start">
+                            <AlertTriangle className="h-4 w-4 mr-2 flex-shrink-0 mt-0.5" />
+                            {warning}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
                 {/* Tax Requirements */}
                 <div className="bg-white rounded-xl shadow-lg p-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                     <FileText className="h-6 w-6 mr-3 text-purple-600" />
-                    3. {selectedCountryData.taxes.title}
+                    4. {selectedCountryData.taxes.title}
                   </h2>
                   <p className="text-gray-700 text-lg mb-4">{selectedCountryData.taxes.content}</p>
                   <ul className="space-y-2">
@@ -382,7 +741,7 @@ const RegulatoryCompliance = () => {
                 <div className="bg-white rounded-xl shadow-lg p-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                     <Shield className="h-6 w-6 mr-3 text-red-600" />
-                    4. {selectedCountryData.compliance.title}
+                    5. {selectedCountryData.compliance.title}
                   </h2>
                   <ul className="space-y-3">
                     {selectedCountryData.compliance.tips.map((tip, index) => (
