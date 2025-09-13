@@ -673,6 +673,293 @@ const RegulatoryCompliance = () => {
     </div>
   );
 
+  const IndiaContent = () => (
+    <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="flex items-center mb-6">
+        <span className="text-4xl mr-4">🇮🇳</span>
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900">India Crypto Guide</h2>
+          <p className="text-gray-600">Complete regulatory compliance guide for Indian crypto users</p>
+        </div>
+      </div>
+
+      {/* Legal Status */}
+      <section className="mb-8">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+          <div className="flex items-start">
+            <Shield className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-bold text-green-800 mb-2">Is Crypto Legal in India?</h3>
+              <p className="text-green-700">
+                Cryptocurrency is <strong>legal to buy, sell, and hold in India</strong>, but it is not recognized as legal tender. 
+                Major agencies like RBI, SEBI, and FIU-IND enforce anti-money laundering (AML), know-your-customer (KYC), 
+                and tax rules for exchanges and users. As of 2025, crypto is taxed at 30% on profits and 1% TDS (Tax Deducted at Source) 
+                on sales exceeding ₹50,000 per financial year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started Steps */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Getting Started: Steps for Beginners</h3>
+        <div className="space-y-4">
+          {[
+            {
+              step: 1,
+              title: 'Select a reputable Indian exchange',
+              description: 'See the list below for trusted options.'
+            },
+            {
+              step: 2,
+              title: 'Complete KYC',
+              description: 'Upload PAN card, photo ID, and proof of address.'
+            },
+            {
+              step: 3,
+              title: 'Deposit INR',
+              description: 'Use UPI, NEFT, RTGS, IMPS, debit/credit card or bank transfer.'
+            },
+            {
+              step: 4,
+              title: 'Buy crypto',
+              description: 'Purchase Bitcoin, Ethereum, stablecoins, or tokens directly.'
+            },
+            {
+              step: 5,
+              title: 'Secure your investment',
+              description: 'Set strong passwords, enable two-factor authentication, and consider storing large holdings in personal wallets.'
+            }
+          ].map((item, index) => (
+            <div key={index} className="flex items-start">
+              <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
+                {item.step}
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Exchange Comparison */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Top Crypto Exchanges for India (2025)</h3>
+        
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Leading Indian Centralized Exchanges</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow border">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Key Features</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">INR Deposit</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {[
+                  { name: 'CoinDCX', features: '100+ coins, low fees, UPI, bank, easy app', inr: 'Yes', kyc: 'PAN Card' },
+                  { name: 'Mudrex', features: '150+ coins, portfolios, USDT/INR, security', inr: 'Yes', kyc: 'PAN Card' },
+                  { name: 'CoinSwitch', features: '170+ coins, aggregator, NEFT, IMPS, RTGS', inr: 'Yes', kyc: 'PAN Card' },
+                  { name: 'ZebPay', features: 'Oldest, lending, competitive fees', inr: 'Yes', kyc: 'PAN Card' },
+                  { name: 'Unocoin', features: '50+ coins, simple INR payments, good support', inr: 'Yes', kyc: 'PAN Card' },
+                  { name: 'Bitbns', features: '400+ coins, P2P, UPI, instant INR', inr: 'Yes', kyc: 'PAN Card' }
+                ].map((exchange, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.features}</td>
+                    <td className="px-6 py-4">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+                        {exchange.inr}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.kyc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Major Global Exchanges Accessible in India</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow border">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Markets/Features</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">INR Deposit/Withdrawal</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">KYC</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {[
+                  { name: 'Binance', features: '500+ coins, low global fees, robust P2P', inr: 'INR via P2P/3rd party', kyc: 'Photo ID' },
+                  { name: 'Paxful', features: 'P2P, stablecoins, wide payment options', inr: 'INR via P2P, PayPal', kyc: 'Photo ID' },
+                  { name: 'Bybit', features: 'Top global trading, now applies 18% GST', inr: 'INR via P2P, USDT', kyc: 'Photo ID' }
+                ].map((exchange, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.features}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.inr}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.kyc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600 mt-2">
+            Local access and funding methods may change over time. Peer-to-peer (P2P) is the main gateway for INR on global platforms.
+          </p>
+        </div>
+      </section>
+
+      {/* On/Off Ramp Section */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: Moving Between INR and Crypto</h3>
+        
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 className="font-bold text-blue-800 mb-3">What Are On-Ramps and Off-Ramps?</h4>
+          <div className="space-y-2 text-blue-700">
+            <p><strong>On-ramp:</strong> Deposit INR to buy crypto quickly through bank, UPI, or P2P methods.</p>
+            <p><strong>Off-ramp:</strong> Sell crypto for INR and withdraw funds legally and securely to a local bank.</p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Best On-Ramp Methods</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Indian exchanges</p>
+                  <p className="text-sm text-gray-600">CoinDCX, Mudrex, CoinSwitch, ZebPay, Unocoin, and Bitbns support INR deposit via UPI, IMPS, NEFT, bank transfer, and debit/credit cards.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Global exchanges via P2P</p>
+                  <p className="text-sm text-gray-600">Binance, Paxful offer INR-supported peer-to-peer on-ramps (users buy crypto direct from verified sellers, payment settled in INR).</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Fiat-to-crypto platforms</p>
+                  <p className="text-sm text-gray-600">OneSafe and similar providers offer seamless INR-to-crypto conversion for beginners and businesses.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Best Off-Ramp Methods</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Indian exchange withdrawal</p>
+                  <p className="text-sm text-gray-600">Sell crypto back for INR and withdraw using UPI, IMPS, NEFT, RTGS, or straight to your local bank (KYC mandatory).</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Global exchanges P2P</p>
+                  <p className="text-sm text-gray-600">Binance, Paxful's P2P desk enables crypto-to-INR sales (payment received from verified buyers).</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Fiat off-ramp services</p>
+                  <p className="text-sm text-gray-600">OneSafe streamlines crypto conversion and payout to INR account, eliminating high fees and delays.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">On/Off Ramp FAQs</h3>
+        <div className="space-y-4">
+          {[
+            {
+              question: 'Is KYC required?',
+              answer: 'Yes—PAN card, photo ID, and address proof are mandatory for all regulated ramps.'
+            },
+            {
+              question: 'Are there limits?',
+              answer: 'Yes—top exchanges set INR deposit and withdrawal limits based on user tiers and verification levels.'
+            },
+            {
+              question: 'Are transactions taxable?',
+              answer: 'Yes—30% tax on profits plus 1% TDS on sales over ₹50,000 per year. Keep detailed records, including dates, amounts, and INR values for each transaction.'
+            },
+            {
+              question: 'How fast are transfers?',
+              answer: 'INR deposits via UPI/IMPS/NEFT are usually real-time or same-day. Off-ramps typically process bank withdrawals within 1–3 business days.'
+            }
+          ].map((faq, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
+              <p className="text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tax and Compliance */}
+      <section className="mb-8">
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+          <div className="flex items-start">
+            <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-bold text-yellow-800 mb-3">Tax & Compliance Essentials</h3>
+              <ul className="space-y-2 text-yellow-700">
+                <li>• Crypto is taxed at 30% on profits and subject to 1% TDS for trades above ₹50,000/year.</li>
+                <li>• Declare profits in your Income Tax Return using appropriate forms (ITR-2 for individuals).</li>
+                <li>• Track all trades: dates, coin/token, INR values, counterparties, and TDS details.</li>
+                <li>• Always use trusted, KYC-compliant exchanges—beware of scam sites, read community reviews, and check with SEBI/FIU-IND for the latest rules.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Checklist */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Beginner's Checklist</h3>
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+          <ul className="space-y-3">
+            {[
+              'Register with a trusted, KYC-compliant Indian exchange (CoinDCX, Mudrex, etc.).',
+              'Prepare your PAN card, photo ID, and address proof for onboarding.',
+              'Compare supported coins, fees, deposit/withdrawal methods, and limits.',
+              'Use strong passwords and 2FA; move larger balances to secure wallets.',
+              'Bookmark CryptoStarted Guide for fresh updates, scam alerts, and exchange comparisons.'
+            ].map((item, index) => (
+              <li key={index} className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                <span className="text-green-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </div>
+  );
+
   const selectedCountryData = countries.find(c => c.id === selectedCountry);
 
   return (
@@ -799,6 +1086,8 @@ const RegulatoryCompliance = () => {
                 <AustraliaContent />
               ) : selectedCountry === 'usa' ? (
                 <USAContent />
+              ) : selectedCountry === 'india' ? (
+                <IndiaContent />
               ) : (
                 <ComingSoonContent countryName={selectedCountryData?.name || 'Selected Country'} />
               )}
