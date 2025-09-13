@@ -289,9 +289,9 @@ const NewsSection = () => {
               </div>
               <div className="ml-3">
                 <h3 className="font-bold text-gray-900">{crypto.name}</h3>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                <p className="text-sm text-gray-600">{crypto.symbol.toUpperCase()}</p>
               </div>
-              </h2>
+            </div>
             <div className="text-right">
               <p className="text-2xl font-bold text-gray-900">{formatPrice(crypto.current_price)}</p>
               <p className={`text-sm font-semibold ${crypto.price_change_percentage_24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
@@ -503,7 +503,7 @@ const NewsSection = () => {
                       <div>
                         <p className="text-gray-700 leading-relaxed">
                           <strong>Bitcoin Metrics:</strong> Nearly 936,000 active BTC addresses and falling exchange balances show 
-                          investor confidence and reduced short-term selling pressure. Large "whale\" holders and positive ETF inflows 
+                          investor confidence and reduced short-term selling pressure. Large "whale" holders and positive ETF inflows 
                           point to continued accumulation, supporting potential for a fresh rally if macro conditions allow. Watch for 
                           price reactions around the $110,000 level—a technical and on-chain support zone.
                         </p>
@@ -577,9 +577,9 @@ const NewsSection = () => {
               {/* Weekly Update Article */}
               <article className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <header className="mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
                     Global Regulatory Challenges Roil Crypto Markets This Week
-                  </h2>
+                  </h1>
                   <p className="text-gray-600 text-sm">Published September 13, 2025</p>
                 </header>
                 
