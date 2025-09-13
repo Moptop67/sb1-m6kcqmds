@@ -108,7 +108,7 @@ class NewsService {
             url: link,
             publishedAt: this.formatDate(pubDate),
             source: source.attribution,
-            category: this.categorizeNews(title, description) as any
+            category: this.categorizeNews(title, description)
           });
         }
       });
@@ -183,7 +183,7 @@ class NewsService {
     }
   }
 
-  private categorizeNews(title: string, description: string): string {
+  private categorizeNews(title: string, description: string): NewsItem['category'] {
     const text = (title + ' ' + description).toLowerCase();
     
     if (text.includes('bitcoin') || text.includes('btc')) return 'bitcoin';

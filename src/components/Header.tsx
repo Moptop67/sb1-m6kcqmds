@@ -73,8 +73,6 @@ const Header = () => {
                 <div
                   onMouseEnter={() => setIsToolsDropdownOpen(true)}
                   onMouseLeave={() => setIsToolsDropdownOpen(false)}
-                  onMouseEnter={() => setIsToolsDropdownOpen(true)}
-                  onMouseLeave={() => setIsToolsDropdownOpen(false)}
                   className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border py-2 z-50"
                 >
                   <Link to="/tools#exchanges" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">

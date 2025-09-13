@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, BookOpen, TrendingUp, Users, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Shield, BookOpen, Users, Star, CheckCircle } from 'lucide-react';
 import NewsletterSignup from '../components/NewsletterSignup';
 import AffiliateToolsWidget from '../components/AffiliateToolsWidget';
 
