@@ -242,7 +242,7 @@ const NewsSection = () => {
             href={article.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700 font-semibold text-sm inline-flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all shadow-sm"
+            className="text-white hover:text-white font-semibold text-sm inline-flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full transition-all shadow-sm"
           >
             Read Full Article
             <ExternalLink className="h-4 w-4 ml-2" />
