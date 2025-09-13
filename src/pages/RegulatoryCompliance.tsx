@@ -1564,9 +1564,3 @@ const RegulatoryCompliance = () => {
           </div>
         </section>
       </div>
-      </div>
-    </>
-  );
-};
-
-export default RegulatoryCompliance;
