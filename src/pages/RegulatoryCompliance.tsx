@@ -1192,6 +1192,7 @@ const RegulatoryCompliance = () => {
           {country.status}
         </span>
       </div>
+      </div>
     </button>
   );
 
