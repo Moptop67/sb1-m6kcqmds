@@ -738,136 +738,6 @@ const RegulatoryCompliance = () => {
         'Set up proper record-keeping for tax filing',
         'Start with small amounts to understand regulations'
       ]
-    },
-    {
-      name: 'Brazil',
-      code: 'BR',
-      flag: '🇧🇷',
-      status: 'regulated',
-      title: 'How to Begin With Crypto in Brazil (2025)',
-      subtitle: 'Ready to start your crypto journey in Brazil? Navigate CVM regulations and understand the legal framework with our comprehensive beginner guide for Brazilian residents.',
-      legalStatus: {
-        title: 'Is Crypto Legal in Brazil?',
-        content: 'Cryptocurrency is fully legal in Brazil, regulated by the Brazilian Securities Commission (CVM) and Central Bank of Brazil (BCB). Brazil has one of the most crypto-friendly regulatory frameworks in Latin America, with clear rules for exchanges and taxation.'
-      },
-      onramp: {
-        description: 'Brazilian residents can fund crypto accounts through several regulated methods:',
-        methods: [
-          {
-            name: 'PIX (Instant Payment)',
-            description: 'Brazil\'s instant payment system',
-            fee: 'Free - 0.5%',
-            speed: 'Instant',
-            limit: 'Up to R$ 50,000/day'
-          },
-          {
-            name: 'Bank Transfer (TED/DOC)',
-            description: 'Traditional bank transfer methods',
-            fee: 'R$ 5-15',
-            speed: '1-2 hours',
-            limit: 'Up to R$ 100,000/day'
-          },
-          {
-            name: 'Credit Card',
-            description: 'Instant purchase with Brazilian credit card',
-            fee: '3-5%',
-            speed: 'Instant',
-            limit: 'Up to R$ 10,000/day'
-          },
-          {
-            name: 'Debit Card',
-            description: 'Instant purchase with Brazilian debit card',
-            fee: '1-2%',
-            speed: 'Instant',
-            limit: 'Up to R$ 5,000/day'
-          }
-        ],
-        tips: [
-          'PIX is the most popular method in Brazil - instant, cheap, and available 24/7',
-          'Most Brazilian exchanges support PIX deposits',
-          'Start with small amounts (R$ 100-500) initially',
-          'Bank transfers are best for large amounts'
-        ]
-      },
-      offramp: {
-        description: 'Converting crypto to BRL and withdrawing to Brazilian bank accounts:',
-        methods: [
-          {
-            name: 'PIX Withdrawal',
-            description: 'Instant withdrawal using PIX',
-            fee: 'Free - 0.5%',
-            speed: 'Instant',
-            limit: 'Up to R$ 50,000/day'
-          },
-          {
-            name: 'Bank Transfer (TED)',
-            description: 'Standard bank transfer withdrawal',
-            fee: 'R$ 5-20',
-            speed: '1-2 hours',
-            limit: 'Up to R$ 100,000/day'
-          },
-          {
-            name: 'P2P Trading',
-            description: 'Direct trading with other users',
-            fee: '0.1-0.5%',
-            speed: 'Varies',
-            limit: 'No limit'
-          }
-        ],
-        warnings: [
-          'Withdrawals over R$ 30,000 may require additional tax documentation',
-          'Keep records of all transactions for Receita Federal reporting',
-          'Tax reporting is mandatory for gains',
-          'Large withdrawals may trigger bank security checks'
-        ]
-      },
-      steps: [
-        'Choose a CVM-registered exchange or reputable global platform',
-        'Complete KYC verification with CPF and valid ID',
-        'Deposit BRL using PIX, bank transfer, or credit card',
-        'Buy crypto with transparent fee display',
-        'Enable two-factor authentication for security',
-        'Keep detailed records for tax reporting'
-      ],
-      taxes: {
-        title: 'Brazilian Tax Requirements',
-        content: 'Brazil has clear crypto tax rules with different rates for different activities:',
-        requirements: [
-          'Day Trading: 20% on all gains',
-          'Long-term Holdings: 15% on gains over R$ 35,000/month',
-          'Sales under R$ 35,000/month: Tax-free',
-          'Keep detailed records of all transactions with BRL values',
-          'File monthly DARF payments for taxes owed'
-        ]
-      },
-      compliance: {
-        title: 'Brazilian Compliance Tips',
-        tips: [
-          'Only use exchanges that comply with CVM regulations',
-          'Complete identity verification with CPF and valid documents',
-          'Keep detailed trading records for tax purposes',
-          'Report crypto gains in annual tax returns',
-          'Use crypto tax software or consult a Brazilian accountant'
-        ]
-      },
-      localExchanges: [
-        { name: 'Mercado Bitcoin', registration: 'Yes', features: 'Largest Brazilian exchange, high security', audSupport: 'Yes', rating: 4.5 },
-        { name: 'Bitso', registration: 'Yes', features: 'Low fees, user-friendly, Latin America focus', audSupport: 'Yes', rating: 4.4 },
-        { name: 'NovaDAX', registration: 'Yes', features: 'Advanced trading, institutional focus', audSupport: 'Yes', rating: 4.3 },
-        { name: 'Foxbit', registration: 'Yes', features: 'Beginner-friendly, educational resources', audSupport: 'Yes', rating: 4.2 }
-      ],
-      globalExchanges: [
-        { name: 'Binance', regulation: 'Global leader', features: 'Huge selection, low fees, P2P trading', audSupport: 'Yes', rating: 4.8 },
-        { name: 'KuCoin', regulation: 'Global registration', features: 'Many altcoins, trading bots', audSupport: 'Limited', rating: 4.4 },
-        { name: 'OKX', regulation: 'Global registration', features: 'Advanced trading, derivatives', audSupport: 'Limited', rating: 4.2 }
-      ],
-      checklist: [
-        'Have your CPF and valid ID ready',
-        'Choose a CVM-registered exchange',
-        'Set up PIX for easy deposits',
-        'Understand tax implications',
-        'Start with small amounts (R$ 100-500)'
-      ]
     }
   ];
 
@@ -1355,6 +1225,343 @@ const RegulatoryCompliance = () => {
             in your jurisdiction before making any cryptocurrency-related decisions. Never invest more than you can afford to lose.
           </p>
         </div>
+
+        {/* European Union */}
+        <section id="eu" className="mb-16">
+          <div className="flex items-center mb-8">
+            <span className="text-4xl mr-4">🇪🇺</span>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900">European Union (EU)</h2>
+              <p className="text-gray-600 mt-1">MiCA regulation brings unified crypto rules across all 27 EU member states</p>
+            </div>
+          </div>
+
+          {/* Legal Status */}
+          <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-green-800 mb-4">✅ Legal Status (2025)</h3>
+            <ul className="space-y-2 text-green-700">
+              <li>• <strong>Fully legal</strong> under MiCA (Markets in Crypto-Assets) regulation</li>
+              <li>• <strong>Unified rules</strong> across all 27 EU member states since 2024</li>
+              <li>• <strong>Consumer protection</strong> with mandatory licensing for exchanges</li>
+              <li>• <strong>Stablecoin regulations</strong> with reserve requirements</li>
+              <li>• <strong>Anti-money laundering</strong> compliance required</li>
+            </ul>
+          </div>
+
+          {/* Step-by-Step Process */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">🚀 Getting Started: Step-by-Step</h3>
+            <div className="space-y-4">
+              {[
+                'Choose a MiCA-licensed exchange (look for regulatory badges)',
+                'Complete KYC verification with EU ID/passport + proof of address',
+                'Deposit EUR using SEPA, bank transfer, or card payments',
+                'Buy crypto with transparent fee display and consumer protections',
+                'Enable 2FA and use strong passwords for security',
+                'Consider hardware wallet for amounts over €1,000'
+              ].map((step, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
+                    {index + 1}
+                  </div>
+                  <p className="text-gray-700">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* On-ramp Methods */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">💰 On-ramp: Getting EUR Into Crypto</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Payment Method</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Fees</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Speed</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Daily Limits</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">SEPA Transfer</div>
+                      <div className="text-sm text-gray-600">Most popular EU method</div>
+                    </td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Free - €1</td>
+                    <td className="py-3 px-4">1-2 hours</td>
+                    <td className="py-3 px-4">€50,000+</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">Instant SEPA</div>
+                      <div className="text-sm text-gray-600">Available 24/7</div>
+                    </td>
+                    <td className="py-3 px-4">€0.70 - €2</td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Instant</td>
+                    <td className="py-3 px-4">€15,000</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">Debit/Credit Card</div>
+                      <div className="text-sm text-gray-600">Visa, Mastercard</div>
+                    </td>
+                    <td className="py-3 px-4">1.8% - 3.5%</td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Instant</td>
+                    <td className="py-3 px-4">€2,000 - €10,000</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">Open Banking</div>
+                      <div className="text-sm text-gray-600">Direct bank connection</div>
+                    </td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Free - €1</td>
+                    <td className="py-3 px-4">15 minutes</td>
+                    <td className="py-3 px-4">€25,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p className="text-blue-800 text-sm">
+                <strong>💡 Pro Tip:</strong> SEPA transfers are cheapest for regular purchases. Use cards only for urgent buys due to higher fees.
+              </p>
+            </div>
+          </div>
+
+          {/* Off-ramp Methods */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">💸 Off-ramp: Converting Crypto Back to EUR</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Withdrawal Method</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Fees</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Processing Time</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Daily Limits</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">SEPA Withdrawal</div>
+                      <div className="text-sm text-gray-600">To EU bank account</div>
+                    </td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Free - €1</td>
+                    <td className="py-3 px-4">1-3 business days</td>
+                    <td className="py-3 px-4">€50,000+</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">Instant SEPA</div>
+                      <div className="text-sm text-gray-600">Fast withdrawal</div>
+                    </td>
+                    <td className="py-3 px-4">€1 - €5</td>
+                    <td className="py-3 px-4 text-green-600 font-medium">15 minutes</td>
+                    <td className="py-3 px-4">€15,000</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">
+                      <div className="font-medium">Crypto Debit Card</div>
+                      <div className="text-sm text-gray-600">Spend directly</div>
+                    </td>
+                    <td className="py-3 px-4">0% - 2%</td>
+                    <td className="py-3 px-4 text-green-600 font-medium">Instant</td>
+                    <td className="py-3 px-4">€5,000 - €25,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-4 p-4 bg-yellow-50 rounded-lg">
+              <p className="text-yellow-800 text-sm">
+                <strong>⚠️ Important:</strong> Large withdrawals (€10,000+) may require additional verification and tax documentation.
+              </p>
+            </div>
+          </div>
+
+          {/* Tax Information */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">📊 Tax & Record-Keeping (Varies by Country)</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3">Common EU Tax Rules:</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Capital gains tax</strong> on crypto profits</li>
+                  <li>• <strong>FIFO method</strong> commonly used</li>
+                  <li>• <strong>Annual reporting</strong> in tax returns</li>
+                  <li>• <strong>Different rates</strong> for short vs long-term</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3">Record-Keeping Requirements:</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>All transactions</strong> with EUR values</li>
+                  <li>• <strong>Purchase/sale dates</strong> and amounts</li>
+                  <li>• <strong>Exchange records</strong> and receipts</li>
+                  <li>• <strong>Wallet addresses</strong> and transfers</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-4 p-4 bg-purple-50 rounded-lg">
+              <p className="text-purple-800 text-sm">
+                <strong>📝 Note:</strong> Tax rules vary by EU country. Germany has different rules than France or Netherlands. 
+                Consult local tax advisors for specific guidance.
+              </p>
+            </div>
+          </div>
+
+          {/* Exchange Recommendations */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">🏆 Recommended Exchanges for EU Users</h3>
+            
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">🇪🇺 EU-Based (MiCA Licensed)</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Exchange</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900">Rating</th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Features</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900">EUR Support</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">Bitstamp</div>
+                        <div className="text-sm text-gray-600">Luxembourg-based, oldest EU exchange</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.7</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">High security, institutional grade, SEPA</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">Bitpanda</div>
+                        <div className="text-sm text-gray-600">Austria-based, beginner-friendly</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.5</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">User-friendly, stocks/crypto, debit card</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">Kraken</div>
+                        <div className="text-sm text-gray-600">US-based but EU compliant</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.6</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">Advanced trading, staking, low fees</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">🌍 Global (EU Accessible)</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Exchange</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900">Rating</th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900">Features</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900">EUR Support</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">Binance</div>
+                        <div className="text-sm text-gray-600">Largest global exchange</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.8</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">Lowest fees, huge selection, advanced tools</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">Coinbase</div>
+                        <div className="text-sm text-gray-600">US-based, beginner-friendly</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.6</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">Easy to use, high security, regulated</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4">
+                        <div className="font-medium">KuCoin</div>
+                        <div className="text-sm text-gray-600">Wide altcoin selection</div>
+                      </td>
+                      <td className="py-3 px-4 text-center">
+                        <div className="flex items-center justify-center">
+                          <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                          <span>4.4</span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-sm">Many altcoins, trading bots, low fees</td>
+                      <td className="py-3 px-4 text-center text-yellow-600">P2P</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          {/* Compliance Checklist */}
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-blue-800 mb-4">✅ EU Beginner Compliance Checklist</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-blue-800 mb-3">Before You Start:</h4>
+                <ul className="space-y-2 text-blue-700">
+                  <li>• ✅ Verify exchange has MiCA license</li>
+                  <li>• ✅ Prepare EU ID/passport + proof of address</li>
+                  <li>• ✅ Understand your country's specific tax rules</li>
+                  <li>• ✅ Set up secure email and 2FA</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-blue-800 mb-3">After Your First Purchase:</h4>
+                <ul className="space-y-2 text-blue-700">
+                  <li>• ✅ Download transaction records</li>
+                  <li>• ✅ Set up crypto tax tracking software</li>
+                  <li>• ✅ Consider hardware wallet for security</li>
+                  <li>• ✅ Never invest more than you can afford to lose</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
