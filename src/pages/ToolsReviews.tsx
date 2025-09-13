@@ -122,6 +122,11 @@ const ToolsReviews = () => {
                   <span className="text-2xl mr-3">{item.logo}</span>
                   <div>
                     <div className="font-semibold text-gray-900">{item.name}</div>
+                    {item.name === 'Binance' && (
+                      <div className="text-sm text-gray-600 mt-1 max-w-xs">
+                        Binance leads in 2025 for low fees, deep liquidity, extensive cryptocurrency support, and robust user safety. Active traders and investors benefit most, though beginners should note a moderate learning curve.
+                      </div>
+                    )}
                     {item.trusted && (
                       <div className="flex items-center text-sm text-green-600">
                         <Shield className="h-3 w-3 mr-1" />
