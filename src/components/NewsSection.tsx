@@ -289,9 +289,9 @@ const NewsSection = () => {
               </div>
               <div className="ml-3">
                 <h3 className="font-bold text-gray-900">{crypto.name}</h3>
-                <p className="text-sm text-gray-600">{crypto.symbol.toUpperCase()}</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
               </div>
-            </div>
+              </h2>
             <div className="text-right">
               <p className="text-2xl font-bold text-gray-900">{formatPrice(crypto.current_price)}</p>
               <p className={`text-sm font-semibold ${crypto.price_change_percentage_24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
@@ -577,9 +577,9 @@ const NewsSection = () => {
               {/* Weekly Update Article */}
               <article className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
                 <header className="mb-6">
-                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Global Regulatory Challenges Roil Crypto Markets This Week
-                  </h1>
+                  </h2>
                   <p className="text-gray-600 text-sm">Published September 13, 2025</p>
                 </header>
                 

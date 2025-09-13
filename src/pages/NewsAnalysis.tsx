@@ -1,9 +1,49 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import NewsSection from '../components/NewsSection';
 
 const NewsAnalysis = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Crypto News & Market Analysis 2025 — Live Updates from Top Sources</title>
+        <meta name="description" content="Stay updated with live cryptocurrency news, market analysis, and regulatory developments from CoinDesk, Cointelegraph, Decrypt & more. Real-time crypto insights and price analysis." />
+        <meta name="keywords" content="crypto news 2025, cryptocurrency market analysis, Bitcoin news, Ethereum updates, DeFi news, crypto regulation, blockchain news, cryptocurrency prices" />
+        <meta property="og:title" content="Crypto News & Market Analysis 2025 — Live Updates" />
+        <meta property="og:description" content="Live cryptocurrency news and market analysis from trusted sources. Get real-time crypto insights, regulatory updates, and price analysis." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cryptostarterguide.com/news" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Crypto News & Market Analysis 2025" />
+        <meta name="twitter:description" content="Live cryptocurrency news and market analysis from trusted sources worldwide." />
+        <link rel="canonical" href="https://cryptostarterguide.com/news" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "NewsMediaOrganization",
+            "name": "CryptoStarterGuide News",
+            "url": "https://cryptostarterguide.com/news",
+            "logo": "https://cryptostarterguide.com/logo.png",
+            "description": "Cryptocurrency news and market analysis platform",
+            "sameAs": [
+              "https://twitter.com/cryptostarterguide",
+              "https://linkedin.com/company/cryptostarterguide"
+            ],
+            "mainEntity": {
+              "@type": "WebPage",
+              "name": "Crypto News & Market Analysis",
+              "description": "Live cryptocurrency news, market analysis, and regulatory developments from trusted sources",
+              "keywords": "cryptocurrency news, Bitcoin news, Ethereum updates, DeFi news, crypto market analysis",
+              "dateModified": new Date().toISOString(),
+              "author": {
+                "@type": "Organization",
+                "name": "CryptoStarterGuide"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Enhanced Crypto Background Pattern */}
       <div className="absolute inset-0">
         {/* Animated Grid */}
@@ -121,7 +161,8 @@ const NewsAnalysis = () => {
           animation: spin-reverse 25s linear infinite;
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 };
 
