@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink, Globe, Shield, Scale, FileText, Users, Star } from 'lucide-react';
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink, Globe, Shield, Scale, FileText, Users, Star, TrendingUp } from 'lucide-react';
 
 const RegulatoryCompliance = () => {
   const [selectedCountry, setSelectedCountry] = useState('');
