@@ -503,7 +503,7 @@ const NewsSection = () => {
                       <div>
                         <p className="text-gray-700 leading-relaxed">
                           <strong>Bitcoin Metrics:</strong> Nearly 936,000 active BTC addresses and falling exchange balances show 
-                          investor confidence and reduced short-term selling pressure. Large "whale" holders and positive ETF inflows 
+                          investor confidence and reduced short-term selling pressure. Large "whale\" holders and positive ETF inflows 
                           point to continued accumulation, supporting potential for a fresh rally if macro conditions allow. Watch for 
                           price reactions around the $110,000 level—a technical and on-chain support zone.
                         </p>
