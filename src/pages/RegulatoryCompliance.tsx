@@ -1563,6 +1563,7 @@ const RegulatoryCompliance = () => {
         </div>
       </div>
     </section>
+    </section>
     </div>
   );
 };
