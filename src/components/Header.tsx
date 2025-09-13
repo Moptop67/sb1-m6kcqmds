@@ -93,7 +93,7 @@ const Header = () => {
             </div>
             
             <Link to="/news" className="text-gray-700 hover:text-blue-900 font-medium">
-              News & Analysis
+              Regulatory Compliance
             </Link>
             <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
               Get Started Free
@@ -123,7 +123,7 @@ const Header = () => {
                 Tools & Reviews
               </Link>
               <Link to="/news" className="text-gray-700 hover:text-blue-900">
-                News & Analysis
+                Regulatory Compliance
               </Link>
               <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors w-full">
                 Get Started Free

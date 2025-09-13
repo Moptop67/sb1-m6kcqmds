@@ -126,30 +126,30 @@ const Homepage = () => {
 
             {/* News Section */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <TrendingUp className="h-12 w-12 text-yellow-600 mb-6" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Market Analysis</h3>
+              <Shield className="h-12 w-12 text-purple-600 mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Regulatory Compliance</h3>
               <p className="text-gray-600 mb-6">
-                Stay updated with the latest crypto news, market analysis, and regulatory developments.
+                Navigate crypto regulations with confidence. Country-specific compliance guides for major markets worldwide.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                  Daily Market Updates
+                  Legal Status by Country
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                  Regulatory News
+                  Exchange Recommendations
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                  Price Analysis
+                  Tax & Compliance Tips
                 </li>
               </ul>
               <Link 
-                to="/news" 
-                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
+                to="/regulatory-compliance" 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
               >
-                Read News
+                View Compliance Guides
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
