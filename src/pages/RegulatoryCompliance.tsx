@@ -475,6 +475,138 @@ const RegulatoryCompliance = () => {
         'Set up Interac e-Transfer for funding',
         'Understand your province\'s specific tax rules'
       ]
+    },
+    {
+      name: 'India',
+      code: 'IN',
+      flag: '🇮🇳',
+      status: 'regulated',
+      title: 'How to Begin With Crypto in India (2025)',
+      subtitle: 'Ready to start your crypto journey in India? Navigate RBI guidelines and high taxation with our comprehensive beginner guide for Indian residents.',
+      legalStatus: {
+        title: 'Is Crypto Legal in India?',
+        content: 'Cryptocurrency is legal in India but heavily regulated and taxed. The Reserve Bank of India (RBI) and Securities and Exchange Board of India (SEBI) oversee crypto activities. While trading is permitted, the government has imposed a 30% flat tax on crypto gains and 1% TDS on all transactions.'
+      },
+      onramp: {
+        description: 'Indian residents can fund crypto accounts through several regulated methods:',
+        methods: [
+          {
+            name: 'UPI (Unified Payments Interface)',
+            description: 'Instant transfer using UPI apps like PhonePe, Paytm, GPay',
+            fee: 'Free',
+            speed: 'Instant',
+            limit: 'Up to ₹1,00,000/day'
+          },
+          {
+            name: 'IMPS/NEFT',
+            description: 'Bank transfer via IMPS or NEFT',
+            fee: 'Free - ₹5',
+            speed: 'Same day',
+            limit: 'Up to ₹10,00,000/day'
+          },
+          {
+            name: 'Bank Transfer',
+            description: 'Direct bank account transfer',
+            fee: 'Free',
+            speed: '1-2 hours',
+            limit: 'Up to ₹50,00,000/day'
+          },
+          {
+            name: 'Debit Card',
+            description: 'Instant purchase with Indian debit card',
+            fee: '2-3%',
+            speed: 'Instant',
+            limit: 'Up to ₹2,00,000/day'
+          }
+        ],
+        tips: [
+          'UPI is the fastest and most popular funding method',
+          'Some banks may block crypto transactions - check with your bank',
+          'Start with small amounts (₹1,000-5,000) for your first purchase',
+          'IMPS transfers are usually processed within minutes'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto to INR and withdrawing to Indian bank accounts:',
+        methods: [
+          {
+            name: 'Bank Transfer',
+            description: 'Withdraw INR directly to your bank account',
+            fee: 'Free - ₹10',
+            speed: '1-3 business days',
+            limit: 'Up to ₹10,00,000/day'
+          },
+          {
+            name: 'UPI Withdrawal',
+            description: 'Fast withdrawal using UPI (limited exchanges)',
+            fee: 'Free',
+            speed: 'Same day',
+            limit: 'Up to ₹1,00,000/day'
+          },
+          {
+            name: 'P2P Trading',
+            description: 'Sell crypto directly to other users',
+            fee: '0.1-0.5%',
+            speed: 'Instant',
+            limit: 'Varies by platform'
+          }
+        ],
+        warnings: [
+          '30% tax applies to all crypto gains - no exemptions',
+          '1% TDS is deducted on all crypto transactions above ₹10,000',
+          'Keep detailed records for income tax filing',
+          'Large withdrawals may trigger bank security checks',
+          'Report all crypto income in your ITR filing'
+        ]
+      },
+      steps: [
+        'Choose an exchange registered with Indian authorities',
+        'Complete KYC with Aadhaar, PAN card, and bank details',
+        'Fund your account using UPI or bank transfer',
+        'Start with Bitcoin or Ethereum for beginners',
+        'Understand the 30% tax implications before trading',
+        'Keep detailed transaction records for tax filing'
+      ],
+      taxes: {
+        title: 'Indian Tax Requirements',
+        content: 'India has some of the world\'s highest crypto taxes:',
+        requirements: [
+          'Pay 30% flat tax on all crypto gains (no deductions allowed)',
+          '1% TDS (Tax Deducted at Source) on transactions above ₹10,000',
+          'No set-off of losses against other income',
+          'Report all crypto income in ITR-2 or ITR-3',
+          'Keep records of all transactions with dates and INR values'
+        ]
+      },
+      compliance: {
+        title: 'Indian Compliance Tips',
+        tips: [
+          'Only use exchanges that comply with Indian KYC/AML norms',
+          'Ensure your exchange reports transactions to tax authorities',
+          'Be prepared for 1% TDS deduction on all trades',
+          'Consult a CA for complex tax situations',
+          'Avoid P2P trading with unverified parties'
+        ]
+      },
+      localExchanges: [
+        { name: 'WazirX', registration: 'Yes', features: 'Most popular, INR deposits, P2P trading', audSupport: 'Yes', rating: 4.2 },
+        { name: 'CoinDCX', registration: 'Yes', features: 'Large selection, futures trading, SIP', audSupport: 'Yes', rating: 4.3 },
+        { name: 'CoinSwitch', registration: 'Yes', features: 'User-friendly, educational content', audSupport: 'Yes', rating: 4.1 },
+        { name: 'Bitbns', registration: 'Yes', features: 'Low fees, margin trading', audSupport: 'Yes', rating: 4.0 },
+        { name: 'Giottus', registration: 'Yes', features: 'Secure, institutional grade', audSupport: 'Yes', rating: 4.2 }
+      ],
+      globalExchanges: [
+        { name: 'Binance', regulation: 'Global registration', features: 'Largest selection, lowest fees', audSupport: 'Limited', rating: 4.8 },
+        { name: 'KuCoin', regulation: 'Global registration', features: 'Wide altcoin selection, trading bots', audSupport: 'Limited', rating: 4.4 },
+        { name: 'OKX', regulation: 'Global registration', features: 'Advanced trading, derivatives', audSupport: 'Limited', rating: 4.2 }
+      ],
+      checklist: [
+        'Verify the exchange complies with Indian regulations',
+        'Prepare Aadhaar, PAN card, and bank account details',
+        'Understand the 30% tax and 1% TDS implications',
+        'Set up proper record-keeping for tax filing',
+        'Start with small amounts due to high taxation'
+      ]
     }
   ];
 
