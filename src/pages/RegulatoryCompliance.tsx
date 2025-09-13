@@ -2238,7 +2238,7 @@ const RegulatoryCompliance = () => {
         </div>
 
         {/* Custom CSS for animations */}
-        <style jsx>{`
+        <style>{`
           @keyframes grid-move {
             0% { transform: translate(0, 0); }
             100% { transform: translate(60px, 60px); }
