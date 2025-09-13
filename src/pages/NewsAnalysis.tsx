@@ -161,7 +161,7 @@ const NewsAnalysis = () => {
           animation: spin-reverse 25s linear infinite;
         }
       `}</style>
-      </div>
+    </div>
     </>
   );
 };
