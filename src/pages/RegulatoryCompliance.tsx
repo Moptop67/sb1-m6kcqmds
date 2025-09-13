@@ -2050,4 +2050,5 @@ const RegulatoryCompliance = () => {
   );
 };
 
-export default RegulatoryCompliance;
+
+export default RegulatoryCompliance
