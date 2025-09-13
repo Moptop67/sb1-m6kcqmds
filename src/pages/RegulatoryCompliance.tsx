@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Globe, Shield, CheckCircle, AlertTriangle, ExternalLink, FileText, Users, TrendingUp } from 'lucide-react';
+import { Globe, Shield, CheckCircle, AlertTriangle, ExternalLink, FileText, Users, TrendingUp, ArrowLeft, XCircle } from 'lucide-react';
 
 const RegulatoryCompliance = () => {
   const [selectedCountry, setSelectedCountry] = useState('australia');
@@ -298,6 +298,320 @@ const RegulatoryCompliance = () => {
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Country Selection
             </button>
+          </div>
+        )}
+
+        {/* Ukraine Guide */}
+        {selectedCountry === 'ukraine' && (
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-center mb-8">
+              <span className="text-6xl mr-4">🇺🇦</span>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900">CryptoStarted Guide: How to Begin With Crypto in Ukraine (2025)</h2>
+                <p className="text-gray-600 mt-2">Interested in crypto in Ukraine? CryptoStarted Guide gives all the essentials—covering evolving laws, top exchanges, and fast on/off ramps for the Ukrainian hryvnia (UAH) and digital assets.</p>
+              </div>
+            </div>
+
+            {/* Legal Status */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Is Crypto Legal in Ukraine?</h3>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-green-800 font-semibold mb-2">Yes—crypto is legal and regulated in Ukraine</p>
+                    <p className="text-green-700">The foundational "On Virtual Assets" law has passed, yet full licensing and tax rules await final amendments to the Tax Code. The National Securities and Stock Market Commission (NSSMC) is setting rules to align with the EU's MiCA framework.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <div className="flex items-start">
+                  <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-yellow-800 font-semibold mb-2">Tax Framework in Transition</p>
+                    <p className="text-yellow-700">A key bill passed first reading, proposing 18% income tax and 5% military tax on digital assets. Until the tax law is enacted, crypto service providers operate under basic legalization.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Getting Started */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Getting Started: Steps for Beginners</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">1</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Select a top exchange</h4>
+                      <p className="text-gray-600 text-sm">Find choices below supporting UAH and reliable onboarding</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">2</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Complete KYC</h4>
+                      <p className="text-gray-600 text-sm">Upload passport/ID, proof of address, and often a selfie for verification</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">3</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Deposit UAH</h4>
+                      <p className="text-gray-600 text-sm">Use bank transfer, cards (Visa/Mastercard), SEPA, Apple Pay, Google Pay, or P2P platforms</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">4</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Buy crypto</h4>
+                      <p className="text-gray-600 text-sm">Instantly purchase Bitcoin, Ethereum, stablecoins, or altcoins</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">5</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Secure your funds</h4>
+                      <p className="text-gray-600 text-sm">Enable two-factor authentication, use strong passwords, and move large sums to secure wallets</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Exchanges */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Best Crypto Exchanges for Ukraine (2025)</h3>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full bg-white border border-gray-200 rounded-lg">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Features</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">UAH Support</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">KYC</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-gray-900">Bybit</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Ukrainian interface, live local support, 1,800+ coins, low fees</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-medium">Bank, cards, Apple/Google Pay, SEPA</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Passport/ID</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-gray-900">Binance</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">High liquidity, beginner-friendly, P2P support</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-medium">Visa/Mastercard/P2P</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Passport/ID</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-gray-900">OKX</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Advanced trading, Web3 integration</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-medium">Bank transfer</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Passport/ID</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-gray-900">WhiteBIT</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Eastern Europe leader, fast UAH ramps, lending</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-medium">Bank, SEPA, P2P</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Passport/ID</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-gray-900">CEX.IO</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Simple onboarding, high security, staking/lending</td>
+                      <td className="px-6 py-4 text-sm text-green-600 font-medium">Bank, credit/debit, P2P</td>
+                      <td className="px-6 py-4 text-sm text-gray-600">Passport/ID</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* On/Off Ramps */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: Move Between UAH and Crypto</h3>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h4 className="text-lg font-bold text-green-800 mb-4">Best On-Ramp Options</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                      <span className="text-green-700"><strong>Centralized exchanges:</strong> Bybit, Binance, OKX, WhiteBIT, CEX.IO via bank, cards, Apple/Google Pay, SEPA</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                      <span className="text-green-700"><strong>P2P platforms:</strong> Buy crypto direct from verified sellers in UAH</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                      <span className="text-green-700"><strong>Fiat-to-crypto services:</strong> Instant UAH-to-crypto via APIs</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="text-lg font-bold text-blue-800 mb-4">Best Off-Ramp Methods</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-blue-700"><strong>Sell on exchange:</strong> Convert crypto to UAH, withdraw to bank/card</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-blue-700"><strong>P2P market:</strong> Sell crypto for UAH on local platforms</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-blue-700"><strong>Dedicated services:</strong> Platforms with strong reviews for larger transactions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">On/Off Ramp FAQs</h3>
+              
+              <div className="space-y-6">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Is KYC required?</h4>
+                  <p className="text-gray-600">Yes—full identity, address, and facial verification are mandatory for legal ramps.</p>
+                </div>
+                
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Are there limits?</h4>
+                  <p className="text-gray-600">Daily and monthly deposit/withdrawal limits depend on verification level and platform.</p>
+                </div>
+                
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Are transactions taxable?</h4>
+                  <p className="text-gray-600">An 18% tax plus 5% military levy applies to profits—pending enactment. Keep detailed logs of all trades, conversion rates, and withdrawals for annual filing.</p>
+                </div>
+                
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-bold text-gray-900 mb-2">How fast are transfers?</h4>
+                  <p className="text-gray-600">Bank/card/P2P methods are usually instant or processed within 24 hours for verified users.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Tax & Compliance */}
+            <section className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Tax & Compliance Essentials</h3>
+              
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-yellow-800">Crypto is currently taxed at 18% (income) plus a 5% military levy on profits—pending enactment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Exemptions exist for swaps between virtual assets, small sales, and some promotional earnings</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Shield className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">All major exchanges require strong AML/KYC per Ukrainian law and EU MiCA alignment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <XCircle className="h-5 w-5 text-red-600 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Only use registered, EU-aligned platforms; beware scams and OTC risk</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Quick Checklist */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Beginner Checklist</h3>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-blue-800">Register with a top Ukrainian exchange (Bybit, Binance, OKX, WhiteBIT, CEX.IO)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-blue-800">Prepare passport/ID, proof of address, and payment method for onboarding</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-blue-800">Compare fees, available coins, and deposit/withdrawal options before trading</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-blue-800">Enable enhanced security and transfer large balances to secure external wallets</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="text-blue-800">Bookmark CryptoStarted Guide for breaking news, regulation, and trusted exchange rankings</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        )}
+
+        {/* Coming Soon Countries */}
+        {selectedCountry && !['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(selectedCountry) && (
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+            <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <FileText className="h-10 w-10 text-gray-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{selectedCountryData?.name} Guide Coming Soon</h2>
+            <p className="text-gray-600 mb-6">
+              We're working on a comprehensive regulatory compliance guide for {selectedCountryData?.name}. 
+              This will include local exchange recommendations, tax implications, and step-by-step instructions for getting started with crypto.
+            </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <p className="text-blue-800 text-sm">
+                <strong>Want to be notified when it's ready?</strong> Subscribe to our newsletter to get updates on new country guides.
+              </p>
+            </div>
+            
+            {/* Country Grid */}
+            <div className="mt-12">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Available Country Guides</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {countries.map((country) => (
+                  <button
+                    key={country.id}
+                    onClick={() => setSelectedCountry(country.id)}
+                    className={`p-6 rounded-xl border-2 transition-all hover:shadow-lg ${
+                      ['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(country.id)
+                        ? 'border-green-200 bg-green-50 hover:border-green-300'
+                        : 'border-gray-200 bg-gray-50 hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="text-4xl mb-3">{country.flag}</div>
+                    <h3 className="font-semibold text-gray-900 mb-2">{country.name}</h3>
+                    <div className="flex items-center justify-center">
+                      {['australia', 'usa', 'india', 'brazil', 'ukraine'].includes(country.id) ? (
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                          Complete Guide
+                        </span>
+                      ) : (
+                        <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
+                          Coming Soon
+                        </span>
+                      )}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
