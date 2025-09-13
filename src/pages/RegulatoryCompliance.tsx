@@ -370,6 +370,309 @@ const RegulatoryCompliance = () => {
     </div>
   );
 
+  const USAContent = () => (
+    <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="flex items-center mb-6">
+        <span className="text-4xl mr-4">🇺🇸</span>
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900">USA Crypto Guide</h2>
+          <p className="text-gray-600">Complete regulatory compliance guide for US crypto users</p>
+        </div>
+      </div>
+
+      {/* Legal Status */}
+      <section className="mb-8">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+          <div className="flex items-start">
+            <Shield className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-bold text-green-800 mb-2">Is Crypto Legal in the USA?</h3>
+              <p className="text-green-700">
+                Cryptocurrency is <strong>legal across the United States</strong>, though regulated by a combination of federal and state laws. 
+                Key oversight comes from FinCEN, SEC, and CFTC, with major exchanges required to comply with anti-money laundering (AML) 
+                and know-your-customer (KYC) regulations. Each user must verify their identity before trading or holding crypto assets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started Steps */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Getting Started: Steps for Beginners</h3>
+        <div className="space-y-4">
+          {[
+            {
+              step: 1,
+              title: 'Choose a US-licensed exchange',
+              description: 'Pick from those listed below for maximum safety and legal compliance.'
+            },
+            {
+              step: 2,
+              title: 'Complete Know-Your-Customer (KYC)',
+              description: 'Upload a government ID and proof of address.'
+            },
+            {
+              step: 3,
+              title: 'Deposit USD',
+              description: 'Use bank transfer, wire, debit/credit card, or PayPal.'
+            },
+            {
+              step: 4,
+              title: 'Buy crypto',
+              description: 'Purchase popular assets like Bitcoin (BTC), Ethereum (ETH), or stablecoins.'
+            },
+            {
+              step: 5,
+              title: 'Secure your investment',
+              description: 'Activate strong passwords, two-factor authentication, and consider moving large holdings into personal wallets.'
+            }
+          ].map((item, index) => (
+            <div key={index} className="flex items-start">
+              <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm mr-4 flex-shrink-0">
+                {item.step}
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Exchange Comparison */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Top Crypto Exchanges for US Users (2025)</h3>
+        
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Major US-Licensed Centralized Exchanges</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow border">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Key Features</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">USD Support</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {[
+                  { name: 'Coinbase', features: 'Beginner-friendly, top security, PayPal/ACH support', usd: 'Yes' },
+                  { name: 'Kraken', features: 'Low fees, excellent security, easy for new users', usd: 'Yes' },
+                  { name: 'Binance US', features: 'Huge liquidity, wide asset list, mobile app', usd: 'Yes' },
+                  { name: 'Gemini', features: 'Regulated, high compliance, insurance options', usd: 'Yes' },
+                  { name: 'Crypto.com', features: 'Versatile app, wide variety of coins, easy card purchases', usd: 'Yes' },
+                  { name: 'Bitstamp', features: 'Oldest US exchange, trusted for fiat-crypto swaps', usd: 'Yes' },
+                  { name: 'bitFlyer USA', features: 'Great for beginners and low fees', usd: 'Yes' },
+                  { name: 'eToro', features: 'Social trading, stocks + crypto, strong compliance', usd: 'Yes' },
+                  { name: 'Robinhood', features: 'Simple crypto trading, $0 commissions', usd: 'Yes' }
+                ].map((exchange, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.features}</td>
+                    <td className="px-6 py-4">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+                        {exchange.usd}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600 mt-2">
+            All listed above require identity verification (KYC) and offer full USD deposit/withdrawal support for new users.
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Global Exchanges Accessible in the USA</h4>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow border">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Exchange</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Regulation/Location</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Features & Notes</th>
+                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">USD Support</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {[
+                  { name: 'OKX', regulation: 'Global, advanced tools', features: 'Bots, many coins, robust interface', usd: 'Limited' },
+                  { name: 'Bybit', regulation: 'Global, advanced trading', features: 'Derivatives, spot trading, DeFi', usd: 'Limited' },
+                  { name: 'FinchTrade', regulation: 'Swiss OTC, deep liquidity', features: '200+ tokens, institutional on/off ramp', usd: 'Yes' }
+                ].map((exchange, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 font-medium text-gray-900">{exchange.name}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.regulation}</td>
+                    <td className="px-6 py-4 text-gray-600">{exchange.features}</td>
+                    <td className="px-6 py-4">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        exchange.usd === 'Yes' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                      }`}>
+                        {exchange.usd}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600 mt-2">
+            Check for changing local rules and access eligibility, as overseas options can fluctuate with regulations.
+          </p>
+        </div>
+      </section>
+
+      {/* On/Off Ramp Section */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">On-Ramp & Off-Ramp: Move Between USD and Crypto</h3>
+        
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <h4 className="font-bold text-blue-800 mb-3">What Are On-Ramps and Off-Ramps?</h4>
+          <div className="space-y-2 text-blue-700">
+            <p><strong>On-ramp:</strong> Exchange USD for crypto via registered platforms and services.</p>
+            <p><strong>Off-ramp:</strong> Sell crypto for USD and withdraw direct to your bank account—safely and lawfully.</p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Best On-Ramp Methods in the USA</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">US exchanges</p>
+                  <p className="text-sm text-gray-600">Coinbase, Kraken, Gemini, Binance US, Crypto.com, Bitstamp, and Robinhood all allow instant USD deposits via ACH bank transfer, wire, debit/credit card, and PayPal.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Overseas exchanges or OTC</p>
+                  <p className="text-sm text-gray-600">FinchTrade, OKX offer USD on-ramps for large volume or business transactions (fees and KYC apply).</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Fiat-to-crypto platforms</p>
+                  <p className="text-sm text-gray-600">Onramper, Banxa provide direct bank-to-crypto conversions and API integrations for wallets/dapps.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-4">Top Off-Ramp Methods for US Users</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Sell on US exchange</p>
+                  <p className="text-sm text-gray-600">Swap crypto back to USD and withdraw via ACH, wire, PayPal, or debit card—all require KYC.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">OTC liquidity providers</p>
+                  <p className="text-sm text-gray-600">FinchTrade offers deep liquidity, fast settlement, and secure fiat conversion for high value or institutional users.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Fiat off-ramp platforms</p>
+                  <p className="text-sm text-gray-600">Banxa, Onramper and similar services support seamless withdrawal from wallets/dapps to USD bank accounts.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-medium text-gray-900">Crypto ATMs & cashout desks</p>
+                  <p className="text-sm text-gray-600">Available in select cities for fast physical conversion (higher fees, strict ID verification).</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">On/Off Ramp FAQs</h3>
+        <div className="space-y-4">
+          {[
+            {
+              question: 'Is ID required?',
+              answer: 'Yes—KYC is mandatory for every regulated US on/off ramp.'
+            },
+            {
+              question: 'Are limits imposed?',
+              answer: 'Yes—daily limits vary by exchange, user level and method (Coinbase, Kraken, Gemini have high withdrawal limits for verified users).'
+            },
+            {
+              question: 'How fast are transfers?',
+              answer: 'USD withdrawals and deposits through ACH, wire, and PayPal are reliable, with same-day or next-day delivery for most major exchanges.'
+            },
+            {
+              question: 'Are transactions taxable?',
+              answer: 'Yes—every sale or withdrawal is a taxable event. Report all crypto activity via IRS Form 8949 and Schedule D, and maintain detailed records.'
+            }
+          ].map((faq, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
+              <p className="text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tax and Compliance */}
+      <section className="mb-8">
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+          <div className="flex items-start">
+            <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="font-bold text-yellow-800 mb-3">Tax & Compliance Essentials</h3>
+              <ul className="space-y-2 text-yellow-700">
+                <li>• Crypto profits are subject to capital gains and income tax; file every year with the IRS.</li>
+                <li>• US exchanges report activity to regulators—always use legitimate platforms.</li>
+                <li>• Maintain detailed logs for all trading, conversions, deposits and withdrawals.</li>
+                <li>• Monitor evolving federal and state laws (FinCEN, SEC, CFTC, IRS), and keep up-to-date via CryptoStarted Guide.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Checklist */}
+      <section className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Beginner's Checklist</h3>
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+          <ul className="space-y-3">
+            {[
+              'Register only with major US-licensed exchanges (see table above).',
+              'Have a government-issued ID and proof of US address for KYC.',
+              'Compare fees, limits, and security features before trading or cashing out.',
+              'Enable two-factor authentication and move large holdings to personal secure wallets as needed.',
+              'Bookmark CryptoStarted Guide for the latest regulatory updates and exchange reviews.'
+            ].map((item, index) => (
+              <li key={index} className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
+                <span className="text-green-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </div>
+  );
+
   const selectedCountryData = countries.find(c => c.id === selectedCountry);
 
   return (
@@ -494,6 +797,8 @@ const RegulatoryCompliance = () => {
             <div className="lg:col-span-3">
               {selectedCountry === 'australia' ? (
                 <AustraliaContent />
+              ) : selectedCountry === 'usa' ? (
+                <USAContent />
               ) : (
                 <ComingSoonContent countryName={selectedCountryData?.name || 'Selected Country'} />
               )}
