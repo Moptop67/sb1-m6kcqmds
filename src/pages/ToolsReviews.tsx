@@ -132,6 +132,11 @@ const ToolsReviews = () => {
                         Coinbase is the most recognized and regulated cryptocurrency exchange for beginners worldwide in 2025. It stands out for its top-tier security, transparent operations, user-friendly interface, broad fiat on/off ramps, and strong regulatory compliance. While its fees are higher than competitors and not ideal for frequent or high-volume traders, Coinbase's clear safety record and approachable app make it a great pick for newcomers and long-term investors.
                       </div>
                     )}
+                    {item.name === 'KuCoin' && (
+                      <div className="text-sm text-gray-600 mt-1 max-w-xs">
+                        KuCoin ranks as one of the top crypto exchanges in 2025, offering ultra-low fees, vast coin selection, innovative trading features, and strong global growth. It suits active altcoin traders and bot users, but those seeking strict regulatory coverage or beginner simplicity may prefer more compliant platforms. KuCoin's security has dramatically improved since its 2020 hack, but ongoing regional restrictions and complex compliance remain key considerations.
+                      </div>
+                    )}
                     {item.trusted && (
                       <div className="flex items-center text-sm text-green-600">
                         <Shield className="h-3 w-3 mr-1" />
@@ -170,7 +175,7 @@ const ToolsReviews = () => {
                     <ExternalLink className="h-3 w-3 ml-1" />
                   </a>
                   <Link
-                    to={item.name === 'Binance' ? '/review/binance' : item.name === 'Coinbase' ? '/review/coinbase' : '/review/binance'}
+                    to={item.name === 'Binance' ? '/review/binance' : item.name === 'Coinbase' ? '/review/coinbase' : '/review/kucoin'}
                     className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium inline-flex items-center transition-colors block text-center"
                   >
                     Read Full Review

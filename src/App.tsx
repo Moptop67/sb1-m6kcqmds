@@ -14,6 +14,7 @@ import WalletReview from './pages/WalletReview';
 import UnderstandingCrypto from './pages/UnderstandingCrypto';
 import BinanceReview from './pages/BinanceReview';
 import CoinbaseReview from './pages/CoinbaseReview';
+import KuCoinReview from './pages/KuCoinReview';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/guide/understanding-crypto" element={<UnderstandingCrypto />} />
           <Route path="/review/binance" element={<BinanceReview />} />
           <Route path="/review/coinbase" element={<CoinbaseReview />} />
+          <Route path="/review/kucoin" element={<KuCoinReview />} />
         </Routes>
         <Footer />
       </div>
