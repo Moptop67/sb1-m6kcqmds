@@ -607,6 +607,137 @@ const RegulatoryCompliance = () => {
         'Set up proper record-keeping for tax filing',
         'Start with small amounts due to high taxation'
       ]
+    },
+    {
+      name: 'Vietnam',
+      code: 'VN',
+      flag: '🇻🇳',
+      status: 'regulated',
+      title: 'How to Begin With Crypto in Vietnam (2025)',
+      subtitle: 'Ready to start your crypto journey in Vietnam? Navigate SBV regulations and understand the legal framework with our comprehensive beginner guide for Vietnamese residents.',
+      legalStatus: {
+        title: 'Is Crypto Legal in Vietnam?',
+        content: 'Cryptocurrency is legal to hold and trade as an investment in Vietnam, but prohibited as a payment method. The State Bank of Vietnam (SBV) and Ministry of Finance regulate crypto activities. While trading is permitted, using crypto for payments is strictly forbidden.'
+      },
+      onramp: {
+        description: 'Vietnamese residents can fund crypto accounts through several regulated methods:',
+        methods: [
+          {
+            name: 'Bank Transfer (VietinBank, BIDV)',
+            description: 'Direct transfer from major Vietnamese banks',
+            fee: '10,000-50,000 VND',
+            speed: '1-2 hours',
+            limit: 'Up to 500M VND/day'
+          },
+          {
+            name: 'Vietcombank Transfer',
+            description: 'Fast processing through Vietcombank',
+            fee: '11,000 VND',
+            speed: '30 minutes',
+            limit: 'Up to 200M VND/day'
+          },
+          {
+            name: 'Techcombank Transfer',
+            description: 'Lower fees through Techcombank',
+            fee: '6,600 VND',
+            speed: '1 hour',
+            limit: 'Up to 300M VND/day'
+          },
+          {
+            name: 'P2P Trading (Cash/Bank)',
+            description: 'Direct trading with other users',
+            fee: '0.1-1%',
+            speed: 'Variable',
+            limit: 'Varies by platform'
+          }
+        ],
+        tips: [
+          'Bank transfers are the most reliable method for large amounts',
+          'Vietcombank offers fast processing and wide acceptance',
+          'Techcombank has lower fees, good for regular trading',
+          'Start with small amounts (1-5M VND) for your first purchase'
+        ]
+      },
+      offramp: {
+        description: 'Converting crypto to VND and withdrawing to Vietnamese bank accounts:',
+        methods: [
+          {
+            name: 'Bank Withdrawal',
+            description: 'Standard withdrawal to Vietnamese bank account',
+            fee: '20,000-100,000 VND',
+            speed: '2-6 hours',
+            limit: 'Up to 500M VND/day'
+          },
+          {
+            name: 'P2P Cash Trading',
+            description: 'Face-to-face trading in major cities',
+            fee: '0.5-2%',
+            speed: 'Instant',
+            limit: 'Up to 100M VND/transaction'
+          },
+          {
+            name: 'International Wire',
+            description: 'For large amounts, higher fees',
+            fee: '$15-30',
+            speed: '1-3 days',
+            limit: 'Up to $50,000/month'
+          }
+        ],
+        warnings: [
+          'Using crypto for payments is prohibited',
+          'Banks may restrict crypto-related transactions',
+          'Tax reporting is mandatory for gains',
+          'Keep detailed records for tax purposes',
+          'Large withdrawals may trigger bank security checks'
+        ]
+      },
+      steps: [
+        'Choose an exchange that accepts Vietnamese users',
+        'Complete identity verification with Vietnamese ID',
+        'Fund your account using bank transfer or P2P',
+        'Start with Bitcoin or Ethereum for beginners',
+        'Use only for investment, not payments',
+        'Keep detailed trading records for tax purposes'
+      ],
+      taxes: {
+        title: 'Vietnamese Tax Requirements',
+        content: 'Crypto gains are subject to personal income tax at progressive rates (5-35%):',
+        requirements: [
+          'Capital gains from crypto trading are taxed as investment income',
+          'Progressive tax rates from 5% to 35% based on income level',
+          'Proper documentation required for tax filing',
+          'Report all crypto gains in annual tax returns',
+          'Keep records of all transactions with dates and VND values'
+        ]
+      },
+      compliance: {
+        title: 'Vietnamese Compliance Tips',
+        tips: [
+          'Only use crypto for investment, not payments',
+          'Complete identity verification with Vietnamese documents',
+          'Keep detailed trading records for tax purposes',
+          'Report crypto gains in annual tax returns',
+          'Stay updated on evolving regulations'
+        ]
+      },
+      localExchanges: [
+        { name: 'Remitano', registration: 'Yes', features: 'P2P focus, VND support', audSupport: 'Yes', rating: 4.1 },
+        { name: 'VNDC', registration: 'Yes', features: 'Vietnamese stablecoin', audSupport: 'Yes', rating: 3.8 },
+        { name: 'Coinhako', registration: 'Yes', features: 'Regional exchange, simple UI', audSupport: 'Yes', rating: 3.9 }
+      ],
+      globalExchanges: [
+        { name: 'Binance', regulation: 'Accessible', features: 'P2P VND trading, huge selection', audSupport: 'Yes', rating: 4.8 },
+        { name: 'KuCoin', regulation: 'Accessible', features: 'Wide altcoin range, futures', audSupport: 'No', rating: 4.4 },
+        { name: 'Huobi', regulation: 'Accessible', features: 'Asian focus, VND pairs', audSupport: 'Limited', rating: 4.2 },
+        { name: 'OKX', regulation: 'Accessible', features: 'Advanced trading, derivatives', audSupport: 'No', rating: 4.3 }
+      ],
+      checklist: [
+        'Verify the exchange accepts Vietnamese users',
+        'Prepare Vietnamese ID and bank account details',
+        'Understand that crypto payments are prohibited',
+        'Set up proper record-keeping for tax filing',
+        'Start with small amounts to understand regulations'
+      ]
     }
   ];
 
