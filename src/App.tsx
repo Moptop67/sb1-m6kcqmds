@@ -13,6 +13,7 @@ import ExchangeReview from './pages/ExchangeReview';
 import WalletReview from './pages/WalletReview';
 import UnderstandingCrypto from './pages/UnderstandingCrypto';
 import BinanceReview from './pages/BinanceReview';
+import CoinbaseReview from './pages/CoinbaseReview';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/review/ledger-vs-trezor" element={<WalletReview />} />
           <Route path="/guide/understanding-crypto" element={<UnderstandingCrypto />} />
           <Route path="/review/binance" element={<BinanceReview />} />
+          <Route path="/review/coinbase" element={<CoinbaseReview />} />
         </Routes>
         <Footer />
       </div>
