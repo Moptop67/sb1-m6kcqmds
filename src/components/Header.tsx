@@ -62,7 +62,6 @@ const Header = () => {
             <div className="relative">
               <button
                 onMouseEnter={() => setIsToolsDropdownOpen(true)}
-                onMouseLeave={() => setIsToolsDropdownOpen(false)}
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-900 font-medium"
               >
                 <span>Tools & Reviews</span>
@@ -71,6 +70,8 @@ const Header = () => {
               
               {isToolsDropdownOpen && (
                 <div
+                  onMouseEnter={() => setIsToolsDropdownOpen(true)}
+                  onMouseLeave={() => setIsToolsDropdownOpen(false)}
                   onMouseEnter={() => setIsToolsDropdownOpen(true)}
                   onMouseLeave={() => setIsToolsDropdownOpen(false)}
                   className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border py-2 z-50"
