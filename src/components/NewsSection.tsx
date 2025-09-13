@@ -433,11 +433,92 @@ const NewsSection = () => {
       {/* Market & Regulation News */}
       {regulationNews.length > 0 && (
         <div className="mb-20">
-          <NewsGrid 
-            title="Market & Regulation" 
-            news={regulationNews} 
-            icon={<div className="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">📊</div>}
-          />
+          <section className="bg-white/95 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/30 relative overflow-hidden">
+            {/* Section Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-blue-50/30"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-full"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center mb-8">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">📊</div>
+                <h2 className="text-3xl font-bold text-gray-900 ml-4">Weekly Regulatory Update</h2>
+              </div>
+              
+              {/* Weekly Update Article */}
+              <article className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <header className="mb-6">
+                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                    Global Regulatory Challenges Roil Crypto Markets This Week
+                  </h1>
+                  <p className="text-gray-600 text-sm">Published September 13, 2025</p>
+                </header>
+                
+                <div className="prose prose-lg max-w-none">
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Introduction</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      This week, cryptocurrency markets experienced a fresh wave of regulatory developments around the world. 
+                      From sweeping new legislation in the US to major regulatory rollouts across Europe and Asia-Pacific, 
+                      the theme is clear: compliance expectations are rising, and market uncertainty continues.
+                    </p>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">United States: Legislative Push and State Scrutiny</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Federal and state authorities in the US are accelerating efforts to finalize comprehensive digital asset frameworks. 
+                      The Senate is actively working on bills like the Digital Asset Market Clarity Act and the Responsible Financial Innovation Act. 
+                      Meanwhile, state securities regulators are pushing for robust antifraud protections, and the SEC/CFTC joint task force is 
+                      addressing surveillance, privacy, and DeFi oversight at the federal level.
+                    </p>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Europe: MiCA Comes Into Force</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      The Markets in Crypto-Assets Regulation (MiCA) is now fully operational, harmonizing digital asset rules across all 27 EU countries. 
+                      Providers face new licensing obligations and stablecoin issuers must comply with strict 1:1 backing and oversight. 
+                      While MiCA boosts cross-border clarity, transitional challenges and pending technical standards mean uncertainty will linger into 2026. 
+                      Additional anti-money laundering (AML) and tax transparency initiatives are also in focus.
+                    </p>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Asia-Pacific: Stablecoin and Tax Reforms</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Asia-Pacific remains the fastest-growing area for crypto—but also one of the most dynamic for new rules. 
+                      Hong Kong's stablecoin licensing regime is now live, and Japan is approving its first fully compliant stablecoins under tough new standards. 
+                      India and Indonesia are piloting new crypto tax rules while Australian regulators are pressing platforms on risk disclosures and operational controls.
+                    </p>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Takeaways</h3>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2">
+                      <li>Global harmonization remains elusive, demanding continued vigilance by international operators.</li>
+                      <li>Stablecoins and DeFi now face increased licensing and transparency demands in nearly every major market.</li>
+                      <li>AML and transparency are universal themes, with new tracking and reporting obligations coming to the fore.</li>
+                    </ul>
+                  </section>
+                  
+                  <section className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Final Thoughts</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Crypto market participants must keep a close watch on both local and global policy moves, as this week's actions show 
+                      that regulatory change is accelerating on all fronts. Strategic adaptation to shifting requirements is the only way forward 
+                      for sustainable growth.
+                    </p>
+                  </section>
+                  
+                  <footer className="mt-8 pt-6 border-t border-gray-200">
+                    <p className="text-gray-600 text-sm italic">
+                      Have comments or questions? Reply below or join the conversation on our Telegram and LinkedIn groups!
+                    </p>
+                  </footer>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       )}
 
