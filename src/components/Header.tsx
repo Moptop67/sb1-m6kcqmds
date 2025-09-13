@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown, Coins } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLearnDropdownOpen, setIsLearnDropdownOpen] = useState(false);
+  const [isToolsDropdownOpen, setIsToolsDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -58,9 +59,38 @@ const Header = () => {
               )}
             </div>
             
-            <Link to="/tools" className="text-gray-700 hover:text-blue-900 font-medium">
-              Tools & Reviews
-            </Link>
+            <div className="relative">
+              <button
+                onMouseEnter={() => setIsToolsDropdownOpen(true)}
+                onMouseLeave={() => setIsToolsDropdownOpen(false)}
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-900 font-medium"
+              >
+                <span>Tools & Reviews</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+              
+              {isToolsDropdownOpen && (
+                <div
+                  onMouseEnter={() => setIsToolsDropdownOpen(true)}
+                  onMouseLeave={() => setIsToolsDropdownOpen(false)}
+                  className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-lg border py-2 z-50"
+                >
+                  <Link to="/tools#exchanges" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    Exchange Reviews
+                  </Link>
+                  <Link to="/tools#wallets" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    Wallet Reviews
+                  </Link>
+                  <Link to="/tools#trading" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    Trading Tools
+                  </Link>
+                  <Link to="/tools#tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                    Tax Software
+                  </Link>
+                </div>
+              )}
+            </div>
+            
             <Link to="/news" className="text-gray-700 hover:text-blue-900 font-medium">
               News & Analysis
             </Link>
