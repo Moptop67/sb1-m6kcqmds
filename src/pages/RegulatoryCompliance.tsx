@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Globe, Shield, CheckCircle, AlertTriangle, ExternalLink, FileText, Users, TrendingUp, ArrowLeft, XCircle } from 'lucide-react';
+import { Globe, Shield, CheckCircle, AlertTriangle, FileText, Users, TrendingUp, ArrowLeft, XCircle } from 'lucide-react';
 
 const RegulatoryCompliance = () => {
   const [selectedCountry, setSelectedCountry] = useState('australia');
@@ -292,7 +291,7 @@ const RegulatoryCompliance = () => {
 
             {/* Back Button */}
             <button
-              onClick={() => setSelectedCountry(null)}
+              onClick={() => setSelectedCountry('')}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center transition-colors"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
