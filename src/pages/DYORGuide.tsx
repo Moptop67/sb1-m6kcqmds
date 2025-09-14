@@ -222,40 +222,57 @@ const DYORGuide = () => {
             </h3>
             
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-              <p className="text-gray-600 mb-6">
-                On-chain metrics are blockchain-wide statistics like transaction volume, active addresses, token concentration, and wealth distribution.
+              <p className="text-gray-600 mb-6 text-lg">
+                On-chain metrics are like the vital signs of a blockchain network. Just as doctors monitor heart rate and blood pressure to assess health, crypto investors can track blockchain data to understand network activity, user adoption, and market sentiment in real-time.
               </p>
               
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                <h4 className="font-semibold text-blue-900 mb-2">Why On-Chain Data Matters:</h4>
+                <p className="text-blue-800 text-sm">
+                  Unlike traditional markets where you rely on company reports and news, blockchain data is transparent and updated every few minutes. This gives you unprecedented insight into what's actually happening with a cryptocurrency, not just what people are saying about it.
+                </p>
+              </div>
+              
               <div className="space-y-6">
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-orange-900 mb-3">Key Metrics to Track:</h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <h5 className="font-medium text-orange-800 mb-2">Network Activity:</h5>
-                      <ul className="text-sm text-orange-700 space-y-1">
-                        <li>• Active wallet addresses</li>
-                        <li>• Transaction volume</li>
-                        <li>• Network hash rate</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-orange-800 mb-2">Market Sentiment:</h5>
-                      <ul className="text-sm text-orange-700 space-y-1">
-                        <li>• Exchange inflows/outflows</li>
-                        <li>• Token concentration</li>
-                        <li>• Wealth distribution</li>
-                      </ul>
-                    </div>
+                <div className="space-y-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-900 mb-2">📈 Active Addresses</h4>
+                    <p className="text-green-800 text-sm mb-2">
+                      <strong>What it means:</strong> The number of unique wallet addresses making transactions each day.
+                    </p>
+                    <p className="text-green-700 text-sm">
+                      <strong>Why it matters:</strong> More active addresses usually means more people are using the network. If Bitcoin has 1 million active addresses today vs 500,000 last month, that suggests growing adoption.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-900 mb-2">💰 Exchange Flows</h4>
+                    <p className="text-purple-800 text-sm mb-2">
+                      <strong>What it means:</strong> How much crypto is moving into or out of exchanges.
+                    </p>
+                    <p className="text-purple-700 text-sm">
+                      <strong>Why it matters:</strong> Large inflows to exchanges often signal selling pressure (people deposit to sell). Large outflows suggest people are moving crypto to personal wallets for long-term holding.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-orange-900 mb-2">🏦 Whale Concentration</h4>
+                    <p className="text-orange-800 text-sm mb-2">
+                      <strong>What it means:</strong> How much of the total supply is held by large holders ("whales").
+                    </p>
+                    <p className="text-orange-700 text-sm">
+                      <strong>Why it matters:</strong> If 10 wallets control 50% of a token, those whales can manipulate the price easily. More distributed ownership is generally healthier.
+                    </p>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-900 mb-2">Analysis Tools:</h4>
-                  <p className="text-blue-800 text-sm">
-                    Tools such as Chainspy aggregate these metrics for Bitcoin, Ethereum, and other blockchains, 
-                    providing visual insights and enabling trend spotting. Combining on-chain analysis with traditional 
-                    technical analysis provides deeper insights for buy/sell decisions.
-                  </p>
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-3">🔍 How to Use This Data:</h4>
+                  <div className="space-y-2 text-sm text-gray-700">
+                    <p><strong>Example 1:</strong> You see Bitcoin active addresses increasing while exchange inflows are decreasing. This suggests more people are buying and holding long-term - potentially bullish.</p>
+                    <p><strong>Example 2:</strong> A new token shows 90% of supply held by just 5 wallets. This is a red flag - those whales could dump and crash the price anytime.</p>
+                    <p><strong>Tools to use:</strong> Websites like Glassnode, CryptoQuant, and Chainanalysis provide these metrics with easy-to-read charts and explanations.</p>
+                  </div>
                 </div>
               </div>
             </div>
