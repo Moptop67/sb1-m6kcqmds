@@ -40,14 +40,6 @@ const LearnCrypto = () => {
 
   const intermediateTopics = [
     {
-      title: 'DeFi Explained: Your Guide to Decentralized Finance',
-      description: 'Understanding lending, borrowing, yield farming, and liquidity pools',
-      duration: '10 min read',
-      students: '7.8k',
-      completed: false,
-      link: '/guide/defi-explained'
-    },
-    {
       title: 'Staking and Passive Income',
       description: 'Earn rewards by holding and staking cryptocurrencies',
       duration: '9 min read',
@@ -67,12 +59,12 @@ const LearnCrypto = () => {
 
   const advancedTopics = [
     {
-      title: 'Technical Analysis Fundamentals',
-      description: 'Reading charts and identifying market trends',
-      duration: '20 min read',
-      students: '2.9k',
+      title: 'DeFi Explained: Your Guide to Decentralized Finance',
+      description: 'Understanding lending, borrowing, yield farming, and liquidity pools',
+      duration: '10 min read',
+      students: '7.8k',
       completed: false,
-      link: '/guide/beginner-bitcoin'
+      link: '/guide/defi-explained'
     },
     {
       title: 'Yield Farming Strategies',
