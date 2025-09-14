@@ -54,7 +54,7 @@ const LearnCrypto = () => {
       students: '4.8k',
       completed: false,
       link: '/review/binance-vs-coinbase'
-    }
+    },
     {
       title: 'Cryptocurrency Exchanges (CEX)',
       description: 'What are centralized exchanges and how do they work?',
