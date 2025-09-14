@@ -18,7 +18,7 @@ const LearnCrypto = () => {
       duration: '8 min read', 
       students: '10.2k',
       completed: false,
-      link: '/guide/beginner-bitcoin'
+      link: '/guide/how-bitcoin-works'
     },
     {
       title: 'What is Blockchain Technology?',
