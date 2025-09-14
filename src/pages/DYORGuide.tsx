@@ -371,26 +371,90 @@ const DYORGuide = () => {
             </h3>
             
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+              <p className="text-gray-600 mb-6 text-lg">
+                Crypto scams are unfortunately common because transactions can't be reversed. Here are the most important things beginners need to know to protect themselves:
+              </p>
+              
               <div className="space-y-6">
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-red-900 mb-3">Never Do This:</h4>
-                  <ul className="text-sm text-red-800 space-y-2">
-                    <li>• Share your seed/recovery phrase with anyone</li>
-                    <li>• Grant unlimited token permissions</li>
-                    <li>• Click links from social media, DMs, or ads</li>
-                    <li>• Use your main wallet for untested projects</li>
-                  </ul>
+                <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-red-900 mb-4">🚨 Your Seed Phrase is Like Your Master Key</h4>
+                  <p className="text-red-800 mb-4">
+                    Your seed phrase (usually 12-24 words) is like the master key to your house. Anyone who has it can steal everything in your wallet. 
+                    <strong> No legitimate company will EVER ask for your seed phrase.</strong>
+                  </p>
+                  <div className="bg-white border border-red-300 rounded-lg p-4">
+                    <p className="text-red-900 font-medium mb-2">❌ Common Scam Message:</p>
+                    <p className="text-sm text-gray-700 italic mb-3">
+                      "Hi! We've detected suspicious activity on your MetaMask wallet. Please verify your account by entering your 12-word recovery phrase here: [fake link]"
+                    </p>
+                    <p className="text-red-800 text-sm">
+                      <strong>Why this is a scam:</strong> Real MetaMask support never asks for seed phrases. They can't even see your wallet!
+                    </p>
+                  </div>
                 </div>
 
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-green-900 mb-3">Always Do This:</h4>
-                  <ul className="text-sm text-green-800 space-y-2">
-                    <li>• Revoke token and NFT approvals monthly</li>
-                    <li>• Use separate wallets for airdrops and new projects</li>
-                    <li>• Test transactions with small amounts first</li>
-                    <li>• Bookmark official sites and verify project legitimacy</li>
-                    <li>• Consult scam lists and trackers regularly</li>
-                  </ul>
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-yellow-900 mb-4">⚠️ "Too Good to Be True" Offers</h4>
+                  <p className="text-yellow-800 mb-4">
+                    Scammers often promise unrealistic returns or free money to lure victims. Here's what to watch for:
+                  </p>
+                  <div className="bg-white border border-yellow-300 rounded-lg p-4 mb-4">
+                    <p className="text-yellow-900 font-medium mb-2">❌ Example Scam:</p>
+                    <p className="text-sm text-gray-700 italic mb-3">
+                      "🎉 ETHEREUM GIVEAWAY! Send 0.1 ETH to this address and we'll send back 1 ETH! Limited time offer from Vitalik Buterin!"
+                    </p>
+                    <p className="text-yellow-800 text-sm">
+                      <strong>Why this is a scam:</strong> No one gives away free money. If you send crypto, it's gone forever.
+                    </p>
+                  </div>
+                  <p className="text-yellow-800 text-sm">
+                    <strong>Remember:</strong> If someone promises to double your money or give you free crypto, it's always a scam.
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-purple-900 mb-4">🔗 Fake Websites and Links</h4>
+                  <p className="text-purple-800 mb-4">
+                    Scammers create fake versions of popular crypto websites that look identical to the real ones. When you enter your wallet details, they steal everything.
+                  </p>
+                  <div className="bg-white border border-purple-300 rounded-lg p-4 mb-4">
+                    <p className="text-purple-900 font-medium mb-2">Real vs Fake URLs:</p>
+                    <div className="space-y-2 text-sm">
+                      <p><span className="text-green-600">✅ Real:</span> <code>app.uniswap.org</code></p>
+                      <p><span className="text-red-600">❌ Fake:</span> <code>app.uniswap.com</code> (notice .com instead of .org)</p>
+                      <p><span className="text-red-600">❌ Fake:</span> <code>app.uniswaap.org</code> (notice extra 'a')</p>
+                    </div>
+                  </div>
+                  <p className="text-purple-800 text-sm">
+                    <strong>Protection tip:</strong> Always bookmark the real websites and use your bookmarks instead of clicking links from social media or emails.
+                  </p>
+                </div>
+
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-green-900 mb-4">✅ How to Stay Safe</h4>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="font-medium text-green-800 mb-2">1. Use a "Test" Wallet</p>
+                      <p className="text-green-700 text-sm">
+                        Create a separate wallet with just $10-20 for trying new websites or claiming airdrops. 
+                        Never connect your main wallet (with your life savings) to unknown sites.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-green-800 mb-2">2. Start Small</p>
+                      <p className="text-green-700 text-sm">
+                        Before sending large amounts, always test with a tiny amount first (like $1). 
+                        If something goes wrong, you only lose $1 instead of $1,000.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-green-800 mb-2">3. When in Doubt, Don't</p>
+                      <p className="text-green-700 text-sm">
+                        If something feels suspicious or you're being pressured to act quickly, stop. 
+                        Legitimate opportunities don't disappear in minutes. Take time to research and ask for help.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
