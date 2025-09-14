@@ -275,7 +275,6 @@ const DYORGuide = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </section>
 
           {/* Security Best Practices */}
