@@ -323,6 +323,7 @@ const DYORGuide = () => {
                   <p className="text-blue-800 text-sm">
                     <strong>Why this matters:</strong> In 2022, hackers stole over $3 billion from crypto accounts that only used passwords. 
                     Accounts with 2FA enabled were almost never compromised.
+                  </p>
                   </div>
                 </div>
 
