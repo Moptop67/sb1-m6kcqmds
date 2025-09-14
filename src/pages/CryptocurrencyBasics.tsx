@@ -7,13 +7,49 @@ const CryptocurrencyBasics = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>What Is Cryptocurrency? Beginners Basics Explained | CryptoStarterGuide</title>
-        <meta name="description" content="Cryptocurrency is a revolutionary form of digital money. Learn the basics of digital currency, blockchain technology, Bitcoin, Ethereum and why crypto is essential in the modern world." />
-        <meta name="keywords" content="cryptocurrency, digital currency, Bitcoin, Ethereum, blockchain, beginner's guide, digital economy, what is crypto" />
+        <title>What Is Cryptocurrency? Complete Beginner's Guide 2025 | CryptoStarterGuide</title>
+        <meta name="description" content="Learn cryptocurrency basics in 2025: digital currency, blockchain technology, Bitcoin vs Ethereum explained. Complete beginner's guide to crypto investing and digital money." />
+        <meta name="keywords" content="what is cryptocurrency 2025, cryptocurrency for beginners, digital currency explained, Bitcoin Ethereum guide, blockchain basics, crypto investing guide" />
         <meta property="og:title" content="What Is Cryptocurrency? Beginners Basics Explained" />
-        <meta property="og:description" content="Complete beginner's guide to understanding cryptocurrency, digital money, and blockchain technology." />
+        <meta property="og:description" content="Learn cryptocurrency basics in 2025: digital currency, blockchain technology, Bitcoin vs Ethereum explained for complete beginners." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://images.pexels.com/photos/6770775/pexels-photo-6770775.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="What Is Cryptocurrency? Complete Beginner's Guide 2025" />
+        <meta name="twitter:description" content="Learn cryptocurrency basics: digital currency, blockchain, Bitcoin & Ethereum explained for beginners." />
         <link rel="canonical" href="https://cryptostarterguide.com/guide/what-is-cryptocurrency" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "What Is Cryptocurrency? Complete Beginner's Guide 2025",
+            "description": "Learn cryptocurrency basics in 2025: digital currency, blockchain technology, Bitcoin vs Ethereum explained for complete beginners.",
+            "image": "https://images.pexels.com/photos/6770775/pexels-photo-6770775.jpeg",
+            "author": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "url": "https://cryptostarterguide.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://cryptostarterguide.com/logo.png"
+              }
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-01-15",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://cryptostarterguide.com/guide/what-is-cryptocurrency"
+            },
+            "articleSection": "Cryptocurrency Education",
+            "keywords": ["cryptocurrency", "digital currency", "Bitcoin", "Ethereum", "blockchain", "beginner guide"],
+            "wordCount": 1200,
+            "timeRequired": "PT5M"
+          })}
+        </script>
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

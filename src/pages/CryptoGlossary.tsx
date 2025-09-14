@@ -226,13 +226,49 @@ const CryptoGlossary = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Blockchain & Crypto Glossary for Newcomers | Essential Terms Explained | CryptoStarterGuide</title>
-        <meta name="description" content="Complete crypto glossary for beginners. Learn essential blockchain terms, cryptocurrency jargon, DeFi concepts, and trading terminology explained in simple language." />
-        <meta name="keywords" content="crypto glossary, blockchain terms, cryptocurrency dictionary, DeFi glossary, crypto jargon explained, beginner crypto terms" />
+        <title>Crypto Glossary 2025: 38+ Essential Blockchain Terms Explained | CryptoStarterGuide</title>
+        <meta name="description" content="Master crypto terminology with our 2025 glossary: 38+ essential blockchain terms, cryptocurrency jargon, DeFi concepts explained simply for beginners. Searchable crypto dictionary." />
+        <meta name="keywords" content="crypto glossary 2025, blockchain terms dictionary, cryptocurrency jargon explained, DeFi terms glossary, crypto terminology guide, blockchain vocabulary" />
         <meta property="og:title" content="Blockchain & Crypto Glossary for Newcomers | Essential Terms" />
-        <meta property="og:description" content="Master crypto terminology with our comprehensive glossary. Essential blockchain and cryptocurrency terms explained simply for beginners." />
+        <meta property="og:description" content="Master crypto terminology: 38+ essential blockchain terms, cryptocurrency jargon, DeFi concepts explained for beginners in 2025." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Crypto Glossary 2025: 38+ Essential Terms Explained" />
+        <meta name="twitter:description" content="Searchable crypto dictionary: blockchain terms, DeFi jargon, cryptocurrency vocabulary explained simply." />
         <link rel="canonical" href="https://cryptostarterguide.com/guide/crypto-glossary" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Crypto Glossary 2025: 38+ Essential Blockchain Terms Explained",
+            "description": "Master crypto terminology with our 2025 glossary: 38+ essential blockchain terms, cryptocurrency jargon explained for beginners.",
+            "image": "https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg",
+            "author": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "url": "https://cryptostarterguide.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://cryptostarterguide.com/logo.png"
+              }
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-01-15",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://cryptostarterguide.com/guide/crypto-glossary"
+            },
+            "articleSection": "Cryptocurrency Reference",
+            "keywords": ["crypto glossary", "blockchain terms", "cryptocurrency dictionary", "DeFi terminology"],
+            "wordCount": 800,
+            "timeRequired": "PT10M"
+          })}
+        </script>
       </Helmet>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

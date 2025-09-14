@@ -7,13 +7,49 @@ const BlockchainBasics = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>What Is Blockchain? The Foundation of Cryptocurrency and Digital Assets | CryptoStarterGuide</title>
-        <meta name="description" content="Learn blockchain basics: decentralized ledgers, consensus mechanisms, cryptographic security, L1/L2 layers, and the difference between coins and tokens. Complete beginner's guide." />
-        <meta name="keywords" content="blockchain basics, decentralized ledger, blockchain layers L1 L2, cryptographic security, tokens vs stocks, consensus mechanisms, proof of work, proof of stake" />
+        <title>What Is Blockchain Technology? Complete Beginner's Guide 2025 | CryptoStarterGuide</title>
+        <meta name="description" content="Master blockchain technology in 2025: decentralized ledgers, L1/L2 layers, consensus mechanisms (PoW vs PoS), coins vs tokens explained. Complete beginner's blockchain guide." />
+        <meta name="keywords" content="what is blockchain 2025, blockchain technology explained, decentralized ledger guide, L1 L2 blockchain layers, proof of work vs proof of stake, coins vs tokens difference" />
         <meta property="og:title" content="What Is Blockchain? The Foundation of Cryptocurrency" />
-        <meta property="og:description" content="Complete beginner's guide to understanding blockchain technology, decentralized ledgers, and how digital assets work." />
+        <meta property="og:description" content="Master blockchain technology: decentralized ledgers, L1/L2 layers, consensus mechanisms explained for beginners in 2025." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://images.pexels.com/photos/8358210/pexels-photo-8358210.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="What Is Blockchain Technology? Complete Guide 2025" />
+        <meta name="twitter:description" content="Learn blockchain: decentralized ledgers, L1/L2 layers, PoW vs PoS consensus mechanisms explained simply." />
         <link rel="canonical" href="https://cryptostarterguide.com/guide/what-is-blockchain" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "What Is Blockchain Technology? Complete Beginner's Guide 2025",
+            "description": "Master blockchain technology in 2025: decentralized ledgers, L1/L2 layers, consensus mechanisms explained for complete beginners.",
+            "image": "https://images.pexels.com/photos/8358210/pexels-photo-8358210.jpeg",
+            "author": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "url": "https://cryptostarterguide.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "CryptoStarterGuide",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://cryptostarterguide.com/logo.png"
+              }
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-01-15",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://cryptostarterguide.com/guide/what-is-blockchain"
+            },
+            "articleSection": "Blockchain Education",
+            "keywords": ["blockchain", "decentralized ledger", "L1 L2 layers", "consensus mechanisms", "proof of work", "proof of stake"],
+            "wordCount": 1500,
+            "timeRequired": "PT8M"
+          })}
+        </script>
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
