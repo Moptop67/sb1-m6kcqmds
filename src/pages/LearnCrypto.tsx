@@ -48,14 +48,6 @@ const LearnCrypto = () => {
       link: '/guide/beginner-bitcoin'
     },
     {
-      title: 'Trading Strategies for Beginners',
-      description: 'Basic trading concepts and risk management',
-      duration: '15 min read',
-      students: '4.8k',
-      completed: false,
-      link: '/review/binance-vs-coinbase'
-    },
-    {
       title: 'Cryptocurrency Exchanges (CEX)',
       description: 'What are centralized exchanges and how do they work?',
       duration: '12 min read',
@@ -92,6 +84,32 @@ const LearnCrypto = () => {
     }
   ];
 
+  const tradingTopics = [
+    {
+      title: 'Trading Strategies for Beginners',
+      description: 'Basic trading concepts and risk management',
+      duration: '15 min read',
+      students: '4.8k',
+      completed: false,
+      link: '/review/binance-vs-coinbase'
+    },
+    {
+      title: 'Technical Analysis Fundamentals',
+      description: 'Reading charts and identifying market trends',
+      duration: '20 min read',
+      students: '2.9k',
+      completed: false,
+      link: '/guide/beginner-bitcoin'
+    },
+    {
+      title: 'Risk Management in Crypto Trading',
+      description: 'Protecting your capital and managing losses',
+      duration: '12 min read',
+      students: '3.2k',
+      completed: false,
+      link: '/guide/beginner-bitcoin'
+    }
+  ];
   type Topic = {
     title: string;
     description: string;
@@ -125,7 +143,8 @@ const LearnCrypto = () => {
         <span className={`px-2 py-1 rounded text-xs ${
           level === 'beginner' ? 'bg-green-100 text-green-800' :
           level === 'intermediate' ? 'bg-yellow-100 text-yellow-800' :
-          'bg-red-100 text-red-800'
+          level === 'advanced' ? 'bg-red-100 text-red-800' :
+          'bg-purple-100 text-purple-800'
         }`}>
           {level}
         </span>
@@ -314,6 +333,22 @@ const LearnCrypto = () => {
           </div>
         </section>
 
+        {/* Crypto Trading Section */}
+        <section id="trading" className="mt-16">
+          <div className="flex items-center mb-8">
+            <BookOpen className="h-8 w-8 text-purple-600 mr-3" />
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900">Crypto Trading</h2>
+              <p className="text-gray-600 mt-1">Master trading strategies and market analysis</p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tradingTopics.map((topic, index) => (
+              <TopicCard key={index} topic={topic} level="trading" />
+            ))}
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="mt-20 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Crypto Journey?</h2>
