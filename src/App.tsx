@@ -13,6 +13,7 @@ import ExchangeReview from './pages/ExchangeReview';
 import WalletReview from './pages/WalletReview';
 import CryptocurrencyBasics from './pages/CryptocurrencyBasics';
 import BlockchainBasics from './pages/BlockchainBasics';
+import CryptoGlossary from './pages/CryptoGlossary';
 import BinanceReview from './pages/BinanceReview';
 import CoinbaseReview from './pages/CoinbaseReview';
 import KuCoinReview from './pages/KuCoinReview';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/guide/beginner-bitcoin" element={<BeginnerGuide />} />
           <Route path="/guide/what-is-cryptocurrency" element={<CryptocurrencyBasics />} />
           <Route path="/guide/what-is-blockchain" element={<BlockchainBasics />} />
+          <Route path="/guide/crypto-glossary" element={<CryptoGlossary />} />
           <Route path="/review/binance-vs-coinbase" element={<ExchangeReview />} />
           <Route path="/review/ledger-vs-trezor" element={<WalletReview />} />
           <Route path="/review/binance" element={<BinanceReview />} />

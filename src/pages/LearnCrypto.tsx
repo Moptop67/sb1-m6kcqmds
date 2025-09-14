@@ -29,12 +29,12 @@ const LearnCrypto = () => {
       link: '/guide/what-is-blockchain'
     },
     {
-      title: 'Setting Up Your First Wallet',
-      description: 'Step-by-step guide to storing your cryptocurrency safely',
-      duration: '10 min read',
-      students: '9.3k',
+      title: 'Blockchain & Crypto Glossary for Newcomers',
+      description: 'Essential crypto terms and jargon explained in simple language',
+      duration: 'Reference guide',
+      students: '8.2k',
       completed: false,
-      link: '/review/ledger-vs-trezor'
+      link: '/guide/crypto-glossary'
     }
   ];
 
