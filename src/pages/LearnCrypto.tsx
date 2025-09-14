@@ -10,7 +10,7 @@ const LearnCrypto = () => {
       duration: '5 min read',
       students: '12.5k',
       completed: false,
-      link: '/guide/understanding-crypto'
+      link: '/guide/what-is-cryptocurrency'
     },
     {
       title: 'How Does Bitcoin Work?',
