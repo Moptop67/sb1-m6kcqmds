@@ -170,6 +170,100 @@ const LearnCrypto = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* History of Money Introduction */}
+        <section className="mb-20">
+          <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 md:p-12">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                The History of Money and the Rise of Digital Currencies
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                The story of money is the story of civilization itself. From ancient bartering to cryptocurrencies, 
+                money has always evolved to meet the needs of a changing society.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Barter and Commodity Money */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-4">🏺</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Barter and Commodity Money</h3>
+                <p className="text-gray-600 text-sm">
+                  Early economies functioned on direct exchange—barter. People traded livestock, grains, or other goods that held value. 
+                  Societies gradually adopted commodity money such as shells, salt, and metals, valued for their scarcity and utility.
+                </p>
+              </div>
+
+              {/* Metal Coins and Paper Money */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-4">🪙</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Metal Coins and Paper Money</h3>
+                <p className="text-gray-600 text-sm">
+                  Around the 7th century BCE, the first standardized metal coins emerged in Lydia and China. 
+                  Later, the Chinese Song Dynasty introduced the world's first government-issued paper money, 
+                  bringing portability and official guarantees of value.
+                </p>
+              </div>
+
+              {/* The Banking Revolution */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-4">🏛️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">The Banking Revolution</h3>
+                <p className="text-gray-600 text-sm">
+                  The birth of banking in medieval Italy enabled people to safely deposit and transfer money, 
+                  fueling economic complexity and global trade. Trust in institutions became central to how value was exchanged.
+                </p>
+              </div>
+
+              {/* Fiat Money and Electronic Payments */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-4">💳</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Fiat Money and Electronic Payments</h3>
+                <p className="text-gray-600 text-sm">
+                  Twentieth-century societies abandoned the gold standard for "fiat money"—currency backed by government decree. 
+                  Credit cards and internet banking digitized finance, with systems like PayPal making money truly virtual.
+                </p>
+              </div>
+
+              {/* The Birth of Digital Currencies */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 border-blue-200">
+                <div className="text-3xl mb-4">₿</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">The Birth of Digital Currencies</h3>
+                <p className="text-gray-600 text-sm">
+                  In 2009, Bitcoin launched as the world's first decentralized digital currency. Unlike previous money forms, 
+                  Bitcoin removed the need for trusted third parties, using blockchain technology and cryptography instead of banks.
+                </p>
+              </div>
+
+              {/* Connecting the Evolution */}
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-4">🌐</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">The Digital Future</h3>
+                <p className="text-gray-600 text-sm">
+                  Digital currencies build on money's legacy, solving digital era needs: instant borderless payments, 
+                  programmable money, and financial inclusion. As economies grow more digital, cryptocurrencies will play 
+                  an increasingly central role in tomorrow's global marketplace.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+                <h3 className="text-xl font-bold mb-3">Ready to Learn About This Revolution?</h3>
+                <p className="text-blue-100 mb-4">
+                  Understanding cryptocurrency starts with understanding why digital money was inevitable. 
+                  Let's explore the technology that's reshaping finance.
+                </p>
+                <div className="flex justify-center">
+                  <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2 text-sm">
+                    👇 Start with the basics below
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-16">
           <div className="flex items-center mb-8">
             <BookOpen className="h-8 w-8 text-green-600 mr-3" />
