@@ -18,6 +18,7 @@ import BinanceReview from './pages/BinanceReview';
 import CoinbaseReview from './pages/CoinbaseReview';
 import KuCoinReview from './pages/KuCoinReview';
 import HowBitcoinWorks from './pages/HowBitcoinWorks';
+import DeFiExplained from './pages/DeFiExplained';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/guide/what-is-blockchain" element={<BlockchainBasics />} />
           <Route path="/guide/crypto-glossary" element={<CryptoGlossary />} />
           <Route path="/guide/how-bitcoin-works" element={<HowBitcoinWorks />} />
+          <Route path="/guide/defi-explained" element={<DeFiExplained />} />
           <Route path="/review/binance-vs-coinbase" element={<ExchangeReview />} />
           <Route path="/review/ledger-vs-trezor" element={<WalletReview />} />
           <Route path="/review/binance" element={<BinanceReview />} />

@@ -40,12 +40,12 @@ const LearnCrypto = () => {
 
   const intermediateTopics = [
     {
-      title: 'DeFi Explained: Decentralized Finance',
-      description: 'Understanding lending, borrowing, and yield farming',
-      duration: '12 min read',
-      students: '5.2k',
+      title: 'DeFi Explained: Your Guide to Decentralized Finance',
+      description: 'Understanding lending, borrowing, yield farming, and liquidity pools',
+      duration: '10 min read',
+      students: '7.8k',
       completed: false,
-      link: '/guide/beginner-bitcoin'
+      link: '/guide/defi-explained'
     },
     {
       title: 'Staking and Passive Income',
