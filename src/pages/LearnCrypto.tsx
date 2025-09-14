@@ -21,12 +21,12 @@ const LearnCrypto = () => {
       link: '/guide/beginner-bitcoin'
     },
     {
-      title: 'Types of Cryptocurrencies',
-      description: 'Explore different types of digital assets and their purposes',
-      duration: '6 min read',
-      students: '8.7k',
+      title: 'What is Blockchain Technology?',
+      description: 'Learn about decentralized ledgers, consensus mechanisms, and L1/L2 layers',
+      duration: '8 min read',
+      students: '15.2k',
       completed: false,
-      link: '/guide/beginner-bitcoin'
+      link: '/guide/what-is-blockchain'
     },
     {
       title: 'Setting Up Your First Wallet',
