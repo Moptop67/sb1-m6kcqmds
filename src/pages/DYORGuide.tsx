@@ -299,33 +299,101 @@ const DYORGuide = () => {
             </h3>
             
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+              <p className="text-gray-600 mb-6 text-lg">
+                Think of your crypto wallet like your house. You wouldn't leave your front door unlocked or give your house keys to strangers. 
+                The same principles apply to protecting your digital assets, but the stakes are even higher because crypto transactions can't be reversed.
+              </p>
+              
               <div className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-blue-900 mb-3">Authentication & Access:</h4>
-                    <ul className="text-sm text-blue-800 space-y-2">
-                      <li>• Enable Multi-Factor Authentication (MFA)</li>
-                      <li>• Use physical keys or authentication apps</li>
-                      <li>• Store private keys offline in hardware wallets</li>
-                      <li>• Never keep keys in cloud storage</li>
-                    </ul>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-blue-900 mb-4">🔐 Two-Factor Authentication (2FA): Your Digital Bodyguard</h4>
+                  <p className="text-blue-800 mb-4">
+                    Imagine your password is like a key to your house. 2FA is like having a security guard who also needs to verify your identity before letting you in. 
+                    Even if someone steals your password, they still can't access your account without the second verification.
+                  </p>
+                  <div className="bg-white border border-blue-300 rounded-lg p-4 mb-4">
+                    <p className="text-blue-900 font-medium mb-2">✅ How to Set Up 2FA:</p>
+                    <div className="space-y-2 text-sm text-gray-700">
+                      <p><strong>Step 1:</strong> Download Google Authenticator or Authy app on your phone</p>
+                      <p><strong>Step 2:</strong> In your exchange settings, find "Security" or "2FA"</p>
+                      <p><strong>Step 3:</strong> Scan the QR code with your authenticator app</p>
+                      <p><strong>Step 4:</strong> Enter the 6-digit code to confirm setup</p>
+                    </div>
                   </div>
-                  
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-green-900 mb-3">Wallet Management:</h4>
-                    <ul className="text-sm text-green-800 space-y-2">
-                      <li>• Update wallet software regularly</li>
-                      <li>• Use cold wallets for long-term storage</li>
-                      <li>• Segment wallets by purpose</li>
-                      <li>• Never connect vault wallet to unfamiliar sites</li>
-                    </ul>
+                  <p className="text-blue-800 text-sm">
+                    <strong>Why this matters:</strong> In 2022, hackers stole over $3 billion from crypto accounts that only used passwords. 
+                    Accounts with 2FA enabled were almost never compromised.
                   </div>
                 </div>
 
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-purple-900 mb-2">Wallet Segmentation Strategy:</h4>
-                  <p className="text-purple-800 text-sm">
-                    Use a "hot" wallet for regular transactions, a "cold" wallet for savings, and a test wallet for new dApps.
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-green-900 mb-4">🏦 The "Three Wallet" Strategy: Like Having Multiple Bank Accounts</h4>
+                  <p className="text-green-800 mb-4">
+                    Just like you might have a checking account for daily expenses, a savings account for long-term money, and a separate account for risky investments, 
+                    you should use different wallets for different purposes.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-white border border-green-300 rounded-lg p-4">
+                      <p className="text-green-900 font-medium mb-2">💳 "Spending" Wallet (Hot Wallet)</p>
+                      <p className="text-green-800 text-sm mb-2">
+                        <strong>What it is:</strong> A mobile app like MetaMask or Trust Wallet with $50-500 for daily trading and DeFi activities.
+                      </p>
+                      <p className="text-green-700 text-sm">
+                        <strong>Think of it like:</strong> The cash in your physical wallet - convenient but you wouldn't carry your life savings.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white border border-green-300 rounded-lg p-4">
+                      <p className="text-green-900 font-medium mb-2">🏦 "Savings" Wallet (Cold Wallet)</p>
+                      <p className="text-green-800 text-sm mb-2">
+                        <strong>What it is:</strong> A hardware wallet like Ledger Nano X ($149) that stores your long-term investments offline.
+                      </p>
+                      <p className="text-green-700 text-sm">
+                        <strong>Think of it like:</strong> A bank vault - maximum security for your most valuable assets.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white border border-green-300 rounded-lg p-4">
+                      <p className="text-green-900 font-medium mb-2">🧪 "Test" Wallet</p>
+                      <p className="text-green-800 text-sm mb-2">
+                        <strong>What it is:</strong> A separate wallet with just $10-20 for trying new websites, claiming airdrops, or testing unknown projects.
+                      </p>
+                      <p className="text-green-700 text-sm">
+                        <strong>Think of it like:</strong> Monopoly money - if you lose it all, no big deal.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-red-900 mb-4">☁️ Never Store Crypto Keys in the Cloud</h4>
+                  <p className="text-red-800 mb-4">
+                    Your seed phrase (12-24 words) is like the master key to all your crypto. Storing it in Google Drive, iCloud, or email is like 
+                    leaving your house keys in a public place with a sign saying "free keys."
+                  </p>
+                  <div className="bg-white border border-red-300 rounded-lg p-4 mb-4">
+                    <p className="text-red-900 font-medium mb-2">❌ Never Store Your Seed Phrase In:</p>
+                    <div className="space-y-1 text-sm text-gray-700">
+                      <p>• Screenshots on your phone (can be hacked or backed up to cloud)</p>
+                      <p>• Google Drive, Dropbox, or any cloud storage</p>
+                      <p>• Email drafts or sent messages</p>
+                      <p>• Notes apps that sync to the cloud</p>
+                      <p>• Text messages to yourself</p>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-red-300 rounded-lg p-4">
+                    <p className="text-red-900 font-medium mb-2">✅ Safe Storage Options:</p>
+                    <div className="space-y-1 text-sm text-gray-700">
+                      <p>• Write it on paper and store in a fireproof safe</p>
+                      <p>• Engrave it on metal plates (fireproof and waterproof)</p>
+                      <p>• Split it between multiple secure physical locations</p>
+                      <p>• Use a password manager that doesn't sync to cloud</p>
+                    </div>
+                  </div>
+                  <p className="text-red-800 text-sm mt-4">
+                    <strong>Real example:</strong> In 2023, a user lost $50,000 when hackers accessed his iCloud account and found screenshots of his seed phrase. 
+                    Don't let convenience cost you your life savings.
                   </p>
                 </div>
               </div>
