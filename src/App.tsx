@@ -20,6 +20,7 @@ import KuCoinReview from './pages/KuCoinReview';
 import HowBitcoinWorks from './pages/HowBitcoinWorks';
 import DeFiExplained from './pages/DeFiExplained';
 import CryptocurrencyExchanges from './pages/CryptocurrencyExchanges';
+import DYORGuide from './pages/DYORGuide';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/guide/how-bitcoin-works" element={<HowBitcoinWorks />} />
           <Route path="/guide/defi-explained" element={<DeFiExplained />} />
           <Route path="/guide/cryptocurrency-exchanges" element={<CryptocurrencyExchanges />} />
+          <Route path="/guide/dyor-research-security" element={<DYORGuide />} />
           <Route path="/guide/defi-explained" element={<DeFiExplained />} />
           <Route path="/review/binance-vs-coinbase" element={<ExchangeReview />} />
           <Route path="/review/ledger-vs-trezor" element={<WalletReview />} />

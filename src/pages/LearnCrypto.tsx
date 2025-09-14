@@ -54,6 +54,14 @@ const LearnCrypto = () => {
       students: '5.2k',
       completed: false,
       link: '/guide/cryptocurrency-exchanges'
+    },
+    {
+      title: 'DYOR: Research & Security Best Practices',
+      description: 'Learn to research crypto projects, assess risk vs reward, and protect your investments from scams',
+      duration: '16 min read',
+      students: '4.3k',
+      completed: false,
+      link: '/guide/dyor-research-security'
     }
   ];
 
