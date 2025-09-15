@@ -40,6 +40,14 @@ const LearnCrypto = () => {
 
   const intermediateTopics = [
     {
+      title: 'How to Research a Token/Project',
+      description: 'Step-by-step guide to analyzing whitepapers, communities, and using tools like Etherscan, DefiLlama, and CoinGecko',
+      duration: '14 min read',
+      students: '3.8k',
+      completed: false,
+      link: '/guide/token-research'
+    },
+    {
       title: 'Staking and Passive Income',
       description: 'Earn rewards by holding and staking cryptocurrencies',
       duration: '9 min read',
