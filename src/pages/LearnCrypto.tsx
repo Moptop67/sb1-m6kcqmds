@@ -41,7 +41,7 @@ const LearnCrypto = () => {
   const intermediateTopics = [
     {
       title: 'How to Research a Token/Project',
-      description: 'Step-by-step guide to analyzing whitepapers, communities, and using tools like Etherscan, DefiLlama, and CoinGecko',
+      description: 'Learn to spot scams and find legitimate projects using simple research tools. Includes real examples of red flags and how to use Etherscan, DefiLlama, and CoinGecko like a pro.',
       duration: '14 min read',
       students: '3.8k',
       completed: false,
@@ -49,7 +49,7 @@ const LearnCrypto = () => {
     },
     {
       title: 'Staking and Passive Income',
-      description: 'Earn rewards by holding and staking cryptocurrencies',
+      description: 'Discover how to earn money while you sleep by "staking" your crypto. Learn which coins pay the best rewards, how to stake safely, and avoid common staking mistakes.',
       duration: '9 min read',
       students: '6.1k',
       completed: false,
@@ -57,7 +57,7 @@ const LearnCrypto = () => {
     },
     {
       title: 'Cryptocurrency Exchanges (CEX)',
-      description: 'What are centralized exchanges and how do they work?',
+      description: 'Understand how crypto exchanges like Binance and Coinbase actually work behind the scenes. Learn about order books, custody, and why some exchanges are safer than others.',
       duration: '12 min read',
       students: '5.2k',
       completed: false,
@@ -65,7 +65,7 @@ const LearnCrypto = () => {
     },
     {
       title: 'DYOR: Research & Security Best Practices',
-      description: 'Learn to research crypto projects, assess risk vs reward, and protect your investments from scams',
+      description: 'Master the art of "Do Your Own Research" with real-world examples of crypto scams and how to avoid them. Includes step-by-step wallet protection and phishing prevention.',
       duration: '16 min read',
       students: '4.3k',
       completed: false,
