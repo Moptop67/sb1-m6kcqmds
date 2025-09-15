@@ -22,6 +22,7 @@ import DeFiExplained from './pages/DeFiExplained';
 import CryptocurrencyExchanges from './pages/CryptocurrencyExchanges';
 import TokenResearchGuide from './pages/TokenResearchGuide';
 import DYORGuide from './pages/DYORGuide';
+import CryptoResearchTools from './pages/CryptoResearchTools';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/guide/cryptocurrency-exchanges" element={<CryptocurrencyExchanges />} />
           <Route path="/guide/token-research" element={<TokenResearchGuide />} />
           <Route path="/guide/dyor-research-security" element={<DYORGuide />} />
+          <Route path="/guide/crypto-research-tools" element={<CryptoResearchTools />} />
           <Route path="/guide/defi-explained" element={<DeFiExplained />} />
           <Route path="/review/binance-vs-coinbase" element={<ExchangeReview />} />
           <Route path="/review/ledger-vs-trezor" element={<WalletReview />} />

@@ -70,6 +70,14 @@ const LearnCrypto = () => {
       students: '4.3k',
       completed: false,
       link: '/guide/dyor-research-security'
+    },
+    {
+      title: 'Essential Crypto Research Tools',
+      description: 'Master the tools every crypto investor uses: CoinGecko for market data, Etherscan for blockchain detective work, DefiLlama for DeFi metrics, and Glassnode for whale tracking. Step-by-step tutorials included.',
+      duration: '18 min read',
+      students: '2.9k',
+      completed: false,
+      link: '/guide/crypto-research-tools'
     }
   ];
 
